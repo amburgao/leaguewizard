@@ -8,6 +8,7 @@ import logging
 import re
 import ssl
 from pathlib import Path
+from typing import Any
 
 import aiohttp
 import websockets
@@ -81,7 +82,7 @@ async def get_champion_name(
     return None
 
 
-async def on_message(event: str | bytes, https: str, headers: dict) -> None:
+async def on_message(event: str | bytes, conn: Any) -> None:
     try:
         _data = json.loads(event)[2]
         data = _data["data"]
@@ -98,115 +99,109 @@ async def on_message(event: str | bytes, https: str, headers: dict) -> None:
                     champion_id = p["championPickIntent"]
                 assigned_position = p["assignedPosition"]
                 summoner_id = p["summonerId"]
-        async with aiohttp.ClientSession(base_url=https, headers=headers) as conn:
-            champion_name = (
-                await get_champion_name(conn, champion_id) if champion_id else None
-            )
-            role = (
-                ROLES.get(assigned_position) if assigned_position is not None else None
-            )
-            build_page_url = (
-                f"https://mobalytics.gg/lol/champions/{champion_name}/build/{role}"
-                if role is not None and role != ""
-                else f"https://mobalytics.gg/lol/champions/{champion_name}/aram-builds"
-            )
-            response = await conn.get(build_page_url)
-            content = await response.text()
-            tree = HTMLParser(content)
+        champion_name = (
+            await get_champion_name(conn, champion_id) if champion_id else None
+        )
+        role = ROLES.get(assigned_position) if assigned_position is not None else None
+        build_page_url = (
+            f"https://mobalytics.gg/lol/champions/{champion_name}/build/{role}"
+            if role is not None and role != ""
+            else f"https://mobalytics.gg/lol/champions/{champion_name}/aram-builds"
+        )
+        response = await conn.get(build_page_url)
+        content = await response.text()
+        tree = HTMLParser(content)
 
-            skill_order = tree.css(".m-m4se9")
-            skills = []
-            for node in skill_order:
-                skill_attr = node.text()
-                skills.append(skill_attr)
-            skills_string = " > ".join(skills)
-            nodes = tree.css(Payload_ItemSets.itemsets_css)
-            blocks: list[Block] = []
-            for node in nodes:
-                block_name_node = node.css_first("h4")
-                if len(blocks) == 0:
-                    block_name = skills_string
-                else:
-                    block_name = block_name_node.text() if block_name_node else ""
-                items_node = node.css(".m-5o4ika")
-                block_items: list[Item] = []
-                for item_node in items_node:
-                    item = item_node.attributes.get("src")
-                    matches = re.search("(\\d+)\\.png", item) if item else None
-                    if matches is not None:
-                        block_items.append(Item(1, matches.group(1)))
-                block = Block(block_items, block_name)
-                blocks.append(block)
-            nodes = tree.css(".m-1eeoc06")
-            situational_block_items: list[Item] = []
-            for node in nodes:
-                item = node.attributes.get("src")
+        skill_order = tree.css(".m-m4se9")
+        skills = []
+        for node in skill_order:
+            skill_attr = node.text()
+            skills.append(skill_attr)
+        skills_string = " > ".join(skills)
+        nodes = tree.css(Payload_ItemSets.itemsets_css)
+        blocks: list[Block] = []
+        for node in nodes:
+            block_name_node = node.css_first("h4")
+            if len(blocks) == 0:
+                block_name = skills_string
+            else:
+                block_name = block_name_node.text() if block_name_node else ""
+            items_node = node.css(".m-5o4ika")
+            block_items: list[Item] = []
+            for item_node in items_node:
+                item = item_node.attributes.get("src")
                 matches = re.search("(\\d+)\\.png", item) if item else None
                 if matches is not None:
-                    situational_block_items.append(Item(1, matches.group(1)))
-            block = Block(situational_block_items, "Situational Items")
+                    block_items.append(Item(1, matches.group(1)))
+            block = Block(block_items, block_name)
             blocks.append(block)
-            itemsets = ItemSet(
-                [champion_id],
-                blocks,
-                f"{champion_name} ({role})"
-                if role is not None and role != ""
-                else f"{champion_name} (ARAM)",
-            )
-            itemsets_payload = Payload_ItemSets(
-                accountId=summoner_id,
-                itemSets=[itemsets],
-                timestamp=0,
-            )
+        nodes = tree.css(".m-1eeoc06")
+        situational_block_items: list[Item] = []
+        for node in nodes:
+            item = node.attributes.get("src")
+            matches = re.search("(\\d+)\\.png", item) if item else None
+            if matches is not None:
+                situational_block_items.append(Item(1, matches.group(1)))
+        block = Block(situational_block_items, "Situational Items")
+        blocks.append(block)
+        itemsets = ItemSet(
+            [champion_id],
+            blocks,
+            f"{champion_name} ({role})"
+            if role is not None and role != ""
+            else f"{champion_name} (ARAM)",
+        )
+        itemsets_payload = Payload_ItemSets(
+            accountId=summoner_id,
+            itemSets=[itemsets],
+            timestamp=0,
+        )
 
-            nodes = tree.css(Payload_Perks.main_perks_css)
-            main_perks = []
-            selected_perks = []
+        nodes = tree.css(Payload_Perks.main_perks_css)
+        main_perks = []
+        selected_perks = []
+        for node in nodes:
+            src = node.attributes.get("src")
+            matches = re.search("/(\\d+)\\.svg", src) if src else None
+            if matches:
+                main_perks.append(int(matches.group(1)))
+        for css in Payload_Perks.selected_perks_css:
+            nodes = tree.css(css)
             for node in nodes:
                 src = node.attributes.get("src")
-                matches = re.search("/(\\d+)\\.svg", src) if src else None
+                matches = re.search("/(\\d+)(\\.svg|\\.png)\\b", src) if src else None
                 if matches:
-                    main_perks.append(int(matches.group(1)))
-            for css in Payload_Perks.selected_perks_css:
-                nodes = tree.css(css)
-                for node in nodes:
-                    src = node.attributes.get("src")
-                    matches = (
-                        re.search("/(\\d+)(\\.svg|\\.png)\\b", src) if src else None
-                    )
-                    if matches:
-                        selected_perks.append(int(matches.group(1)))
-            perks_payload = Payload_Perks(
-                name=f"{champion_name} - {role}"
-                if role is not None and role != ""
-                else f"{champion_name} - ARAM",
-                current=True,
-                primaryStyleId=int(main_perks[0]),
-                subStyleId=int(main_perks[1]),
-                selectedPerkIds=selected_perks,
-            )
+                    selected_perks.append(int(matches.group(1)))
+        perks_payload = Payload_Perks(
+            name=f"{champion_name} - {role}"
+            if role is not None and role != ""
+            else f"{champion_name} - ARAM",
+            current=True,
+            primaryStyleId=int(main_perks[0]),
+            subStyleId=int(main_perks[1]),
+            selectedPerkIds=selected_perks,
+        )
 
-            nodes = tree.css(Payload_Spells.spells_css)
-            spells_ids = []
-            for node in nodes:
-                src = node.attributes.get("src")
-                matches = re.search("(\\w+)\\.png", src) if src else None
-                if matches:
-                    spells_ids.append(SPELLS[matches[1]])
-            spells_payload = Payload_Spells(
-                selectedSkinId=champion_id,
-                spell1Id=int(spells_ids[0]),
-                spell2Id=int(spells_ids[1]),
+        nodes = tree.css(Payload_Spells.spells_css)
+        spells_ids = []
+        for node in nodes:
+            src = node.attributes.get("src")
+            matches = re.search("(\\w+)\\.png", src) if src else None
+            if matches:
+                spells_ids.append(SPELLS[matches[1]])
+        spells_payload = Payload_Spells(
+            selectedSkinId=champion_id,
+            spell1Id=int(spells_ids[0]),
+            spell2Id=int(spells_ids[1]),
+        )
+        global _last_champion_id
+        if _last_champion_id != champion_id:
+            await asyncio.gather(
+                send_itemsets(conn, itemsets_payload),
+                send_perks(conn, perks_payload),
+                send_spells(conn, spells_payload),
             )
-            global _last_champion_id
-            if _last_champion_id != champion_id:
-                await asyncio.gather(
-                    send_itemsets(conn, itemsets_payload),
-                    send_perks(conn, perks_payload),
-                    send_spells(conn, spells_payload),
-                )
-            _last_champion_id = champion_id
-            await conn.close()
+        _last_champion_id = champion_id
     except (json.decoder.JSONDecodeError, KeyError, TypeError, IndexError):
         pass
     except KeyboardInterrupt:
@@ -275,8 +270,9 @@ async def start() -> None:
             await ws.send('[2,"0", "GetLolSummonerV1CurrentSummoner"]')
             json.loads(await ws.recv())
             await ws.send('[5, "OnJsonApiEvent_lol-champ-select_v1_session"]')
-            async for event in ws:
-                await on_message(event, https, header)
+            async with aiohttp.ClientSession(base_url=https, headers=header) as conn:
+                async for event in ws:
+                    await on_message(event, conn)
     except (
         KeyboardInterrupt,
         asyncio.exceptions.CancelledError,
