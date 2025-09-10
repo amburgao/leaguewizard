@@ -1,0 +1,19 @@
+fix = true
+src = ["src"]
+
+[lint]
+select = [
+    "B",
+    "D",
+    "E",
+    "F",
+    "I",
+    "RUF100",
+    "S",
+    "SIM",
+    "UP",
+    "W",
+]
+
+
+pydocstyle.convention = "google"

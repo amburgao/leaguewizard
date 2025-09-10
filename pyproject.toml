@@ -1,0 +1,69 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [
+    "hatch-vcs",
+    "hatchling",
+]
+
+[project]
+name = "leaguewizard"
+description = "Auto sync your itemsets, perks and spells with mobalytics.gg ones on champion selection."
+readme = "README.md"
+
+keywords = [
+    "automation",
+    "builds",
+    "lcu",
+    "league of legends",
+    "leaguewizard",
+    "lol",
+    "runes",
+]
+license-files = [
+    "LICENSE",
+]
+authors = [
+
+    { name = "Hamburgão", email = "amburgao@users.noreply.github.com" },
+]
+requires-python = ">=3.13"
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Games/Entertainment",
+]
+dynamic = [
+    "version",
+]
+dependencies = [
+    "aiohttp>=3.12.15",
+    "pillow>=11.3",
+    "pystray>=0.19.5",
+    "pywin32>=311",
+    "selectolax>=0.3.34",
+    "websockets>=15.0.1",
+]
+urls.documentation = "https://amburgao.github.io/leaguewizard"
+urls.issue = "https://github.com/amburgao/leaguewizard/issues"
+urls.repository = "https://github.com/amburgao/leaguewizard"
+
+gui-scripts.leaguewizard = "leaguewizard.__init__:main"
+
+[dependency-groups]
+dev = [
+    "hatch>=1.14.1",
+    "mypy>=1.14.1",
+    "pyinstaller>=6.15",
+    "ruff>=0.12.11",
+]
+types = [
+    "types-pywin32>=311.0.0.20250822",
+]
+
+[tool.hatch.version]
+source = "vcs"

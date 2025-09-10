@@ -1,0 +1,110 @@
+{
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
+    },
+    "cSpell.words": [
+        "addopts",
+        "aiohttp",
+        "asctime",
+        "autodoc",
+        "cafile",
+        "codespell",
+        "currentpage",
+        "ddragon",
+        "eeoc",
+        "endpoit",
+        "github",
+        "Hamburgão",
+        "iebrlh",
+        "isort",
+        "itemset",
+        "itemsets",
+        "lcumadesimple",
+        "leaguewizard",
+        "leaguewizardlock",
+        "levelname",
+        "minversion",
+        "mobalytics",
+        "mypy",
+        "myst",
+        "noconsole",
+        "noqa",
+        "onefile",
+        "pipx",
+        "PROCESSENTRY",
+        "pycodestyle",
+        "pydantic",
+        "pydocstyle",
+        "Pyflakes",
+        "pyinstaller",
+        "pyproject",
+        "pystray",
+        "pytest",
+        "pyupgrade",
+        "pywin",
+        "riotgames",
+        "selectolax",
+        "simplerunes",
+        "SNAPPROCESS",
+        "Toolhelp",
+        "typehints",
+        "venv",
+        "windll",
+        "winerror"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        88
+    ],
+    "evenBetterToml.formatter.columnWidth": 20,
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": false,
+        "**/.hg": false,
+        "**/*.egg-info": false,
+        "**/.coverage": false,
+        "**/.mypy_cache": false,
+        "**/.pdm-build": false,
+        "**/.pytest_cache": false,
+        "**/.ruff_cache": false,
+        "**/.venv": false,
+        "**/Pipfile*": false,
+        "**/__pycache__": false,
+        "**/_build": false,
+        "**/coverage.xml": false,
+        "**/htmlcov": false,
+        ".editorconfig": false,
+        ".github": false,
+        ".pre-commit-config.yaml": false,
+        ".python-version": false,
+        ".vscode": false
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "sortJSON.contextMenu": {
+        "sortJSONAlphaNum": false,
+        "sortJSONAlphaNumReverse": false,
+        "sortJSONKeyLength": false,
+        "sortJSONKeyLengthReverse": false,
+        "sortJSONReverse": false,
+        "sortJSONType": false,
+        "sortJSONTypeReverse": false,
+        "sortJSONValues": false,
+        "sortJSONValuesReverse": false
+    }
+}

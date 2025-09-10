@@ -1,0 +1,100 @@
+default_install_hook_types:
+  - post-checkout
+  - post-merge
+  - post-rewrite
+  - pre-push
+default_stages:
+  - manual
+  - pre-push
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-docstring-first
+      - id: check-merge-conflict
+        args:
+          - '--assume-in-merge'
+      - id: check-toml
+      - id: check-xml
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: forbid-new-submodules
+      - id: mixed-line-ending
+      - id: name-tests-test
+      - id: no-commit-to-branch
+        stages:
+          - pre-push
+      - id: sort-simple-yaml
+        files: .pre-commit-config.yaml
+      - id: trailing-whitespace
+  - repo: https://github.com/renovatebot/pre-commit-hooks
+    rev: 41.23.5
+    hooks:
+      - id: renovate-config-validator
+  - repo: local
+    hooks:
+      - id: uv-sync
+        name: uv-sync
+        entry: uv sync
+        language: python
+        stages:
+          - post-checkout
+          - post-merge
+          - post-rewrite
+        always_run: true
+        pass_filenames: false
+      - id: uv-dev-sync
+        name: uv-dev-sync
+        entry: uv sync --dev
+        language: python
+        stages:
+          - post-checkout
+          - post-merge
+          - post-rewrite
+        always_run: true
+        pass_filenames: false
+      - id: uv-lock-check
+        name: uv-lock-check
+        entry: uv lock --check
+        language: python
+        files: ^pyproject.toml$
+        pass_filenames: false
+      - id: mypy
+        name: mypy
+        entry: uv run python -m mypy
+        language: system
+        exclude: ^template/.*
+        types_or:
+          - python
+          - pyi
+        require_serial: true
+      - id: ruff
+        name: ruff
+        entry: ruff check --force-exclude
+        language: system
+        types_or:
+          - python
+          - pyi
+        require_serial: true
+      - id: ruff-format
+        name: ruff-format
+        entry: ruff format --force-exclude
+        language: system
+        types_or:
+          - python
+          - pyi
+        require_serial: true
+      - id: pyproject-fmt
+        name: pyproject-fmt
+        entry: pyproject-fmt --indent 4 --keep-full-version --max-supported-python 3.13
+        language: python
+        files: '(^|/)pyproject\.toml$'
+        types:
+          - toml
+      - id: codespell
+        name: codespell
+        entry: codespell -f -w
+        language: python
+        types:
+          - text
