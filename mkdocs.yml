@@ -1,0 +1,9 @@
+site_name: LeagueWizard Docs
+site_url: https://amburgao.github.io/leaguewizardm
+theme:
+  name: material
+plugins:
+- search
+- mkdocstrings
+docs_dir: _docs
+site_dir: docs

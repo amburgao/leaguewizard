@@ -1,3 +1,5 @@
+"""LeagueWizard main entry point."""
+
 import asyncio
 import os
 import sys
@@ -5,17 +7,24 @@ import tempfile
 import threading
 import urllib
 import urllib.request
+from typing import Any
 
 import pystray
 import win32api
 import win32event
+import win32security
 import winerror
 from PIL import Image
 
 from leaguewizard.core import start
 
 
-def to_tray():
+def to_tray() -> Any:
+    """Create the tray icon with exit action.
+
+    Returns:
+        Any: Must be a pystray Icon object.
+    """
     dest = f"{tempfile.gettempdir()}\\logo.png"
     urllib.request.urlretrieve(
         "https://github.com/amburgao/leaguewizard/blob/main/.github/images/logo.png?raw=true",
@@ -29,19 +38,30 @@ def to_tray():
 
 
 def already_running_error() -> None:
-    import ctypes
+    """Keep only one process running at system.
 
-    ctypes.windll.user32.MessageBoxW(
-        0,
-        "Another instance is already running. Close it to create a new one.",
-        "Warn!",
-        48,
-    )
-    sys.exit(1)
+    Raises:
+        RuntimeWarning: Another instance is already running error.
+    """
+    try:
+        import ctypes
+
+        ctypes.windll.user32.MessageBoxW(
+            0,
+            "Another instance is already running. Close it to create a new one.",
+            "Warn!",
+            48,
+        )
+        raise RuntimeWarning("Another instance is already running.")
+    except RuntimeWarning:
+        sys.exit(1)
 
 
 def main() -> None:
-    mutex = win32event.CreateMutex(None, False, "leaguewizardlock")
+    """LeagueWizard main entry point function."""
+    win32event.CreateMutex(
+        win32security.SECURITY_ATTRIBUTES(), False, "leaguewizardlock"
+    )
     last_error = win32api.GetLastError()
     if last_error == winerror.ERROR_ALREADY_EXISTS:
         already_running_error()

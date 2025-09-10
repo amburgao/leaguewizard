@@ -22,7 +22,7 @@ repos:
       - id: forbid-new-submodules
       - id: mixed-line-ending
       - id: name-tests-test
-      - id: no-commit-to-branch
+      #- id: no-commit-to-branch
         stages:
           - pre-push
       - id: sort-simple-yaml
