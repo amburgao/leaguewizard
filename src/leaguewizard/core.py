@@ -12,6 +12,7 @@ from typing import Any
 
 import aiohttp
 import websockets
+from async_lru import alru_cache
 from selectolax.parser import HTMLParser
 
 from leaguewizard.backend import find_process_fullname
@@ -26,7 +27,6 @@ from leaguewizard.models import (
 )
 
 logging.basicConfig(level=51)
-
 _last_champion_id = None
 
 if Path("riotgames.pem").exists():
@@ -60,10 +60,8 @@ def _lcu_wss(lockfile: Path) -> dict[str, str]:
     return {"auth": auth, "wss": wss, "https": https}
 
 
-async def get_champion_name(
-    client: aiohttp.ClientSession,
-    champion_id: int,
-) -> str | None:
+@alru_cache
+async def _get_champion_list(client: aiohttp.ClientSession) -> Any:
     response = await client.get("https://ddragon.leagueoflegends.com/api/versions.json")
     content = await response.json()
     latest_ddragon_ver = content[0]
@@ -72,7 +70,14 @@ async def get_champion_name(
         f"https://ddragon.leagueoflegends.com/cdn/{latest_ddragon_ver}/data/en_US/champion.json",
     )
     content = await response.json()
-    ddragon_data = content["data"]
+    return content["data"]
+
+
+async def get_champion_name(
+    client: aiohttp.ClientSession,
+    champion_id: int,
+) -> str | None:
+    ddragon_data = await _get_champion_list(client)
     name = ""
     for item in ddragon_data.values():
         if item["key"] == str(champion_id):
@@ -80,6 +85,108 @@ async def get_champion_name(
     if name:
         return name
     return None
+
+
+@alru_cache
+async def get_mobalytics_info(
+    champion_name: str | None,
+    role: str | None,
+    conn: aiohttp.ClientSession,
+    champion_id: int,
+    summoner_id: int,
+) -> Any:
+    build_page_url = (
+        f"https://mobalytics.gg/lol/champions/{champion_name}/build/{role}"
+        if role is not None and role != ""
+        else f"https://mobalytics.gg/lol/champions/{champion_name}/aram-builds"
+    )
+    response = await conn.get(build_page_url)
+    content = await response.text()
+    tree = HTMLParser(content)
+
+    skill_order = tree.css(".m-m4se9")
+    skills = []
+    for node in skill_order:
+        skill_attr = node.text()
+        skills.append(skill_attr)
+    skills_string = " > ".join(skills)
+    nodes = tree.css(Payload_ItemSets.itemsets_css)
+    blocks: list[Block] = []
+    for node in nodes:
+        block_name_node = node.css_first("h4")
+        if len(blocks) == 0:
+            block_name = skills_string
+        else:
+            block_name = block_name_node.text() if block_name_node else ""
+        items_node = node.css(".m-5o4ika")
+        block_items: list[Item] = []
+        for item_node in items_node:
+            item = item_node.attributes.get("src")
+            matches = re.search("(\\d+)\\.png", item) if item else None
+            if matches is not None:
+                block_items.append(Item(1, matches.group(1)))
+        block = Block(block_items, block_name)
+        blocks.append(block)
+    nodes = tree.css(".m-1eeoc06")
+    situational_block_items: list[Item] = []
+    for node in nodes:
+        item = node.attributes.get("src")
+        matches = re.search("(\\d+)\\.png", item) if item else None
+        if matches is not None:
+            situational_block_items.append(Item(1, matches.group(1)))
+    block = Block(situational_block_items, "Situational Items")
+    blocks.append(block)
+    itemsets = ItemSet(
+        [champion_id],
+        blocks,
+        f"{champion_name} ({role})"
+        if role is not None and role != ""
+        else f"{champion_name} (ARAM)",
+    )
+    itemsets_payload = Payload_ItemSets(
+        accountId=summoner_id,
+        itemSets=[itemsets],
+        timestamp=0,
+    )
+
+    nodes = tree.css(Payload_Perks.main_perks_css)
+    main_perks = []
+    selected_perks = []
+    for node in nodes:
+        src = node.attributes.get("src")
+        matches = re.search("/(\\d+)\\.svg", src) if src else None
+        if matches:
+            main_perks.append(int(matches.group(1)))
+    for css in Payload_Perks.selected_perks_css:
+        nodes = tree.css(css)
+        for node in nodes:
+            src = node.attributes.get("src")
+            matches = re.search("/(\\d+)(\\.svg|\\.png)\\b", src) if src else None
+            if matches:
+                selected_perks.append(int(matches.group(1)))
+    perks_payload = Payload_Perks(
+        name=f"{champion_name} - {role}"
+        if role is not None and role != ""
+        else f"{champion_name} - ARAM",
+        current=True,
+        primaryStyleId=int(main_perks[0]),
+        subStyleId=int(main_perks[1]),
+        selectedPerkIds=selected_perks,
+    )
+
+    nodes = tree.css(Payload_Spells.spells_css)
+    spells_ids = []
+    for node in nodes:
+        src = node.attributes.get("src")
+        matches = re.search("(\\w+)\\.png", src) if src else None
+        if matches:
+            spells_ids.append(SPELLS[matches[1]])
+    spells_payload = Payload_Spells(
+        selectedSkinId=champion_id,
+        spell1Id=int(spells_ids[0]),
+        spell2Id=int(spells_ids[1]),
+    )
+    return itemsets_payload, perks_payload, spells_payload
 
 
 async def on_message(event: str | bytes, conn: Any) -> None:
@@ -103,96 +210,8 @@ async def on_message(event: str | bytes, conn: Any) -> None:
             await get_champion_name(conn, champion_id) if champion_id else None
         )
         role = ROLES.get(assigned_position) if assigned_position is not None else None
-        build_page_url = (
-            f"https://mobalytics.gg/lol/champions/{champion_name}/build/{role}"
-            if role is not None and role != ""
-            else f"https://mobalytics.gg/lol/champions/{champion_name}/aram-builds"
-        )
-        response = await conn.get(build_page_url)
-        content = await response.text()
-        tree = HTMLParser(content)
-
-        skill_order = tree.css(".m-m4se9")
-        skills = []
-        for node in skill_order:
-            skill_attr = node.text()
-            skills.append(skill_attr)
-        skills_string = " > ".join(skills)
-        nodes = tree.css(Payload_ItemSets.itemsets_css)
-        blocks: list[Block] = []
-        for node in nodes:
-            block_name_node = node.css_first("h4")
-            if len(blocks) == 0:
-                block_name = skills_string
-            else:
-                block_name = block_name_node.text() if block_name_node else ""
-            items_node = node.css(".m-5o4ika")
-            block_items: list[Item] = []
-            for item_node in items_node:
-                item = item_node.attributes.get("src")
-                matches = re.search("(\\d+)\\.png", item) if item else None
-                if matches is not None:
-                    block_items.append(Item(1, matches.group(1)))
-            block = Block(block_items, block_name)
-            blocks.append(block)
-        nodes = tree.css(".m-1eeoc06")
-        situational_block_items: list[Item] = []
-        for node in nodes:
-            item = node.attributes.get("src")
-            matches = re.search("(\\d+)\\.png", item) if item else None
-            if matches is not None:
-                situational_block_items.append(Item(1, matches.group(1)))
-        block = Block(situational_block_items, "Situational Items")
-        blocks.append(block)
-        itemsets = ItemSet(
-            [champion_id],
-            blocks,
-            f"{champion_name} ({role})"
-            if role is not None and role != ""
-            else f"{champion_name} (ARAM)",
-        )
-        itemsets_payload = Payload_ItemSets(
-            accountId=summoner_id,
-            itemSets=[itemsets],
-            timestamp=0,
-        )
-
-        nodes = tree.css(Payload_Perks.main_perks_css)
-        main_perks = []
-        selected_perks = []
-        for node in nodes:
-            src = node.attributes.get("src")
-            matches = re.search("/(\\d+)\\.svg", src) if src else None
-            if matches:
-                main_perks.append(int(matches.group(1)))
-        for css in Payload_Perks.selected_perks_css:
-            nodes = tree.css(css)
-            for node in nodes:
-                src = node.attributes.get("src")
-                matches = re.search("/(\\d+)(\\.svg|\\.png)\\b", src) if src else None
-                if matches:
-                    selected_perks.append(int(matches.group(1)))
-        perks_payload = Payload_Perks(
-            name=f"{champion_name} - {role}"
-            if role is not None and role != ""
-            else f"{champion_name} - ARAM",
-            current=True,
-            primaryStyleId=int(main_perks[0]),
-            subStyleId=int(main_perks[1]),
-            selectedPerkIds=selected_perks,
-        )
-
-        nodes = tree.css(Payload_Spells.spells_css)
-        spells_ids = []
-        for node in nodes:
-            src = node.attributes.get("src")
-            matches = re.search("(\\w+)\\.png", src) if src else None
-            if matches:
-                spells_ids.append(SPELLS[matches[1]])
-        spells_payload = Payload_Spells(
-            selectedSkinId=champion_id,
-            spell1Id=int(spells_ids[0]),
-            spell2Id=int(spells_ids[1]),
+        itemsets_payload, perks_payload, spells_payload = await get_mobalytics_info(
+            champion_name, role, conn, champion_id, summoner_id
         )
         global _last_champion_id
         if _last_champion_id != champion_id:
