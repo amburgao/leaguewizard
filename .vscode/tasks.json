@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "LeagueWizard",
+            "type": "shell",
+            "command": "uv run python src/leaguewizard/__init__.py",
+            "isBackground": true,
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "hide": true
+        }
+    ]
+}

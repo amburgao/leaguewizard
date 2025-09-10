@@ -22,6 +22,7 @@
         "cafile",
         "codespell",
         "currentpage",
+        "datefmt",
         "ddragon",
         "eeoc",
         "endpoit",
@@ -32,6 +33,7 @@
         "itemset",
         "itemsets",
         "lcumadesimple",
+        "leaguewiz",
         "leaguewizard",
         "leaguewizardlock",
         "levelname",
@@ -104,6 +106,17 @@
         "src/leaguewizard/py.typed": false,
         "docs": false
     },
+    "statusbar_command.commands": [
+        {
+            "text": "LeagueWizard",
+            "id": "runTask",
+            "name": "runTask",
+            "command": "workbench.action.tasks.runTask",
+            "arguments": [
+                "LeagueWizard"
+            ]
+        }
+    ],
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,

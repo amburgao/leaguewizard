@@ -7,6 +7,7 @@ import tempfile
 import threading
 import urllib
 import urllib.request
+from pathlib import Path
 from typing import Any
 
 import pystray
@@ -14,9 +15,13 @@ import win32api
 import win32event
 import win32security
 import winerror
+from loguru import logger
 from PIL import Image
 
 from leaguewizard.core import start
+
+Path("logs").mkdir(parents=True, exist_ok=True)
+logger.add("logs/leaguewiz_log.log", rotation="1 MB")
 
 
 def to_tray() -> Any:
