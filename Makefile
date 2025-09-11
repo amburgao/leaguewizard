@@ -1,4 +1,4 @@
-.PHONY: install prerequisites reset docs publish uv-sync-all docs
+.PHONY: install prerequisites reset docs publish uv-sync-all docs push-docs
 
 VERSION := $(shell git rev-parse --short HEAD)
 
@@ -29,3 +29,14 @@ reset:
 
 docs:
 	@mkdocs build -c
+
+push-docs:
+	@. .venv/Scripts/activate; \
+	$(MAKE) docs
+	find ../gh-pages -mindepth 1 -not -name '.git' -exec rm -rf {} +; \
+	cp -rf site/* ../gh-pages; \
+	cd ../gh-pages; \
+	git add .; \
+	git commit -m "Update docs from main"; \
+	git push origin gh-pages --no-verify -f; \
+	cd ../leaguewizard
