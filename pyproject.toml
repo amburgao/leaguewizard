@@ -43,6 +43,7 @@ dynamic = [
 dependencies = [
     "aiohttp>=3.12.15",
     "async-lru>=2.0.5",
+    "loguru>=0.7.3",
     "pillow>=11.3",
     "pystray>=0.19.5",
     "pywin32>=311",

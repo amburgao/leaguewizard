@@ -1,9 +1,9 @@
 ROLES = {
-    "TOP": "top",
-    "JUNGLE": "jungle",
-    "MID": "mid",
-    "BOTTOM": "adc",
-    "SUPPORT": "support",
+    "top": "top",
+    "jungle": "jungle",
+    "mid": "mid",
+    "bottom": "adc",
+    "utility": "support",
 }
 
 SPELLS = {

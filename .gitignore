@@ -212,4 +212,3 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 /uv.lock
-/riotgames.pem
