@@ -141,3 +141,4 @@ async def get_mobalytics_info(
         return itemsets_payload, perks_payload, spells_payload
     except (TypeError, AttributeError, ValueError, LeWizardGenericError) as e:
         logger.exception(e)
+        pass

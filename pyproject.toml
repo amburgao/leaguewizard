@@ -1,12 +1,13 @@
 [build-system]
 build-backend = "hatchling.build"
 requires = [
-    "hatch-vcs",
     "hatchling",
 ]
 
 [project]
 name = "leaguewizard"
+version = "0.2.1"
+
 description = "Auto sync your itemsets, perks and spells with mobalytics.gg ones on champion selection."
 readme = "README.md"
 
@@ -26,7 +27,7 @@ authors = [
 
     { name = "Hamburgão", email = "amburgao@users.noreply.github.com" },
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.10,<4.0"
 
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -34,19 +35,19 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Games/Entertainment",
-]
-dynamic = [
-    "version",
 ]
 dependencies = [
     "aiohttp>=3.12.15",
     "async-lru>=2.0.5",
     "loguru>=0.7.3",
     "pillow>=11.3",
+    "psutil>=7.0.0",
     "pystray>=0.19.5",
-    "pywin32>=311",
     "selectolax>=0.3.34",
     "websockets>=15.0.1",
 ]
@@ -74,8 +75,5 @@ docs = [
     "mkdocstrings[python]>=0.30.0",
 ]
 types = [
-    "types-pywin32>=311.0.0.20250822",
+    "types-psutil>=7.0.0.20250822",
 ]
-
-[tool.hatch.version]
-source = "vcs"

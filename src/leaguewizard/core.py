@@ -9,11 +9,11 @@ from pathlib import Path
 from typing import Any
 
 import aiohttp
+import psutil
 import websockets
 from async_lru import alru_cache
 from loguru import logger
 
-from leaguewizard.backend import find_process_fullname
 from leaguewizard.constants import ROLES
 from leaguewizard.mobalytics import get_mobalytics_info
 from leaguewizard.models import (
@@ -116,7 +116,8 @@ async def on_message(event: str | bytes, conn: Any) -> None:
                 send_spells(conn, spells_payload),
             )
         _last_champion_id = champion_id
-    except (json.decoder.JSONDecodeError, KeyError, TypeError, IndexError):
+    except (json.decoder.JSONDecodeError, KeyError, TypeError, IndexError) as e:
+        logger.exception(e)
         pass
     except KeyboardInterrupt:
         raise
@@ -163,9 +164,18 @@ async def send_spells(client: aiohttp.ClientSession, payload: Payload_Spells) ->
     )
 
 
+def find_proc_by_name(name: str | list[str]) -> str | None:
+    if type(name) is str:
+        name = list(name)
+    for proc in psutil.process_iter():
+        if proc.name() in name:
+            return proc.exe()
+    return None
+
+
 async def start() -> None:
-    exe = find_process_fullname("LeagueClient.exe")
-    if not exe:
+    exe = find_proc_by_name(["LeagueClient.exe", "LeagueClientUx.exe"])
+    if exe is None:
         msg = "league.exe not found."
         raise RuntimeError(msg)
     lockfile = _lcu_lockfile(exe)
@@ -191,6 +201,8 @@ async def start() -> None:
         KeyboardInterrupt,
         asyncio.exceptions.CancelledError,
         websockets.exceptions.ConnectionClosedError,
-    ):
+    ) as e:
+        logger.exception(e)
         pass
+
     return
