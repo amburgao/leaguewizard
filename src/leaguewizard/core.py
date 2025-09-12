@@ -5,6 +5,8 @@ import base64
 import contextlib
 import json
 import ssl
+import tempfile
+import urllib
 from pathlib import Path
 from typing import Any
 
@@ -25,7 +27,11 @@ from leaguewizard.models import (
 _last_champion_id = None
 
 
-RIOT_CERT = Path("./riotgames.pem").resolve()
+RIOT_CERT = Path(tempfile.gettempdir(), "riotgames.pem")
+if not RIOT_CERT.exists():
+    urllib.request.urlretrieve(
+        "https://static.developer.riotgames.com/docs/lol/riotgames.pem", RIOT_CERT
+    )
 
 context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
 context.load_verify_locations(RIOT_CERT)
@@ -116,8 +122,7 @@ async def on_message(event: str | bytes, conn: Any) -> None:
                 send_spells(conn, spells_payload),
             )
         _last_champion_id = champion_id
-    except (json.decoder.JSONDecodeError, KeyError, TypeError, IndexError) as e:
-        logger.exception(e)
+    except (json.decoder.JSONDecodeError, KeyError, TypeError, IndexError):
         pass
     except KeyboardInterrupt:
         raise
@@ -198,11 +203,10 @@ async def start() -> None:
                 async for event in ws:
                     await on_message(event, conn)
     except (
-        KeyboardInterrupt,
         asyncio.exceptions.CancelledError,
         websockets.exceptions.ConnectionClosedError,
     ) as e:
-        logger.exception(e)
+        logger.exception(e.args)
         pass
 
     return

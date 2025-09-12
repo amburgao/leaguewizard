@@ -15,8 +15,10 @@ from PIL import Image
 from leaguewizard.core import start
 from leaguewizard.exceptions import LeWizardGenericError
 
-Path("logs").mkdir(parents=True, exist_ok=True)
-logger.add("logs/leaguewiz_log.log", rotation="1 MB")
+logfile = Path(tempfile.gettempdir(), "logs")
+if not logfile.exists():
+    logfile.mkdir(parents=True, exist_ok=True)
+logger.add(f"{str(logfile)}/leaguewiz_log.log", rotation="1 MB")
 
 
 def to_tray() -> Any:
