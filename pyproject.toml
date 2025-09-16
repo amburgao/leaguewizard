@@ -1,12 +1,10 @@
 [build-system]
-build-backend = "hatchling.build"
-requires = [
-    "hatchling",
-]
+build-backend = "uv_build"
+requires = ["uv_build"]
 
 [project]
 name = "leaguewizard"
-version = "0.2.3"
+version = "0.3.0"
 
 description = "Auto sync your itemsets, perks and spells with mobalytics.gg ones on champion selection."
 readme = "README.md"
@@ -78,3 +76,7 @@ docs = [
 types = [
     "types-psutil>=7.0.0.20250822",
 ]
+
+
+[tool.uv.workspace]
+members = ["."]
