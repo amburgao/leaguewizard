@@ -218,3 +218,4 @@ __marimo__/
 .vscode/tasks.json
 .vscode/settings.json
 .vscode/keybindings.json
+scripts/autoDocstring/
