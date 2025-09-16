@@ -206,11 +206,11 @@ def _get_spells(html: HTMLParser) -> list[int]:
 
 
 def _get_spells_payload(spells: list[int]) -> Any:
-    if os.getenv("FLASH_POS") is not None:
-        flash_config = os.getenv("FLASH_POS", "").lower()
-    else:
-        flash_config = WizConfig["spells"]["flash"]
-    if flash_config != "":
-        flash_pos = 0 if flash_config == "on_left" else 1
-        spells = _set_flash_position(spells, 4, flash_pos)
+    flash_env = os.getenv("FLASH_POS", None)
+    flash_config = (
+        os.getenv("FLASH_POS", "").lower()
+        if flash_env is not None
+        else WizConfig["spells"]["flash"]
+    )
+    spells = _set_flash_position(spells, 4, (0 if flash_config == "on_left" else 1))
     return Payload_Spells(spells[0], spells[1], selectedSkinId=0)

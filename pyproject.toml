@@ -1,10 +1,10 @@
 [build-system]
 build-backend = "uv_build"
-requires = ["uv_build"]
+requires = [ "uv-build" ]
 
 [project]
 name = "leaguewizard"
-version = "0.3.0"
+version = "0.4.0"
 
 description = "Auto sync your itemsets, perks and spells with mobalytics.gg ones on champion selection."
 readme = "README.md"
@@ -43,10 +43,9 @@ dependencies = [
     "aiohttp>=3.12.15",
     "async-lru>=2.0.5",
     "dotenv>=0.9.9",
+    "infi-systray>=0.1.12.1",
     "loguru>=0.7.3",
-    "pillow>=11.3",
     "psutil>=7.0.0",
-    "pystray>=0.19.5",
     "selectolax>=0.3.34",
     "websockets>=15.0.1",
 ]
@@ -60,6 +59,7 @@ gui-scripts.leaguewizard = "leaguewizard.__init__:main"
 dev = [
     "hatch>=1.14.1",
     "mypy>=1.14.1",
+    "nuitka>=2.7.14",
     "pyinstaller>=6.15",
     "ruff>=0.12.11",
 ]
@@ -77,6 +77,5 @@ types = [
     "types-psutil>=7.0.0.20250822",
 ]
 
-
 [tool.uv.workspace]
-members = ["."]
+members = [ "." ]

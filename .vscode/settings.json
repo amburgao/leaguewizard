@@ -1,4 +1,6 @@
 {
+    "mbake.configPath": "./mbake.toml",
+    "mbake.formatOnSave": true,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -38,6 +40,7 @@
         "leaguewizardlock",
         "levelname",
         "minversion",
+        "mkdocs",
         "mobalytics",
         "mypy",
         "myst",
@@ -53,6 +56,7 @@
         "pydocstyle",
         "Pyflakes",
         "pyinstaller",
+        "pypi",
         "pyproject",
         "pystray",
         "pytest",

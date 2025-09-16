@@ -1,0 +1,22 @@
+aiohappyeyeballs==2.6.1
+aiohttp==3.12.15
+aiosignal==1.4.0
+async-lru==2.0.5
+attrs==25.3.0
+colorama==0.4.6
+dotenv==0.9.9
+frozenlist==1.7.0
+idna==3.10
+infi-systray==0.1.12.1
+loguru==0.7.3
+multidict==6.6.4
+propcache==0.3.2
+psutil==7.0.0
+python-dotenv==1.1.1
+selectolax==0.3.34
+websockets==15.0.1
+win32-setctime==1.2.0
+yarl==1.20.1
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools

@@ -3,6 +3,7 @@ from __future__ import annotations
 import asyncio
 import base64
 import json
+import os
 import ssl
 import sys
 import tempfile
@@ -13,6 +14,7 @@ from typing import Any
 import aiohttp
 import psutil
 import websockets
+from infi.systray import SysTrayIcon
 from loguru import logger
 
 from leaguewizard.callback_handler import on_message
@@ -62,30 +64,39 @@ def find_proc_by_name(name: str | list[str]) -> Any:
 
 
 async def start() -> None:
-    exe = find_proc_by_name(["LeagueClient.exe", "LeagueClientUx.exe"])
-    if exe is None:
-        msg = "league.exe not found."
-        raise LeWizardGenericError(msg, True, "abc", True)
-    lockfile = _lcu_lockfile(exe)
-    lockfile_data = _lcu_wss(lockfile)
-    https = lockfile_data["https"]
-    wss = lockfile_data["wss"]
-    auth = lockfile_data["auth"]
-    header = {"Authorization": f"Basic {auth}"}
+    ico = f"{tempfile.gettempdir()}\\logo.ico"
+    urllib.request.urlretrieve(
+        "https://github.com/amburgao/leaguewizard/blob/main/.github/images/logo.ico?raw=true",
+        ico,
+    )
+    tray = SysTrayIcon(ico, "LeagueWizard", on_quit=lambda e: os._exit(0))
+    with tray:
+        exe = find_proc_by_name(["LeagueClient.exe", "LeagueClientUx.exe"])
+        if exe is None:
+            msg = "league.exe not found."
+            raise LeWizardGenericError(msg, True, "abc", True)
+        lockfile = _lcu_lockfile(exe)
+        lockfile_data = _lcu_wss(lockfile)
+        https = lockfile_data["https"]
+        wss = lockfile_data["wss"]
+        auth = lockfile_data["auth"]
+        header = {"Authorization": f"Basic {auth}"}
 
-    try:
-        async with websockets.connect(
-            uri=wss,
-            additional_headers=header,
-            ssl=context,
-        ) as ws:
-            await ws.send('[2,"0", "GetLolSummonerV1CurrentSummoner"]')
-            json.loads(await ws.recv())
-            await ws.send('[5, "OnJsonApiEvent_lol-champ-select_v1_session"]')
-            async with aiohttp.ClientSession(base_url=https, headers=header) as conn:
-                async for event in ws:
-                    await on_message(event, conn)
-    except websockets.exceptions.ConnectionClosedError as e:
-        logger.exception(e.args)
-    except (KeyboardInterrupt, asyncio.exceptions.CancelledError):
-        sys.exit(0)
+        try:
+            async with websockets.connect(
+                uri=wss,
+                additional_headers=header,
+                ssl=context,
+            ) as ws:
+                await ws.send('[2,"0", "GetLolSummonerV1CurrentSummoner"]')
+                json.loads(await ws.recv())
+                await ws.send('[5, "OnJsonApiEvent_lol-champ-select_v1_session"]')
+                async with aiohttp.ClientSession(
+                    base_url=https, headers=header
+                ) as conn:
+                    async for event in ws:
+                        await on_message(event, conn)
+        except websockets.exceptions.ConnectionClosedError as e:
+            logger.exception(e.args)
+        except (KeyboardInterrupt, asyncio.exceptions.CancelledError):
+            sys.exit(0)

@@ -1,12 +1,19 @@
+"""."""
+
 import os
 import pathlib
 import sys
 
-import tomllib
+from leaguewizard.constants import MIN_PY_VER
+
+if sys.version_info[1] <= MIN_PY_VER:
+    from tomli import load  # pyright: ignore
+else:
+    from tomllib import load
 
 options = []
 
-appdata_dir = os.getenv("LOCALAPPDATA")
+appdata_dir = os.getenv("LOCALAPPDATA", None)
 
 if appdata_dir is not None:
     appdata_option = pathlib.Path(appdata_dir) / "LeagueWizard" / "config.toml"
@@ -26,6 +33,6 @@ for candidate in options:
 
 if "path" in locals():
     with path.open(mode="rb") as f:
-        WizConfig = tomllib.load(f)
+        WizConfig = load(f)
 else:
-    WizConfig = {}
+    WizConfig = {"spells": {"flash": ""}}
