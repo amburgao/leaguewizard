@@ -1,0 +1,4 @@
+[spells]
+# Summoner spell FLASH position.
+# Possible values: "on_left" (usually [D]), "on_right" (usually [F]).
+flash = ""
