@@ -7,7 +7,6 @@ from typing import Any
 
 import aiohttp
 from async_lru import alru_cache
-from dotenv import load_dotenv
 from loguru import logger
 from selectolax.parser import HTMLParser, Node
 
@@ -22,9 +21,6 @@ from leaguewizard.models import (
     Payload_Perks,
     Payload_Spells,
 )
-
-if Path(".env").exists():
-    load_dotenv(".env")
 
 
 def _build_url(champion_name: str, role: str | None) -> str:
@@ -207,6 +203,12 @@ def _get_spells(html: HTMLParser) -> list[int]:
 
 def _get_spells_payload(spells: list[int]) -> Any:
     flash_env = os.getenv("FLASH_POS", None)
+    if flash_env is None:
+        from dotenv import load_dotenv  # noqa: PLC0415
+
+        if Path(".env").exists():
+            load_dotenv(".env")
+            flash_env = os.getenv("FLASH_POS", None)
     flash_config = (
         os.getenv("FLASH_POS", "").lower()
         if flash_env is not None
