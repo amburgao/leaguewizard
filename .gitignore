@@ -212,3 +212,9 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 /uv.lock
+/src/makedocs
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/tasks.json
+.vscode/settings.json
+.vscode/keybindings.json

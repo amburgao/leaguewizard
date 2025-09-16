@@ -1,14 +1,18 @@
 """Mobalytics handler module."""
 
+import os
 import re
+from pathlib import Path
 from typing import Any
 
 import aiohttp
 from async_lru import alru_cache
+from dotenv import load_dotenv
 from loguru import logger
-from selectolax.parser import HTMLParser
+from selectolax.parser import HTMLParser, Node
 
-from leaguewizard.constants import SPELLS
+from leaguewizard.config import WizConfig
+from leaguewizard.constants import RESPONSE_ERROR_CODE, SPELLS
 from leaguewizard.exceptions import LeWizardGenericError
 from leaguewizard.models import (
     Block,
@@ -18,6 +22,9 @@ from leaguewizard.models import (
     Payload_Perks,
     Payload_Spells,
 )
+
+if Path(".env").exists():
+    load_dotenv(".env")
 
 
 def _build_url(champion_name: str, role: str | None) -> str:
@@ -32,7 +39,7 @@ def _build_url(champion_name: str, role: str | None) -> str:
 async def _get_html(url: str, client: aiohttp.ClientSession) -> HTMLParser:
     try:
         response = await client.get(url)
-        if response.status >= 400:
+        if response.status >= RESPONSE_ERROR_CODE:
             raise ConnectionError
         raw_html = await response.text()
         return HTMLParser(raw_html)
@@ -44,7 +51,7 @@ async def _get_html(url: str, client: aiohttp.ClientSession) -> HTMLParser:
 @alru_cache
 async def get_mobalytics_info(
     champion_name: str,
-    role: str,
+    role: str | None,
     conn: aiohttp.ClientSession,
     champion_id: int,
     summoner_id: int,
@@ -52,93 +59,158 @@ async def get_mobalytics_info(
     """TODO."""
     try:
         page_url = _build_url(champion_name, role)
-        tree = await _get_html(page_url, conn)
-        if tree is None:
-            pass
-        skill_order = tree.css(".m-m4se9")
-        skills = []
-        for node in skill_order:
-            skill_attr = node.text()
-            skills.append(skill_attr)
-        skills_string = " > ".join(skills)
-        nodes = tree.css(Payload_ItemSets.itemsets_css)
-        blocks: list[Block] = []
-        for node in nodes:
-            block_name_node = node.css_first("h4")
-            if len(blocks) == 0:
-                block_name = skills_string
-            else:
-                block_name = block_name_node.text() if block_name_node else ""
-            items_node = node.css(".m-5o4ika")
-            block_items: list[Item] = []
-            for item_node in items_node:
-                item = item_node.attributes.get("src")
-                matches = re.search("(\\d+)\\.png", item) if item else None
-                if matches is not None:
-                    block_items.append(Item(1, matches.group(1)))
-            block = Block(block_items, block_name)
-            blocks.append(block)
-        nodes = tree.css(".m-1eeoc06")
-        situational_block_items: list[Item] = []
-        for node in nodes:
-            item = node.attributes.get("src")
-            matches = re.search("(\\d+)\\.png", item) if item else None
-            if matches is not None:
-                situational_block_items.append(Item(1, matches.group(1)))
-        block = Block(situational_block_items, "Situational Items")
-        blocks.append(block)
-        itemsets = ItemSet(
-            [champion_id],
-            blocks,
-            f"{champion_name} ({role})"
-            if role is not None and role != ""
-            else f"{champion_name} (ARAM)",
+        response = await conn.get(page_url)
+        page_content = await response.text()
+        tree = HTMLParser(page_content)
+
+        item_sets = (
+            _get_aram_item_sets(tree) if role is None else _get_sr_item_sets(tree)
         )
-        itemsets_payload = Payload_ItemSets(
-            accountId=summoner_id,
-            itemSets=[itemsets],
-            timestamp=0,
+        itemsets_payload = _get_item_sets_payload(
+            item_sets, summoner_id, champion_id, champion_name
         )
 
-        nodes = tree.css(Payload_Perks.main_perks_css)
-        main_perks = []
-        selected_perks = []
-        for node in nodes:
-            src = node.attributes.get("src")
-            matches = re.search("/(\\d+)\\.svg", src) if src else None
-            if matches:
-                main_perks.append(int(matches.group(1)))
-        for css in Payload_Perks.selected_perks_css:
-            nodes = tree.css(css)
-            for node in nodes:
-                src = node.attributes.get("src")
-                matches = re.search("/(\\d+)(\\.svg|\\.png)\\b", src) if src else None
-                if matches:
-                    selected_perks.append(int(matches.group(1)))
-        perks_payload = Payload_Perks(
-            name=f"{champion_name} - {role}"
-            if role is not None and role != ""
-            else f"{champion_name} - ARAM",
-            current=True,
-            primaryStyleId=int(main_perks[0]),
-            subStyleId=int(main_perks[1]),
-            selectedPerkIds=selected_perks,
+        perks = _get_perks(tree)
+
+        perks_payload = _get_perks_payload(
+            perks=perks, champion_name=champion_name, role=role
         )
 
-        nodes = tree.css(Payload_Spells.spells_css)
-        spells_ids = []
-        for node in nodes:
-            src = node.attributes.get("src")
-            matches = re.search("(\\w+)\\.png", src) if src else None
-            if matches:
-                spells_ids.append(SPELLS[matches[1]])
-        spells_payload = Payload_Spells(
-            selectedSkinId=champion_id,
-            spell1Id=int(spells_ids[0]),
-            spell2Id=int(spells_ids[1]),
-        )
+        spells = _get_spells(tree)
+        spells_payload = _get_spells_payload(spells)
+
         logger.debug(f"Added to cache: {champion_name}")
         return itemsets_payload, perks_payload, spells_payload
     except (TypeError, AttributeError, ValueError, LeWizardGenericError) as e:
         logger.exception(e)
-        pass
+
+
+def _get_itemsets(tree: list[Node]) -> list[list[Any]]:
+    item_sets_groups = []
+
+    for node in tree:
+        items = []
+
+        if node is None:
+            continue
+
+        for img in node.css("img"):
+            src = img.attributes.get("src")
+            matches = re.search("/(\\d+)\\.png", src) if src else None
+
+            if matches:
+                items.append(matches.group(1))
+
+        item_sets_groups.append(items)
+    return item_sets_groups
+
+
+def _get_sr_item_sets(html: HTMLParser) -> dict[str, Any]:
+    container_div = html.css_first("div.m-owe8v3:nth-child(2)")
+
+    if container_div is None:
+        raise ValueError
+
+    tree = container_div.css(".m-1q4a7cx") + html.css(".m-s76v8c")
+    itemsets = _get_itemsets(tree)
+    return {
+        "Starter Items": itemsets[0],
+        "Early Items": itemsets[1],
+        "Core Items": itemsets[2],
+        "Full Build": itemsets[3],
+        "Situational Items": itemsets[4],
+    }
+
+
+def _get_aram_item_sets(html: HTMLParser) -> dict[str, Any]:
+    container_div = html.css_first("div.m-owe8v3:nth-child(2)")
+
+    if container_div is None:
+        raise ValueError
+
+    tree = container_div.css(".m-1q4a7cx") + html.css(".m-s76v8c")
+    itemsets = _get_itemsets(tree)
+    return {
+        "Starter Items": itemsets[0],
+        "Core Items": itemsets[1],
+        "Full Build": itemsets[2],
+        "Situational Items": itemsets[3],
+    }
+
+
+def _get_item_sets_payload(
+    item_sets: dict, accountId: int, champion_id: int, champion_name: str
+) -> Any:
+    blocks = []
+    for block, items in item_sets.items():
+        _items = []
+        for item in items:
+            _items.append(Item(1, item))
+        blocks.append(Block(_items, block))
+    itemset = ItemSet([champion_id], blocks, champion_name)
+    return Payload_ItemSets(accountId, [itemset], 0)
+
+
+def _get_perks(html: HTMLParser) -> Any:
+    perks_selectors = [".m-68x97p", ".m-1iebrlh", ".m-1nx2cdb", ".m-1u3ui07"]
+    perks = []
+    for selector in perks_selectors:
+        nodes = html.css(selector)
+        for node in nodes:
+            src = node.attributes.get("src")
+            if src:
+                matches = re.search("/(\\d+)\\.(svg|png)\\b", src)
+                if matches:
+                    perks.append(int(matches.group(1)))
+    if len(perks) == 0:
+        raise ValueError
+    return perks
+
+
+def _get_perks_payload(perks: Any, champion_name: str, role: str | None) -> Any:
+    return Payload_Perks(
+        name=f"{champion_name} - {role}"
+        if role is not None and role != ""
+        else f"{champion_name} - ARAM",
+        current=True,
+        primaryStyleId=perks[0],
+        subStyleId=perks[1],
+        selectedPerkIds=perks[2:],
+    )
+
+
+def _set_flash_position(
+    spell_list: list[int], spell_id: int = 4, index: int = 1
+) -> list[int]:
+    if spell_id not in spell_list:
+        return spell_list
+
+    spell_list = [x for x in spell_list if x != spell_id]
+    spell_list.insert(index, spell_id)
+    return spell_list
+
+
+def _get_spells(html: HTMLParser) -> list[int]:
+    spells = []
+
+    nodes = html.css(".m-d3vnz1")
+    for node in nodes:
+        alt = node.attributes.get("alt")
+        if not alt:
+            raise ValueError
+        spell = SPELLS[alt]
+        spells.append(int(spell))
+    if not spells:
+        raise ValueError
+    return spells
+
+
+def _get_spells_payload(spells: list[int]) -> Any:
+    if os.getenv("FLASH_POS") is not None:
+        flash_config = os.getenv("FLASH_POS", "").lower()
+    else:
+        flash_config = WizConfig["spells"]["flash"]
+    if flash_config != "":
+        flash_pos = 0 if flash_config == "on_left" else 1
+        spells = _set_flash_position(spells, 4, flash_pos)
+    return Payload_Spells(spells[0], spells[1], selectedSkinId=0)

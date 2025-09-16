@@ -48,6 +48,9 @@ nav:
 
 copyright: Copyright &copy; 2025 Hamburgão
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.highlight:
       default_lang: python
       use_pygments: true

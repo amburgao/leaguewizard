@@ -26,3 +26,6 @@ SPELLS = {
     "Summoner_UltBookPlaceholder": "54",
     "Summoner_UltBookSmitePlaceholder": "55",
 }
+
+
+RESPONSE_ERROR_CODE = 400

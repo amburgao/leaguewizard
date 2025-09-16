@@ -44,6 +44,7 @@ classifiers = [
 dependencies = [
     "aiohttp>=3.12.15",
     "async-lru>=2.0.5",
+    "dotenv>=0.9.9",
     "loguru>=0.7.3",
     "pillow>=11.3",
     "psutil>=7.0.0",

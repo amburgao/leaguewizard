@@ -3,11 +3,14 @@ src = ["src"]
 
 [lint]
 select = [
+    "ASYNC",
     "B",
     "D",
     "E",
     "F",
     "I",
+    "PIE",
+    "PL",
     "RUF100",
     "S",
     "SIM",

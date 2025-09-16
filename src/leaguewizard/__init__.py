@@ -2,6 +2,7 @@
 
 import asyncio
 import os
+import socket
 import tempfile
 import threading
 import urllib
@@ -15,10 +16,10 @@ from PIL import Image
 from leaguewizard.core import start
 from leaguewizard.exceptions import LeWizardGenericError
 
-logfile = Path(tempfile.gettempdir(), "logs")
-if not logfile.exists():
-    logfile.mkdir(parents=True, exist_ok=True)
-logger.add(f"{str(logfile)}/leaguewiz_log.log", rotation="1 MB")
+base_dir = os.getenv("LOCALAPPDATA", "tempfile.gettempdir()")
+lewizard_dir = Path(base_dir, "LeagueWizard")
+log_dir = Path(lewizard_dir, "logs")
+log_dir.mkdir(parents=True, exist_ok=True)
 
 
 def to_tray() -> Any:
@@ -40,9 +41,9 @@ def to_tray() -> Any:
 
 
 def main() -> None:
-    """LeagueWizard main entry point function."""
-    import socket
+    logger.add(f"{log_dir}/log.txt", rotation="1MB")
 
+    """LeagueWizard main entry point function."""
     s = socket.socket()
     try:
         s.bind(("127.0.0.1", 54321))

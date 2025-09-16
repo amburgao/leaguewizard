@@ -1,6 +1,7 @@
 """Exceptions module for LeWizard."""
 
 import sys
+from tkinter import messagebox
 
 
 class LeWizardGenericError(Exception):
@@ -11,8 +12,6 @@ class LeWizardGenericError(Exception):
     ) -> None:
         super().__init__(message)
         if show:
-            from tkinter import messagebox
-
             messagebox.showerror(title=title, message=message)
         if exit:
             sys.exit()
