@@ -1158,3 +1158,10 @@ __init__.dist/tk/ttk/vistaTheme.tcl
 __init__.dist/tk/ttk/winTheme.tcl
 __init__.dist/tk/ttk/xpTheme.tcl
 __init__.exe
+
+
+#Ignore insiders AI rules
+.github\instructions\codacy.instructions.md
+.codacy/cli.sh
+.codacy/codacy.yaml
+.github/instructions/codacy.instructions.md

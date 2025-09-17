@@ -17,9 +17,8 @@ log_dir.mkdir(parents=True, exist_ok=True)
 
 
 def main() -> None:
-    logger.add(f"{log_dir}/log.txt", rotation="1MB")
-
     """LeagueWizard main entry point function."""
+    logger.add(f"{log_dir}/log.txt", rotation="1MB")
     s = socket.socket()
     try:
         s.bind(("127.0.0.1", 54321))

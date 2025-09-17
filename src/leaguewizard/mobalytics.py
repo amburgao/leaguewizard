@@ -23,25 +23,107 @@ from leaguewizard.models import (
 )
 
 
-def _build_url(champion_name: str, role: str | None) -> str:
-    base_url = "https://mobalytics.gg/lol/champions"
-    return (
-        f"{base_url}/{champion_name}/build/{role}"
-        if role != "" and role is not None
-        else f"{base_url}/{champion_name}/aram-builds"
-    )
+class MobaChampion:
+    """Represents the champion mobalytics webpage."""
 
+    def __init__(self, champion_name: str, role: str) -> None:
+        """Initializes the MobaChampion instance.
 
-async def _get_html(url: str, client: aiohttp.ClientSession) -> HTMLParser:
-    try:
-        response = await client.get(url)
-        if response.status >= RESPONSE_ERROR_CODE:
-            raise ConnectionError
-        raw_html = await response.text()
-        return HTMLParser(raw_html)
-    except (aiohttp.ClientResponseError, ConnectionError) as e:
-        logger.error(e)
-        raise LeWizardGenericError("_get_html returned None.") from e
+        Args:
+            champion_name (str): The name of the champion.
+            role (str): The role of the champion (e.g., "top", "aram").
+        """
+        self.champion_name = champion_name
+        self.role = role
+        self.url = self._build_url()
+        self.html: HTMLParser | None = None
+
+    def _build_url(self) -> str:
+        """Builds the Mobalytics URL for the champion and role.
+
+        Returns:
+            str: The constructed URL.
+        """
+        base_url = "https://mobalytics.gg/lol/champions"
+        endpoint = (
+            f"{self.champion_name}/build/{self.role}"
+            if self.role != "aram"
+            else f"{self.champion_name}/aram-builds"
+        )
+        return f"{base_url}/{endpoint}"
+
+    async def fetch_data(self, client: aiohttp.ClientSession) -> HTMLParser:
+        """Fetches the HTML content of the Mobalytics champion page.
+
+        Args:
+            client (aiohttp.ClientSession): The aiohttp client session.
+
+        Raises:
+            LeWizardGenericError: If the champion HTML could not be retrieved.
+
+        Returns:
+            HTMLParser: The parsed HTML content.
+        """
+        try:
+            response = await client.get(self.url)
+            if response.status >= RESPONSE_ERROR_CODE:
+                raise aiohttp.ClientResponseError(
+                    response.request_info, response.history
+                )
+            content = await response.text()
+            self.html = HTMLParser(content)
+            return self.html
+        except aiohttp.ClientResponseError as e:
+            raise LeWizardGenericError("Could not get champion html.") from e
+
+    def _get_itemsets_by_role(self) -> Any:
+        if self.html is None:
+            return {}
+        if self.role == "aram":
+            return _get_aram_item_sets(self.html)
+        return _get_sr_item_sets(self.html)
+
+    def itemsets_payload(self, summoner_id: int, champion_id: int) -> Any:
+        """Generates the item sets payload for the LCU API.
+
+        Args:
+            summoner_id (int): The summoner's ID.
+            champion_id (int): The champion's ID.
+
+        Returns:
+            Any: The Payload_ItemSets object.
+        """
+        return _get_item_sets_payload(
+            self._get_itemsets_by_role(),
+            summoner_id,
+            champion_id,
+            self.champion_name,
+            self.role,
+        )
+
+    def perks_payload(self) -> Any:
+        """Generates the perks payload for the LCU API.
+
+        Returns:
+            Any: The Payload_Perks object or an empty dictionary if not HTML.
+        """
+        if self.html is None:
+            return {}
+        return _get_perks_payload(
+            perks=_get_perks(self.html),
+            champion_name=self.champion_name,
+            role=self.role,
+        )
+
+    def spells_payload(self) -> Any:
+        """Generates the spells payload for the LCU API.
+
+        Returns:
+            Any: The Payload_Spells object or an empty dictionary if not HTML.
+        """
+        if self.html is None:
+            return {}
+        return _get_spells_payload(_get_spells(self.html))
 
 
 @alru_cache
@@ -54,26 +136,14 @@ async def get_mobalytics_info(
 ) -> Any:
     """TODO."""
     try:
-        page_url = _build_url(champion_name, role)
-        response = await conn.get(page_url)
-        page_content = await response.text()
-        tree = HTMLParser(page_content)
+        if role is None:
+            role = "aram"
+        champion = MobaChampion(champion_name, role)
+        await champion.fetch_data(conn)
 
-        item_sets = (
-            _get_aram_item_sets(tree) if role is None else _get_sr_item_sets(tree)
-        )
-        itemsets_payload = _get_item_sets_payload(
-            item_sets, summoner_id, champion_id, champion_name
-        )
-
-        perks = _get_perks(tree)
-
-        perks_payload = _get_perks_payload(
-            perks=perks, champion_name=champion_name, role=role
-        )
-
-        spells = _get_spells(tree)
-        spells_payload = _get_spells_payload(spells)
+        itemsets_payload = champion.itemsets_payload(summoner_id, champion_id)
+        perks_payload = champion.perks_payload()
+        spells_payload = champion.spells_payload()
 
         logger.debug(f"Added to cache: {champion_name}")
         return itemsets_payload, perks_payload, spells_payload
@@ -135,7 +205,7 @@ def _get_aram_item_sets(html: HTMLParser) -> dict[str, Any]:
 
 
 def _get_item_sets_payload(
-    item_sets: dict, accountId: int, champion_id: int, champion_name: str
+    item_sets: dict, accountId: int, champion_id: int, champion_name: str, role: str
 ) -> Any:
     blocks = []
     for block, items in item_sets.items():
@@ -143,7 +213,9 @@ def _get_item_sets_payload(
         for item in items:
             _items.append(Item(1, item))
         blocks.append(Block(_items, block))
-    itemset = ItemSet([champion_id], blocks, champion_name)
+    itemset = ItemSet(
+        [champion_id], blocks, f"{champion_name.capitalize()} - {role.upper()}"
+    )
     return Payload_ItemSets(accountId, [itemset], 0)
 
 
@@ -163,11 +235,9 @@ def _get_perks(html: HTMLParser) -> Any:
     return perks
 
 
-def _get_perks_payload(perks: Any, champion_name: str, role: str | None) -> Any:
+def _get_perks_payload(perks: Any, champion_name: str, role: str) -> Any:
     return Payload_Perks(
-        name=f"{champion_name} - {role}"
-        if role is not None and role != ""
-        else f"{champion_name} - ARAM",
+        name=f"{champion_name.capitalize()} - {role.upper()}",
         current=True,
         primaryStyleId=perks[0],
         subStyleId=perks[1],
