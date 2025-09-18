@@ -1,3 +1,10 @@
+"""Core module for LeagueWizard, handling LCU connection and event processing.
+
+This module establishes a connection to the League of Legends client (LCU) via
+WebSocket, retrieves necessary authentication details, and dispatches incoming
+game events to the `on_message` handler. It also manages the system tray icon.
+"""
+
 from __future__ import annotations
 
 import asyncio
@@ -40,7 +47,7 @@ def _lcu_lockfile(league_exe: str) -> Path:
 
 
 def _lcu_wss(lockfile: Path) -> dict[str, str]:
-    with lockfile.open() as f:
+    with lockfile.open(encoding="utf_8") as f:
         content = f.read()
     parts = content.split(":")
 
@@ -55,21 +62,40 @@ def _lcu_wss(lockfile: Path) -> dict[str, str]:
 
 
 def find_proc_by_name(name: str | list[str]) -> Any:
+    """Finds the executable path of a process by its name.
+
+    Args:
+        name (str | list[str]): The name(s) of the process to find (e.g.,
+            "LeagueClient.exe").
+
+    Returns:
+        Any: The full path to the executable if found, otherwise None.
+    """
     if type(name) is str:
         name = list(name)
-    for proc in psutil.process_iter():
+    proc_list = psutil.process_iter()  # type: ignore[no-untyped-call]
+    for proc in proc_list:
         if proc.name() in name:
             return proc.exe()
     return None
 
 
 async def start() -> None:
+    """Initializes the application, connects to the LCU, and starts listening events.
+
+    Raises:
+        LeWizardGenericError: If 'LeagueClient.exe' or 'LeagueClientUx.exe'
+            is not found.
+
+    Returns:
+        None: This function runs indefinitely until interrupted.
+    """
     ico = f"{tempfile.gettempdir()}\\logo.ico"
     urllib.request.urlretrieve(
         "https://github.com/amburgao/leaguewizard/blob/main/.github/images/logo.ico?raw=true",
         ico,
     )
-    tray = SysTrayIcon(ico, "LeagueWizard", on_quit=lambda e: os._exit(0))
+    tray = SysTrayIcon(ico, "LeagueWizard", on_quit=lambda e: os._exit(0))  # type: ignore[no-untyped-call]
     with tray:
         exe = find_proc_by_name(["LeagueClient.exe", "LeagueClientUx.exe"])
         if exe is None:

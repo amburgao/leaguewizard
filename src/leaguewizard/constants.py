@@ -1,3 +1,9 @@
+"""Defines constant values used throughout the LeagueWizard application.
+
+This module centralizes various fixed data, such as role mappings, summoner spell
+IDs, API response error codes, and minimum Python version requirements.
+"""
+
 ROLES = {
     "top": "top",
     "jungle": "jungle",

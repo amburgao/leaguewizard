@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "leaguewizard"
-version = "0.4.2"
+version = "0.4.3"
 
 description = "Auto sync your itemsets, perks and spells with mobalytics.gg ones on champion selection."
 readme = "README.md"
@@ -48,6 +48,7 @@ dependencies = [
     "infi-systray>=0.1.12.1",
     "loguru>=0.7.3",
     "psutil>=7.0.0",
+    "pydantic>=2.11.9",
     "selectolax>=0.3.34",
     "websockets>=15.0.1",
 ]
@@ -59,10 +60,11 @@ gui-scripts.leaguewizard = "leaguewizard.__init__:main"
 
 [dependency-groups]
 dev = [
-    "mypy>=1.14.1",
-    "pyinstaller>=6.15",
-    "ruff>=0.12.11",
+    "mypy>=1.18.1",
+    "ruff>=0.13.0",
 ]
+
+[project.optional-dependencies]
 
 docs = [
     "mkdocs>=1.6.1",
@@ -80,3 +82,50 @@ types = [
 
 [tool.uv.workspace]
 members = ["."]
+
+[tool.ruff]
+fix = true
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "ASYNC",
+    "B",
+    "C4",
+    "D",
+    "E",
+    "ERA",
+    "F",
+    "I",
+    "N",
+    "PIE",
+    "PL",
+    "RUF100",
+    "S",
+    "SIM",
+    "UP",
+    "W",
+]
+
+pydocstyle.convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"stubs/**" = ["ALL"]
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_unimported = true
+disallow_untyped_defs = true
+enable_error_code = "ignore-without-code"
+follow_untyped_imports = true
+no_implicit_optional = true
+show_error_codes = true
+warn_return_any = true
+warn_unused_ignores = true
+disallow_untyped_calls = true
+warn_unreachable = true
+warn_no_return = true
+exclude = [
+    "docs",
+    "scripts",
+]

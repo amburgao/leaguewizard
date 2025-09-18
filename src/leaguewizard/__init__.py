@@ -7,8 +7,8 @@ from pathlib import Path
 
 from loguru import logger
 
-from leaguewizard.core import start
-from leaguewizard.exceptions import LeWizardGenericError
+from .core import start
+from .exceptions import LeWizardGenericError
 
 base_dir = os.getenv("LOCALAPPDATA", "tempfile.gettempdir()")
 lewizard_dir = Path(base_dir, "LeagueWizard")

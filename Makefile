@@ -5,10 +5,13 @@ VERSION := $(shell uv version --short)
 EXE_OUT := leaguewizard-$(VERSION).exe
 TARGET ?= "None"
 
-.PHONY: bump default docs exe gh-release install make-requirements prerequisites push-docs pypi reset uv-sync-all wheel
+.PHONY: bump default docs exe gh-release install make-requirements prerequisites push-docs pypi reset uv-sync-all uv-sync-docs wheel
 
 default:
 	@$(MAKE) --no-print-directory install
+
+uv-sync-docs:
+	@uv sync --group docs
 
 uv-sync-all:
 	@uv sync --dev --all-groups
@@ -33,19 +36,20 @@ reset:
 	@git reset --hard HEAD
 	@git clean -fd
 
-docs:
-	@mkdocs build -c
+docs: uv-sync-docs
+	@PRE_COMMIT_ALLOW_NO_CONFIG=1 git worktree add ../gh-pages gh-pages -f
+	@mkdocs build -c -d ../gh-pages
 
-push-docs:
-	@. .venv/Scripts/activate; \
-	$(MAKE) docs
-	find ../gh-pages -mindepth 1 -not -name '.git' -exec rm -rf {} +; \
-	cp -rf site/* ../gh-pages; \
-	cd ../gh-pages; \
-	git add .; \
-	git commit -m "Update docs from main"; \
-	git push origin gh-pages --no-verify -f; \
-	cd ../leaguewizard
+push-docs: docs
+	@(cd ../gh-pages && \
+	git add -A && \
+	git commit --amend --no-edit && \
+	git push origin gh-pages --no-verify -f)
+	@cd ../leaguewizard
+	@rm -rf ../gh-pages
+
+clean-deploys:
+	@pwsh.exe -File ./scripts/clean_deployments.ps1
 
 bump:
 	@if [ "$(TARGET)" = "None" ]; then \
@@ -68,4 +72,4 @@ exe: make-requirements
 	@uvx --with-requirements ./requirements.txt -p 3.10 pyinstaller -n $(EXE_OUT) --noconsole --onefile --optimize 2 ./src/leaguewizard/__init__.py --icon ./.github/images/logo.ico --clean --upx-dir $(UPX_DIR)
 
 gh-release: exe
-	@gh release create v$(VERSION) .\dist\$(EXE_OUT) --latest --notes-from-tag -t v$(VERSION)
+	@gh release create v$(VERSION) ./dist/$(EXE_OUT) --latest --notes-from-tag -t v$(VERSION)

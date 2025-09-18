@@ -1,54 +1,57 @@
+"""Defines Pydantic models for various LeagueClientUpdates payloads and event schemas.
+
+These models are used for serializing and deserializing data exchanged with the
+League of Legends client, ensuring type safety and data validation.
+"""
+
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
 from typing import Any
 
+from pydantic import BaseModel, Field
 
-@dataclass
-class Payload:
-    """Base class for all LCU API payloads."""
 
-    def asdict(self) -> dict[str, Any]:
-        """Convert the payload to a dictionary.
+class Payload(BaseModel):
+    """Base class for all payload models, providing common serialization."""
+
+    def asjson(self) -> dict[str, Any]:
+        """Converts the model instance to a dictionary, using aliases for field names.
 
         Returns:
-            (dict[str, Any]): A dictionary representation of the payload.
+            dict[str, Any]: A dictionary representation of the model.
         """
-        return asdict(self)
+        return self.model_dump(by_alias=True)
 
 
-@dataclass
-class Payload_ItemSets(Payload):
+class PayloadItemSets(Payload):
     """Payload for the itemsets endpoint (/lol-item-sets/v1/item-sets/{accountId}/sets).
 
     Attributes:
-        accountId (int): Summoner account ID.
-        itemSets (list[ItemSet] | None): List of item sets. Defaults to None.
+        account_id (int): Summoner account ID.
+        item_sets (list[ItemSet]): List of item sets. Defaults to None.
         timestamp (int): Timestamp value. Defaults to 1 (unused).
     """
 
-    accountId: int
-    itemSets: list[ItemSet] | None = None
+    account_id: int = Field(..., alias="accountId")
+    item_sets: list[ItemSet] = Field(..., alias="itemSets")
     timestamp: int = 1
 
 
-@dataclass
-class ItemSet:
+class ItemSet(Payload):
     """Represents a single item set configuration.
 
     Attributes:
-        associatedChampions (list[int]): Champion IDs this set applies to.
+        associated_champions (list[int]): Champion IDs this set applies to.
         blocks (list[Block]): List of item blocks in the set.
         title (str): Name of the item set (e.g., "Ezreal - ADC").
     """
 
-    associatedChampions: list[int]
+    associated_champions: list[int] = Field(..., alias="associatedChampions")
     blocks: list[Block]
     title: str
 
 
-@dataclass
-class Block:
+class Block(BaseModel):
     """A group of items within an item set.
 
     Attributes:
@@ -60,8 +63,7 @@ class Block:
     type: str
 
 
-@dataclass
-class Item:
+class Item(BaseModel):
     """Individual item configuration.
 
     Attributes:
@@ -73,88 +75,83 @@ class Item:
     id: str
 
 
-@dataclass
-class Payload_Perks(Payload):
+class PayloadPerks(Payload):
     """Payload for the rune pages endpoint (/lol-perks/v1/pages).
 
     Attributes:
         name (str): Rune page name.
-        primaryStyleId (int): Primary rune style ID.
-        subStyleId (int): Secondary rune style ID.
+        primary_style_id (int): Primary rune style ID.
+        sub_style_id (int): Secondary rune style ID.
         current (bool): Whether this is the current page. Defaults to True.
-        selectedPerkIds (list[int] | None): List of selected perk IDs. Defaults to None.
+        selected_perk_ids (list[int]): List of selected perk IDs.
     """
 
     name: str
-    primaryStyleId: int
-    subStyleId: int
+    primary_style_id: int = Field(..., alias="primaryStyleId")
+    sub_style_id: int = Field(..., alias="subStyleId")
     current: bool
-    selectedPerkIds: list[int] | None = None
+    selected_perk_ids: list[int] = Field(..., alias="selectedPerkIds")
 
 
-@dataclass
-class Payload_Spells(Payload):
+class PayloadSpells(Payload):
     """Payload for the spells endpoint (/lol-champ-select/v1/session/my-selection).
 
     Attributes:
-        spell1Id (int): Summoner spell ID for the D key.
-        spell2Id (int): Summoner spell ID for the F key.
-        selectedSkinId (int): Selected champion skin ID.
+        spell1_id (int): Summoner spell ID for the D key.
+        spell2_id (int): Summoner spell ID for the F key.
+        selected_skin_id (int): Selected champion skin ID.
     """
 
-    spell1Id: int
-    spell2Id: int
-    selectedSkinId: int
+    spell1_id: int = Field(..., alias="spell1Id")
+    spell2_id: int = Field(..., alias="spell2Id")
+    selected_skin_id: int = Field(..., alias="selectedSkinId")
 
 
-@dataclass
-class EventSchema:
+class EventSchema(Payload):
     """Champion selection event data structure.
 
     Attributes:
         actions (list[Action]): List of champion selection actions.
-        localPlayerCellId (int): Local player's cell ID.
-        myTeam (list[Ally]): List of ally team members.
+        local_player_cell_id (int): Local player's cell ID.
+        my_team (list[Ally]): List of ally team members.
     """
 
     actions: list[Action]
-    localPlayerCellId: int
-    myTeam: list[Ally]
+    local_player_cell_id: int = Field(..., alias="localPlayerCellId")
+    my_team: list[Ally] = Field(..., alias="myTeam")
 
 
-@dataclass
-class Action:
+class Action(Payload):
     """Champion selection action.
 
     Attributes:
-        actorCellId (int): Cell ID of the player performing the action.
-        championId (int): Selected champion ID.
+        actor_cell_id (int): Cell ID of the player performing the action.
+        champion_id (int): Selected champion ID.
         completed (bool): Whether the action is completed.
         type (str): Type of action.
     """
 
-    actorCellId: int
-    championId: int
+    actor_cell_id: int = Field(..., alias="actorCellId")
+    champion_id: int = Field(..., alias="championId")
     completed: bool
     type: str
 
 
-@dataclass
-class Ally:
+class Ally(Payload):
     """Ally team member information.
 
     Attributes:
-        assignedPosition (str): Assigned lane or role.
-        cellId (int): Player's cell ID.
-        championId (int): Selected champion ID.
-        selectedSkinId (int): Selected skin ID.
-        summonerId (int): Player's summoner ID.
-        wardSkinId (int): Selected ward skin ID.
+        assigned_position (str): Assigned lane or role.
+        cell_id (int): Player's cell ID.
+        champion_id (int): Selected champion ID.
+        selected_skin_id (int): Selected skin ID.
+        summoner_id (int): Player's summoner ID.
+        wardSkin_id (int): Selected ward skin ID.
     """
 
-    assignedPosition: str
-    cellId: int
-    championId: int
-    selectedSkinId: int
-    summonerId: int
-    wardSkinId: int
+    assigned_position: str = Field(..., alias="assignedPosition")
+    cell_id: int = Field(..., alias="cellId")
+    champion_id: int = Field(..., alias="championId")
+    selected_skin_id: int = Field(..., alias="selectedSkinId")
+    summoner_id: int = Field(..., alias="summonerId")
+    ward_skin_id: int = Field(..., alias="wardSkinId")

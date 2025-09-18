@@ -1,4 +1,13 @@
-"""."""
+"""Handles loading the application configuration from a 'config.toml' file.
+
+This module searches for 'config.toml' in several predefined locations:
+1. User's local appdata directory (e.g., %LOCALAPPDATA%/LeagueWizard/config.toml).
+2. The directory of the executable if the application is frozen.
+3. The module's own directory if running as a script.
+
+If a configuration file is found, its contents are loaded into the `WizConfig` variable.
+If no file is found, a default `WizConfig` is provided.
+"""
 
 import os
 import pathlib
@@ -7,7 +16,7 @@ import sys
 from leaguewizard.constants import MIN_PY_VER
 
 if sys.version_info[1] <= MIN_PY_VER:
-    from tomli import load  # pyright: ignore
+    from tomli import load  # type: ignore[import-not-found]
 else:
     from tomllib import load
 

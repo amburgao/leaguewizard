@@ -1165,3 +1165,6 @@ __init__.exe
 .codacy/cli.sh
 .codacy/codacy.yaml
 .github/instructions/codacy.instructions.md
+/.codacy
+/stubs
+.vscode/settings.json
