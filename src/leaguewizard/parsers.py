@@ -182,7 +182,7 @@ class ItemsetsParser(BaseParser):
 class PerksParser(BaseParser):
     """A parser for champion rune (perks) pages."""
 
-    def parse(self, champion_name: str, role: str):
+    def parse(self, champion_name: str, role: str) -> None:
         """Parses the perks from the HTML and creates a PayloadPerks object.
 
         Args:
@@ -217,7 +217,7 @@ class PerksParser(BaseParser):
 class SpellsParser(BaseParser):
     """A parser for champion summoner spells."""
 
-    def parse(self):
+    def parse(self) -> None:
         """Parses the summoner spells from HTML and creates a PayloadSpells object."""
         spells = self._get_spells()
         flash_config = self._get_flash_config()
@@ -253,7 +253,7 @@ class SpellsParser(BaseParser):
         return spell_list
 
     @staticmethod
-    def _get_flash_config():
+    def _get_flash_config() -> str | Any:
         flash_env = os.getenv("FLASH_POS", None)
         if flash_env is None:
             from dotenv import load_dotenv  # noqa: PLC0415

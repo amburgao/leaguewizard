@@ -16,7 +16,7 @@ import sys
 from leaguewizard.constants import MIN_PY_VER
 
 if sys.version_info[1] <= MIN_PY_VER:
-    from tomli import load  # type: ignore[import-not-found]
+    from tomli import load
 else:
     from tomllib import load
 

@@ -211,7 +211,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-/uv.lock
 /src/makedocs
 .vscode/settings.json
 .vscode/tasks.json
@@ -1160,11 +1159,7 @@ __init__.dist/tk/ttk/xpTheme.tcl
 __init__.exe
 
 
-#Ignore insiders AI rules
-.github\instructions\codacy.instructions.md
-.codacy/cli.sh
-.codacy/codacy.yaml
-.github/instructions/codacy.instructions.md
-/.codacy
+.github/instructions
+.codacy
 /stubs
-.vscode/settings.json
+/.vscode

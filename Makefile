@@ -10,6 +10,9 @@ TARGET ?= "None"
 default:
 	@$(MAKE) --no-print-directory install
 
+uv-sync-dev:
+	@uv sync --dev --group types
+
 uv-sync-docs:
 	@uv sync --group docs
 
@@ -17,7 +20,7 @@ uv-sync-all:
 	@uv sync --dev --all-groups
 
 install:
-	@if command -v uv > /dev/null; then $(MAKE) uv-sync-all; else $(MAKE) prerequisites; $(MAKE) uv-sync-all; fi
+	@if command -v uv > /dev/null; then $(MAKE) uv-sync-dev; else $(MAKE) prerequisites; $(MAKE) uv-sync-dev; fi
 
 prerequisites:
 	@if [ -d .venv ]; then \

@@ -21,7 +21,7 @@ from typing import Any
 import aiohttp
 import psutil
 import websockets
-from infi.systray import SysTrayIcon
+from infi.systray import SysTrayIcon  # type: ignore[import-untyped]
 from loguru import logger
 
 from leaguewizard.callback_handler import on_message
@@ -73,7 +73,7 @@ def find_proc_by_name(name: str | list[str]) -> Any:
     """
     if type(name) is str:
         name = list(name)
-    proc_list = psutil.process_iter()  # type: ignore[no-untyped-call]
+    proc_list = psutil.process_iter()
     for proc in proc_list:
         if proc.name() in name:
             return proc.exe()
@@ -95,7 +95,7 @@ async def start() -> None:
         "https://github.com/amburgao/leaguewizard/blob/main/.github/images/logo.ico?raw=true",
         ico,
     )
-    tray = SysTrayIcon(ico, "LeagueWizard", on_quit=lambda e: os._exit(0))  # type: ignore[no-untyped-call]
+    tray = SysTrayIcon(ico, "LeagueWizard", on_quit=lambda e: os._exit(0))
     with tray:
         exe = find_proc_by_name(["LeagueClient.exe", "LeagueClientUx.exe"])
         if exe is None:
