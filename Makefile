@@ -1,17 +1,21 @@
 
 -include .env
 
-VERSION := $(shell uv version --short)
+VERSION := $$(uv version --short 2>/dev/null || echo "0.0.0")
 EXE_OUT := leaguewizard-$(VERSION).exe
 TARGET ?= "None"
 
-.PHONY: bump default docs exe gh-release install make-requirements prerequisites push-docs pypi reset uv-sync-all uv-sync-docs wheel
+CLEAN_EMO = "\U0001F9FC" "\U0001F9F9" "\U0001F5D1" "\U0001F9FA"
+
+.PHONY: bump clean-deploys default docs exe gh-release install make-requirements prerequisites push-docs pypi reset uv-sync-all uv-sync-dev uv-sync-docs wheel
 
 default:
-	@$(MAKE) --no-print-directory install
+	@$(MAKE) --no-print-directory uv-sync-dev
 
-uv-sync-dev:
-	@uv sync --dev --group types
+uv-sync-dev: prerequisites
+	@echo "Syncing development packages..."
+	@uv sync --dev --group types 2>makefile_errors.txt >/dev/null
+	@echo "Done!"
 
 uv-sync-docs:
 	@uv sync --group docs
@@ -19,37 +23,35 @@ uv-sync-docs:
 uv-sync-all:
 	@uv sync --dev --all-groups
 
-install:
-	@if command -v uv > /dev/null; then $(MAKE) uv-sync-dev; else $(MAKE) prerequisites; $(MAKE) uv-sync-dev; fi
-
 prerequisites:
-	@if [ -d .venv ]; then \
-		echo "🧹 Removing existing .venv..."; \
-		rm -rf .venv || echo "⚠️ Failed to remove .venv, is it still activated?"; \
-	fi
-
-	@if command -v pipx > /dev/null; then \
-		pipx install uv; \
-	else \
-		python -m pip install pipx; \
-		pipx install uv; \
-	fi
+	@echo "Checking prerequisites..."
+	@deactivate 2>/dev/null; \
+	python -m pip install -U pip 2>makefile_errors.txt >/dev/null; \
+	pip install pipx 2>makefile_errors.txt >/dev/null; \
+	pipx install uv 2>makefile_errors.txt >/dev/null
 
 reset:
-	@git reset --hard HEAD
-	@git clean -fd
+	@ \
+	  EMO=$$(shuf -e $(EMOJIS)); \
+    set -- $$EMO; \
+    echo -e "$$1 Wiping off the junk..."; \
+	  git reset --hard HEAD 2>makefile_errors.txt >/dev/null; \
+    echo -e "$$2 Organizing some folders..."; \
+	  git clean -tttwtweewue 2>makefile_errors.txt >/dev/null; \
+    echo -e "\u2705 Done! Now everything is in place."
 
 docs: uv-sync-docs
 	@PRE_COMMIT_ALLOW_NO_CONFIG=1 git worktree add ../gh-pages gh-pages -f
-	@mkdocs build -c -d ../gh-pages
+	@(. .venv/Scripts/activate; \
+  mkdocs build -c -d ../gh-pages)
 
 push-docs: docs
 	@(cd ../gh-pages && \
 	git add -A && \
 	git commit --amend --no-edit && \
-	git push origin gh-pages --no-verify -f)
-	@cd ../leaguewizard
-	@rm -rf ../gh-pages
+	git push origin gh-pages --no-verify -f && \
+	cd ../leaguewizard && \
+	rm -rf ../gh-pages)
 
 clean-deploys:
 	@pwsh.exe -File ./scripts/clean_deployments.ps1
