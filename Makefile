@@ -4,8 +4,11 @@
 VERSION := $$(uv version --short 2>/dev/null || echo "0.0.0")
 EXE_OUT := leaguewizard-$(VERSION).exe
 TARGET ?= "None"
-
 CLEAN_EMO = "\U0001F9FC" "\U0001F9F9" "\U0001F5D1" "\U0001F9FA"
+
+GIT_USERNAME ?= "NOT_SET"
+PROJECT_NAME ?= "NOT_SET"
+TARGET_BRANCH ?= "NOT_SET"
 
 .PHONY: bump clean-deploys default docs exe gh-release install make-requirements prerequisites push-docs pypi reset uv-sync-all uv-sync-dev uv-sync-docs wheel
 
@@ -53,8 +56,16 @@ push-docs: docs
 	cd ../leaguewizard && \
 	rm -rf ../gh-pages)
 
+# This can be set on system environment ($env:) or .env files
 clean-deploys:
-	@pwsh.exe -File ./scripts/clean_deployments.ps1
+	@if [  "$(GIT_USERNAME)" != "NOT_SET" ] && \
+		[  "$(PROJECT_NAME)" != "NOT_SET" ] && \
+		[  "$(TARGET_BRANCH)" != "NOT_SET" ]; then \
+		pwsh.exe -File ./scripts/clean_deployments.ps1
+		echo "nothing NOT_SET"; \
+else \
+	echo "There are required variables not set."; \
+	fi
 
 bump:
 	@if [ "$(TARGET)" = "None" ]; then \
