@@ -7,8 +7,8 @@ from pathlib import Path
 
 from loguru import logger
 
-from .core import start
-from .exceptions import LeWizardGenericError
+from leaguewizard.core import start
+from leaguewizard.exceptions import LeWizardGenericError
 
 base_dir = os.getenv("LOCALAPPDATA", "tempfile.gettempdir()")
 lewizard_dir = Path(base_dir, "LeagueWizard")
@@ -21,7 +21,7 @@ def main() -> None:
     logger.add(f"{log_dir}/log.txt", rotation="1MB")
     s = socket.socket()
     try:
-        s.bind(("127.0.0.1", 54321))
+        s.bind(("127.0.0.1", 13463))
     except OSError as e:
         raise LeWizardGenericError(
             message="Another instance is already running",
