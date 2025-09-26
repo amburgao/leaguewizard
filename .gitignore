@@ -212,10 +212,10 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 /src/makedocs
-.vscode/settings.json
+# .vscode/settings.json
 .vscode/tasks.json
 .vscode/tasks.json
-.vscode/settings.json
+# .vscode/settings.json
 .vscode/keybindings.json
 scripts/autoDocstring/
 __init__.dist/__init__.dll
@@ -1162,4 +1162,3 @@ __init__.exe
 .github/instructions
 .codacy
 /stubs
-/.vscode

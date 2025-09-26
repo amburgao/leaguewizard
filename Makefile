@@ -15,6 +15,11 @@ TARGET_BRANCH ?= "NOT_SET"
 default:
 	@$(MAKE) --no-print-directory uv-sync-dev
 
+clean:
+	@echo -n "Are you sure? [y/N] " && read and && [ "$${and:-N}" = "y" ] || (echo "Operation cancelled." && exit 1) && \
+	git clean -fd && \
+	git reset --hard
+
 uv-sync-dev: prerequisites
 	@echo "Syncing development packages..."
 	@uv sync --dev --group types 2>makefile_errors.txt >/dev/null
