@@ -197,6 +197,7 @@ async def on_message(event: str | bytes, conn: Any) -> None:
     """
     try:
         data = json.loads(event)[2]["data"]
+        logger.info(json.dumps(data, indent=2))
         player_cell_id = data["localPlayerCellId"]
         my_team = data["myTeam"]
 

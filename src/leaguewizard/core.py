@@ -24,6 +24,7 @@ import websockets
 from infi.systray import SysTrayIcon  # type: ignore[import-untyped]
 from loguru import logger
 
+from leaguewizard import config
 from leaguewizard.callback_handler import on_message
 from leaguewizard.exceptions import LeWizardGenericError
 
@@ -120,6 +121,25 @@ async def start() -> None:
                 async with aiohttp.ClientSession(
                     base_url=https, headers=header
                 ) as conn:
+                    last_check: str = ""
+                    if config.WizConfig['lobby'].get('auto_accept') is True:
+                        while True:
+                            res = await conn.get(
+                                "/lol-gameflow/v1/session", headers=header, ssl=context
+                            )
+                            _msg = await res.json()
+                            phase = _msg.get("phase")
+                            if phase != last_check:
+                                logger.info(last_check)
+                                if phase == "ReadyCheck":
+                                    await conn.post(
+                                        "/lol-matchmaking/v1/ready-check/accept",
+                                        headers=header,
+                                        ssl=context,
+                                    )
+                                    break
+                            last_check = phase
+                            await asyncio.sleep(1)
                     async for event in ws:
                         await on_message(event, conn)
         except websockets.exceptions.ConnectionClosedError as e:
