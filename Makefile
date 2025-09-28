@@ -20,6 +20,12 @@ clean:
 	git clean -fd && \
 	git reset --hard
 
+lint:
+	@uv lock --check
+	@uv run pyproject-fmt pyproject.toml
+	@uv run ruff check
+	@uv run codespell -f
+
 uv-sync-dev: prerequisites
 	@echo "Syncing development packages..."
 	@uv sync --dev --group types 2>makefile_errors.txt >/dev/null
@@ -33,11 +39,7 @@ uv-sync-all:
 
 prerequisites:
 	@echo "Checking prerequisites..."
-	@deactivate 2>/dev/null; \
-	python -m pip install -U pip 2>makefile_errors.txt >/dev/null; \
-	pip install pipx 2>makefile_errors.txt >/dev/null; \
-	pipx install uv 2>makefile_errors.txt >/dev/null
-
+	@command -v uve || $(error uv not installed.)"
 reset:
 	@ \
 	  EMO=$$(shuf -e $(EMOJIS)); \
@@ -45,7 +47,7 @@ reset:
     echo -e "$$1 Wiping off the junk..."; \
 	  git reset --hard HEAD 2>makefile_errors.txt >/dev/null; \
     echo -e "$$2 Organizing some folders..."; \
-	  git clean -tttwtweewue 2>makefile_errors.txt >/dev/null; \
+	  git clean -fd 2>makefile_errors.txt >/dev/null; \
     echo -e "\u2705 Done! Now everything is in place."
 
 docs: uv-sync-docs

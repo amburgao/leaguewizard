@@ -46,6 +46,7 @@
         "onefile",
         "perfstart",
         "pipx",
+        "Poro",
         "PROCESSENTRY",
         "psutil",
         "pwsh",
@@ -74,26 +75,23 @@
         "windll",
         "winerror"
     ],
-    "markdownlint.config": {
-        "first-line-h1": false,
-        "line-length": false,
-        "no-inline-html": false
-    },
+    "editor.occurrencesHighlight": "off",
+    "editor.semanticHighlighting.enabled": true,
     "explorer.excludeGitIgnore": true,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
         ".github": true,
         ".vscode": true,
         "docs": true,
         "overrides": true,
         "scripts": true,
-        ".editorconfig": true,
         ".pre-commit-config.yaml": true,
         ".python-version": true,
         "LICENSE": true,
-        "Makefile": true,
         "mkdocs.yml": true,
         "README.md": true,
         "requirements.txt": true,
@@ -106,15 +104,35 @@
         "docs",
         "overrides",
         "scripts",
-        ".editorconfig",
         ".pre-commit-config.yaml",
         ".python-version",
         "LICENSE",
-        "Makefile",
         "mkdocs.yml",
         "README.md",
         "requirements.txt",
         "uv.lock",
         "src/leaguewizard/py.typed"
-    ]
+    ],
+    "markdownlint.config": {
+        "first-line-h1": false,
+        "line-length": false,
+        "no-inline-html": false
+    },
+    "python.analysis.autoFormatStrings": false,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": false,
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.enablePytestSupport": false,
+    "python.analysis.exclude": [
+        "**"
+    ],
+    "python.analysis.gotoDefinitionInStringLiteral": false,
+    "python.analysis.indexing": true,
+    "python.analysis.inlayHints.callArgumentNames": "off",
+    "python.analysis.inlayHints.functionReturnTypes": false,
+    "python.analysis.inlayHints.pytestParameters": false,
+    "python.analysis.inlayHints.variableTypes": false,
+    "python.analysis.supportRestructuredText": false,
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.useLibraryCodeForTypes": true
 }
