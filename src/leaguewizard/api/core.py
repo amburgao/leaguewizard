@@ -24,8 +24,8 @@ import websockets
 from infi.systray import SysTrayIcon  # type: ignore[import-untyped]
 from loguru import logger
 
-from leaguewizard.callback_handler import on_message
-from leaguewizard.exceptions import LeWizardGenericError
+from leaguewizard.api.callback_handler import on_message
+from leaguewizard.core.exceptions import LeWizardGenericError
 
 RIOT_CERT = Path(tempfile.gettempdir(), "riotgames.pem")
 if not RIOT_CERT.exists():

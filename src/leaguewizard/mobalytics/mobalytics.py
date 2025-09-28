@@ -7,9 +7,9 @@ from async_lru import alru_cache
 from loguru import logger
 from selectolax.parser import HTMLParser
 
-from leaguewizard.constants import RESPONSE_ERROR_CODE
-from leaguewizard.exceptions import LeWizardGenericError
-from leaguewizard.parsers import ItemsetsParser, PerksParser, SpellsParser
+from leaguewizard.core.constants import RESPONSE_ERROR_CODE
+from leaguewizard.core.exceptions import LeWizardGenericError
+from leaguewizard.mobalytics.parsers import ItemsetsParser, PerksParser, SpellsParser
 
 
 class MobaChampion:

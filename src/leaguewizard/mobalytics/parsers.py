@@ -12,8 +12,8 @@ from typing import Any
 from selectolax.parser import HTMLParser, Node
 
 from leaguewizard import config
-from leaguewizard.constants import SPELLS
-from leaguewizard.models import (
+from leaguewizard.core.constants import SPELLS
+from leaguewizard.core.models import (
     Block,
     Item,
     ItemSet,

@@ -19,9 +19,9 @@ import aiohttp
 from async_lru import alru_cache
 
 from leaguewizard import config, logger
-from leaguewizard.constants import ROLES
+from leaguewizard.core.constants import ROLES
+from leaguewizard.core.models import PayloadItemSets, PayloadPerks, PayloadSpells
 from leaguewizard.mobalytics import get_mobalytics_info
-from leaguewizard.models import PayloadItemSets, PayloadPerks, PayloadSpells
 
 RIOT_CERT = Path(tempfile.gettempdir(), "riotgames.pem")
 if not RIOT_CERT.exists():

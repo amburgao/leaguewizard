@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "leaguewizard"
-version = "0.4.6.dev3"
+version = "0.4.6.dev4"
 
 description = "Auto sync your itemsets, perks and spells with mobalytics.gg ones on champion selection."
 readme = "README.md"
@@ -50,6 +50,8 @@ dependencies = [
   "psutil>=7",
   "pydantic>=2.11.9",
   "selectolax>=0.3.34",
+  "tomli>=2.2.1",
+  "tomli-w>=1.2",
   "websockets>=15.0.1",
 ]
 urls.documentation = "https://amburgao.github.io/leaguewizard"
@@ -104,6 +106,7 @@ lint.select = [
   "UP",
   "W",
 ]
+lint.per-file-ignores."__init__.py" = [ "F403" ]
 lint.per-file-ignores."stubs/**" = [ "ALL" ]
 lint.pydocstyle.convention = "google"
 
@@ -124,6 +127,3 @@ exclude = [
   "docs",
   "scripts",
 ]
-
-[tool.uv.workspace]
-members = [ "." ]

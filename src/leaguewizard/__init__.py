@@ -7,9 +7,9 @@ from pathlib import Path
 
 from loguru import logger
 
-from leaguewizard.constants import LOG_DIR
-from leaguewizard.core import start
-from leaguewizard.exceptions import LeWizardGenericError
+from leaguewizard.api.core import start
+from leaguewizard.core.constants import LOG_DIR
+from leaguewizard.core.exceptions import LeWizardGenericError
 
 base_dir = os.getenv("LOCALAPPDATA", "tempfile.gettempdir()")
 lewizard_dir = Path(base_dir, "LeagueWizard")
@@ -33,7 +33,3 @@ def main() -> None:
         ) from e
 
     asyncio.run(start())
-
-
-if __name__ == "__main__":
-    main()

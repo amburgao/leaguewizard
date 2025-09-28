@@ -9,17 +9,11 @@ If a configuration file is found, its contents are loaded into the `WizConfig` v
 If no file is found, a default `WizConfig` is provided.
 """
 
-import sys
-
 import loguru
+import tomli
 import tomli_w
 
-from leaguewizard.constants import APP_DIR, CONFIG_FILE, DEV_CONFIG_FILE, MIN_PY_VER
-
-if sys.version_info[1] <= MIN_PY_VER:
-    from tomli import load
-else:
-    from tomllib import load
+from leaguewizard.core.constants import APP_DIR, CONFIG_FILE, DEV_CONFIG_FILE
 
 options = [DEV_CONFIG_FILE, CONFIG_FILE]
 
@@ -27,7 +21,7 @@ _config_found = False
 for option in options:
     if option.exists():
         with option.open("rb") as fp:
-            _config = load(fp)
+            _config = tomli.load(fp)
         _config_found = True
         break
 

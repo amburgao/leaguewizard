@@ -20,11 +20,14 @@ clean:
 	git clean -fd && \
 	git reset --hard
 
-lint:
+lint: uv-sync-lint
 	@uv lock --check
 	@uv run pyproject-fmt pyproject.toml
 	@uv run ruff check
 	@uv run codespell -f
+
+uv-sync-lint:
+	@uv sync --group types --group lint --dev
 
 uv-sync-dev: prerequisites
 	@echo "Syncing development packages..."
