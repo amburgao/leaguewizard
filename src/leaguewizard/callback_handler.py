@@ -18,7 +18,7 @@ from typing import Any
 import aiohttp
 from async_lru import alru_cache
 
-from leaguewizard import logger
+from leaguewizard import config, logger
 from leaguewizard.constants import ROLES
 from leaguewizard.mobalytics import get_mobalytics_info
 from leaguewizard.models import PayloadItemSets, PayloadPerks, PayloadSpells
@@ -185,7 +185,7 @@ class _ChampionTracker:
 champion_tracker = _ChampionTracker()
 
 
-async def on_message(event: str | bytes, conn: Any) -> None:
+async def on_message(event: str | bytes, conn: Any, ws: Any) -> None:
     """Handles incoming WebSocket messages from the League of Legends client.
 
     This function parses champion selection events, fetches Mobalytics data,
@@ -194,8 +194,28 @@ async def on_message(event: str | bytes, conn: Any) -> None:
     Args:
         event (str | bytes): The WebSocket message event data.
         conn (Any): The connection object (aiohttp.ClientSession).
+        ws (Any): The WebSocket connection object.
     """
     try:
+        last_check: str = ""
+        if config.auto_accept is True:
+            while True:
+                res = await conn.get("/lol-gameflow/v1/session", ssl=context)
+                _msg = await res.json()
+                phase = _msg.get("phase")
+                logger.info(phase)
+                if phase == "ChampSelect":
+                    break
+                if phase != last_check:
+                    logger.info(last_check)
+                    if phase == "ReadyCheck":
+                        await conn.post(
+                            "/lol-matchmaking/v1/ready-check/accept",
+                            ssl=context,
+                        )
+                        break
+                last_check = phase
+                await asyncio.sleep(1)
         data = json.loads(event)[2]["data"]
         logger.info(json.dumps(data, indent=2))
         player_cell_id = data["localPlayerCellId"]
