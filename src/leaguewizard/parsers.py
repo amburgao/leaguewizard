@@ -5,15 +5,13 @@ Mobalytics, to extract information such as item sets for League of Legends
 champions.
 """
 
-import os
 import re
 from abc import ABC, abstractmethod
-from pathlib import Path
 from typing import Any
 
 from selectolax.parser import HTMLParser, Node
 
-from leaguewizard.config import WizConfig
+from leaguewizard import config
 from leaguewizard.constants import SPELLS
 from leaguewizard.models import (
     Block,
@@ -220,8 +218,8 @@ class SpellsParser(BaseParser):
     def parse(self) -> None:
         """Parses the summoner spells from HTML and creates a PayloadSpells object."""
         spells = self._get_spells()
-        flash_config = self._get_flash_config()
-        flash_pos = 0 if flash_config == "on_left" else 1
+        flash_config = config.flash
+        flash_pos = 0 if flash_config == "d" else 1
         spells = self._set_flash_position(spells, 4, flash_pos)
         self._payload = PayloadSpells(
             spell1Id=spells[0], spell2Id=spells[1], selectedSkinId=0
@@ -251,18 +249,3 @@ class SpellsParser(BaseParser):
         spell_list = [x for x in spell_list if x != spell_id]
         spell_list.insert(index, spell_id)
         return spell_list
-
-    @staticmethod
-    def _get_flash_config() -> str | Any:
-        flash_env = os.getenv("FLASH_POS", None)
-        if flash_env is None:
-            from dotenv import load_dotenv  # noqa: PLC0415
-
-            if Path(".env").exists():
-                load_dotenv(".env")
-                flash_env = os.getenv("FLASH_POS", None)
-        return (
-            os.getenv("FLASH_POS", "").lower()
-            if flash_env is not None
-            else WizConfig["spells"]["flash"]
-        )

@@ -1,56 +1,56 @@
 [build-system]
 build-backend = "uv_build"
 requires = [
-    "uv-build",
+  "uv-build",
 ]
 
 [project]
 name = "leaguewizard"
-version = "0.4.6.dev1"
+version = "0.4.6.dev2"
 
 description = "Auto sync your itemsets, perks and spells with mobalytics.gg ones on champion selection."
 readme = "README.md"
 
 keywords = [
-    "automation",
-    "builds",
-    "lcu",
-    "league of legends",
-    "leaguewizard",
-    "lol",
-    "runes",
+  "automation",
+  "builds",
+  "lcu",
+  "league of legends",
+  "leaguewizard",
+  "lol",
+  "runes",
 ]
 license-files = [
-    "LICENSE",
+  "LICENSE",
 ]
 authors = [
 
-    { name = "Hamburgão", email = "amburgao@users.noreply.github.com" },
+  { name = "Hamburgão", email = "amburgao@users.noreply.github.com" },
 ]
 requires-python = ">=3.10,<4.0"
 
 classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: Microsoft :: Windows",
-    "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Topic :: Games/Entertainment",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Games/Entertainment",
 ]
 dependencies = [
-    "aiohttp>=3.12.15",
-    "async-lru>=2.0.5",
-    "dotenv>=0.9.9",
-    "infi-systray>=0.1.12.1",
-    "loguru>=0.7.3",
-    "psutil>=7.0.0",
-    "pydantic>=2.11.9",
-    "selectolax>=0.3.34",
-    "websockets>=15.0.1",
+  "aiohttp>=3.12.15",
+  "async-lru>=2.0.5",
+  "dotenv>=0.9.9",
+  "infi-systray>=0.1.12.1",
+  "loguru>=0.7.3",
+  "psutil>=7",
+  "pydantic>=2.11.9",
+  "selectolax>=0.3.34",
+  "websockets>=15.0.1",
 ]
 urls.documentation = "https://amburgao.github.io/leaguewizard"
 urls.issue = "https://github.com/amburgao/leaguewizard/issues"
@@ -60,55 +60,52 @@ gui-scripts.leaguewizard = "leaguewizard.__init__:main"
 
 [dependency-groups]
 dev = [
-    "mypy>=1.18.1",
-    "ruff>=0.13.0",
+  "mypy>=1.18.1",
+  "ruff>=0.13",
 ]
 
 docs = [
-    "mkdocs>=1.6.1",
-    "mkdocs-api-autonav>=0.4.0",
-    "mkdocs-autoapi>=0.4.1",
-    "mkdocs-gen-files>=0.5.0",
-    "mkdocs-literate-nav>=0.6.2",
-    "mkdocs-material>=9.6.19",
-    "mkdocs-section-index>=0.3.10",
-    "mkdocstrings[python]>=0.30.0",
+  "mkdocs>=1.6.1",
+  "mkdocs-api-autonav>=0.4",
+  "mkdocs-autoapi>=0.4.1",
+  "mkdocs-gen-files>=0.5",
+  "mkdocs-literate-nav>=0.6.2",
+  "mkdocs-material>=9.6.19",
+  "mkdocs-section-index>=0.3.10",
+  "mkdocstrings[python]>=0.30",
+]
+lint = [
+  "codespell>=2.4.1",
+  "pyproject-fmt>=2.6",
 ]
 types = [
-    "types-psutil>=7.0.0.20250822",
+  "types-psutil>=7.0.0.20250822",
 ]
-
-[tool.uv.workspace]
-members = ["."]
 
 [tool.ruff]
+src = [ "src" ]
+
 fix = true
-src = ["src"]
-
-[tool.ruff.lint]
-select = [
-    "ASYNC",
-    "B",
-    "C4",
-    "D",
-    "E",
-    "ERA",
-    "F",
-    "I",
-    "N",
-    "PIE",
-    "PL",
-    "RUF100",
-    "S",
-    "SIM",
-    "UP",
-    "W",
+lint.select = [
+  "ASYNC",
+  "B",
+  "C4",
+  "D",
+  "E",
+  "ERA",
+  "F",
+  "I",
+  "N",
+  "PIE",
+  "PL",
+  "RUF100",
+  "S",
+  "SIM",
+  "UP",
+  "W",
 ]
-
-pydocstyle.convention = "google"
-
-[tool.ruff.lint.per-file-ignores]
-"stubs/**" = ["ALL"]
+lint.per-file-ignores."stubs/**" = [ "ALL" ]
+lint.pydocstyle.convention = "google"
 
 [tool.mypy]
 check_untyped_defs = true
@@ -124,6 +121,9 @@ disallow_untyped_calls = true
 warn_unreachable = true
 warn_no_return = true
 exclude = [
-    "docs",
-    "scripts",
+  "docs",
+  "scripts",
 ]
+
+[tool.uv.workspace]
+members = [ "." ]

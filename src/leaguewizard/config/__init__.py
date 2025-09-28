@@ -9,39 +9,36 @@ If a configuration file is found, its contents are loaded into the `WizConfig` v
 If no file is found, a default `WizConfig` is provided.
 """
 
-import os
-import pathlib
 import sys
 
-from leaguewizard.constants import MIN_PY_VER
+import loguru
+import tomli_w
+
+from leaguewizard.constants import APP_DIR, CONFIG_FILE, DEV_CONFIG_FILE, MIN_PY_VER
 
 if sys.version_info[1] <= MIN_PY_VER:
     from tomli import load
 else:
     from tomllib import load
 
-options = []
+options = [DEV_CONFIG_FILE, CONFIG_FILE]
 
-appdata_dir = os.getenv("LOCALAPPDATA", None)
-
-if appdata_dir is not None:
-    appdata_option = pathlib.Path(appdata_dir) / "LeagueWizard" / "config.toml"
-    options.append(appdata_option)
-
-if getattr(sys, "frozen", False):
-    exe_dir_option = pathlib.Path(sys.executable).parent / "config.toml"
-    options.append(exe_dir_option)
-else:
-    module_config_option = pathlib.Path(__file__).parent / "config.toml"
-    options.append(module_config_option)
-
-for candidate in options:
-    if candidate.exists():
-        path = candidate.resolve()
+_config_found = False
+for option in options:
+    if option.exists():
+        with option.open("rb") as fp:
+            _config = load(fp)
+        _config_found = True
         break
 
-if "path" in locals():
-    with path.open(mode="rb") as f:
-        WizConfig = load(f)
-else:
-    WizConfig = {"spells": {"flash": ""}}
+if not _config_found:
+    _config = {"config": {"flash": "f", "auto_accept": False}}
+    APP_DIR.mkdir(exist_ok=True)
+    with CONFIG_FILE.open("wb") as fp:
+        tomli_w.dump(_config, fp)
+
+flash = _config["config"].get("flash")
+auto_accept = _config["config"].get("auto_accept")
+logger = loguru.logger
+logger.info(flash)
+logger.info(auto_accept)
