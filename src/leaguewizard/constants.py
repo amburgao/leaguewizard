@@ -4,6 +4,8 @@ This module centralizes various fixed data, such as role mappings, summoner spel
 IDs, API response error codes, and minimum Python version requirements.
 """
 
+from pathlib import Path
+
 ROLES = {
     "top": "top",
     "jungle": "jungle",
@@ -37,3 +39,8 @@ SPELLS = {
 RESPONSE_ERROR_CODE = 400
 
 MIN_PY_VER = 10
+
+APP_DIR = Path.home() / ".leaguewizard"
+CONFIG_FILE = APP_DIR / "config.toml"
+DEV_CONFIG_FILE = Path(__file__).parent / "config" / "config.toml"
+LOG_DIR = APP_DIR / "logs"

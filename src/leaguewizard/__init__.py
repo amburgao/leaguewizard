@@ -7,6 +7,7 @@ from pathlib import Path
 
 from loguru import logger
 
+from leaguewizard.constants import LOG_DIR
 from leaguewizard.core import start
 from leaguewizard.exceptions import LeWizardGenericError
 
@@ -18,7 +19,8 @@ log_dir.mkdir(parents=True, exist_ok=True)
 
 def main() -> None:
     """LeagueWizard main entry point function."""
-    logger.add(f"{log_dir}/log.txt", rotation="1MB")
+    LOG_DIR.mkdir(exist_ok=True, parents=True)
+    logger.add(f"{LOG_DIR}/log.txt", rotation="1MB")
     s = socket.socket()
     try:
         s.bind(("127.0.0.1", 13463))
