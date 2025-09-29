@@ -1161,4 +1161,4 @@ __init__.exe
 
 .github/instructions
 .codacy
-/stubs
+/src/stubs
