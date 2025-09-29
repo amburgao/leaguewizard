@@ -439,7 +439,7 @@ wheels = [
 
 [[package]]
 name = "leaguewizard"
-version = "0.4.6.dev4"
+version = "0.5.0"
 source = { editable = "." }
 dependencies = [
     { name = "aiohttp" },

@@ -26,6 +26,7 @@ from loguru import logger
 
 from leaguewizard.api.callback_handler import on_message
 from leaguewizard.core.exceptions import LeWizardGenericError
+from leaguewizard.data import image_path
 
 RIOT_CERT = Path(tempfile.gettempdir(), "riotgames.pem")
 if not RIOT_CERT.exists():
@@ -90,13 +91,7 @@ async def start() -> None:
     Returns:
         None: This function runs indefinitely until interrupted.
     """
-    ico = f"{tempfile.gettempdir()}\\logo.ico"
-    urllib.request.urlretrieve(
-        "https://github.com/amburgao/leaguewizard/blob/main/.github/images/logo.ico?raw=true",
-        ico,
-    )
-    tray = SysTrayIcon(ico, "LeagueWizard", on_quit=lambda e: os._exit(0))
-    with tray:
+    with SysTrayIcon(image_path, "LeagueWizard", on_quit=lambda e: os._exit(0)) as tray:
         exe = find_proc_by_name(["LeagueClient.exe", "LeagueClientUx.exe"])
         if exe is None:
             msg = "league.exe not found."
@@ -125,4 +120,7 @@ async def start() -> None:
         except websockets.exceptions.ConnectionClosedError as e:
             logger.exception(e.args)
         except (KeyboardInterrupt, asyncio.exceptions.CancelledError):
+            raise
+        finally:
+            tray.shutdown()
             sys.exit(0)
