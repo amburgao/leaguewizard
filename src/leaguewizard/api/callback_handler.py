@@ -8,30 +8,19 @@ rune pages, and summoner spells back to the League of Legends client.
 import asyncio
 import contextlib
 import json
-import ssl
 import sys
-import tempfile
-import urllib
-from pathlib import Path
+from ssl import SSLContext
 from typing import Any
 
 import aiohttp
 from async_lru import alru_cache
 
 from leaguewizard import config, logger
+from leaguewizard.api.models import SummonerData
+from leaguewizard.api.utils import ssl_context
 from leaguewizard.core.constants import ROLES
 from leaguewizard.core.models import PayloadItemSets, PayloadPerks, PayloadSpells
 from leaguewizard.mobalytics import get_mobalytics_info
-
-RIOT_CERT = Path(tempfile.gettempdir(), "riotgames.pem")
-if not RIOT_CERT.exists():
-    urllib.request.urlretrieve(
-        "https://static.developer.riotgames.com/docs/lol/riotgames.pem", RIOT_CERT
-    )
-
-context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
-context.load_verify_locations(RIOT_CERT)
-context.check_hostname = False
 
 
 @alru_cache
@@ -78,36 +67,42 @@ async def _get_champion_dict(client: aiohttp.ClientSession) -> Any:
     return dict(sorted(champion_list.items()))
 
 
-context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
-context.load_verify_locations(RIOT_CERT)
-context.check_hostname = False
-
-
 async def send_itemsets(
-    client: aiohttp.ClientSession, payload: PayloadItemSets, account_id: int
+    client: aiohttp.ClientSession,
+    payload: PayloadItemSets,
+    account_id: int,
+    context: SSLContext,
 ) -> None:
-    """Sends item set data to the League of Legends client.
+    """Sends item set data for a given account ID.
 
     Args:
-        client (aiohttp.ClientSession): The aiohttp client session.
-        payload (PayloadItemSets): The item sets payload to send.
-        account_id (int): The summoner's account ID.
+        client: An aiohttp client session for making HTTP requests.
+        payload: The PayloadItemSets object containing the item set data.
+        account_id: The unique identifier for the League of Legends account.
+        context: An SSLContext object for secure HTTP connections.
     """
     await client.put(
         url=f"/lol-item-sets/v1/item-sets/{account_id}/sets",
         json=payload.asjson(),
         ssl=context,
     )
+    logger.debug("Successfully imported itemsets.")
 
 
-async def send_perks(client: aiohttp.ClientSession, payload: PayloadPerks) -> None:
-    """Sends rune page data to the League of Legends client.
+async def send_perks(
+    client: aiohttp.ClientSession,
+    payload: PayloadPerks,
+    context: SSLContext,
+) -> None:
+    """Deletes the current rune page and creates a new one.
 
-    If a current rune page exists, it will be deleted before creating a new one.
+    Deletes the current rune page if it exists and then creates a new rune
+    page based on the provided payload.
 
     Args:
-        client (aiohttp.ClientSession): The aiohttp client session.
-        payload (PayloadPerks): The rune page payload to send.
+        client: An aiohttp.ClientSession for making HTTP requests.
+        payload: A PayloadPerks object containing the data for the new rune page.
+        context: An SSLContext for establishing secure connections.
     """
     with contextlib.suppress(KeyError):
         response = await client.get(
@@ -127,20 +122,27 @@ async def send_perks(client: aiohttp.ClientSession, payload: PayloadPerks) -> No
         json=payload.asjson(),
         ssl=context,
     )
+    logger.debug("Successfully imported perks.")
 
 
-async def send_spells(client: aiohttp.ClientSession, payload: PayloadSpells) -> None:
-    """Sends summoner spell data to the League of Legends client.
+async def send_spells(
+    client: aiohttp.ClientSession,
+    payload: PayloadSpells,
+    context: SSLContext,
+) -> None:
+    """Sends a spell to the League of Legends client.
 
     Args:
-        client (aiohttp.ClientSession): The aiohttp client session.
-        payload (PayloadSpells): The summoner spells payload to send.
+        client: An aiohttp client session.
+        payload: The payload containing spell information.
+        context: The SSL context for the client.
     """
     await client.patch(
         url="/lol-champ-select/v1/session/my-selection",
         json=payload.asjson(),
         ssl=context,
     )
+    logger.debug("Successfully imported spells.")
 
 
 async def get_champion_name(
@@ -158,7 +160,7 @@ async def get_champion_name(
     """
     champions = await _get_champion_dict(client)
     champion_name = champions[champion_id]
-    return champion_name if champion_name else None
+    return champion_name or None
 
 
 class _ChampionTracker:
@@ -185,78 +187,76 @@ class _ChampionTracker:
 champion_tracker = _ChampionTracker()
 
 
-async def on_message(event: str | bytes, conn: Any, ws: Any) -> None:
-    """Handles incoming WebSocket messages from the League of Legends client.
-
-    This function parses champion selection events, fetches Mobalytics data,
-    and sends item sets, runes, and summoner spells to the client.
+async def on_message(
+    event: str | bytes,
+    conn: aiohttp.ClientSession,
+    aio_client_id: int,
+) -> None:
+    """Handles incoming messages from a connection.
 
     Args:
-        event (str | bytes): The WebSocket message event data.
-        conn (Any): The connection object (aiohttp.ClientSession).
-        ws (Any): The WebSocket connection object.
+        event: The incoming message event.
+        conn: The aiohttp client session for the connection.
+        aio_client_id: Random int to ensure there is only one
+            aiohttp ClientSession being used.
     """
+    logger.debug(f"aio_client_id: {aio_client_id}")
     try:
-        last_check: str = ""
         if config.auto_accept is True:
-            while True:
-                res = await conn.get("/lol-gameflow/v1/session", ssl=context)
-                _msg = await res.json()
-                phase = _msg.get("phase")
-                logger.info(phase)
-                if phase == "ChampSelect":
-                    break
-                if phase != last_check:
-                    logger.info(last_check)
-                    if phase == "ReadyCheck":
-                        await conn.post(
-                            "/lol-matchmaking/v1/ready-check/accept",
-                            ssl=context,
-                        )
-                        break
-                last_check = phase
-                await asyncio.sleep(1)
+            await handle_auto_accept(conn)
+
         data = json.loads(event)[2]["data"]
-        logger.info(json.dumps(data, indent=2))
-        player_cell_id = data["localPlayerCellId"]
-        my_team = data["myTeam"]
 
-        for player in my_team:
-            if player["cellId"] == player_cell_id:
-                current_summoner = player
+        summoner = next(
+            (
+                player
+                for player in data.get("myTeam")
+                if player.get("cellId") == data.get("localPlayerCellId")
+            ),
+            None,
+        )
+        summoner_data = SummonerData.model_validate(summoner, by_alias=True)
 
-        if "current_summoner" not in locals():
-            return
+        champion_id = max(
+            summoner_data.champion_id,
+            summoner_data.champion_pick_intent,
+        )
 
-        selected_id = int(current_summoner["championId"])
-        pick_intent = int(current_summoner["championPickIntent"])
-        champion_id = selected_id if selected_id != 0 else pick_intent
         if champion_id == champion_tracker.last_id():
             return
         logger.debug(
-            f"The last champion was {champion_tracker.last_id()}.\n"
-            f"The current is {champion_id}."
+            f"Last champion: {champion_tracker.last_id()} | Current: {champion_id}.",
         )
-        summoner_id = current_summoner["summonerId"]
-        assigned_position = current_summoner["assignedPosition"]
+        champion_list = await _get_champion_dict(conn)
+        logger.debug("Fetched champion_list.")
 
-        champions = await _get_champion_dict(conn)
+        champion_name = champion_list.get(champion_id)
+        logger.debug(f"Champion name: {champion_name}")
 
-        champion_name = champions[champion_id]
-
-        role = ROLES.get(assigned_position) if assigned_position else None
+        role = (
+            ROLES.get(summoner_data.assigned_position)
+            if summoner_data.assigned_position is not None
+            else "aram"
+        )
 
         itemsets_payload, perks_payload, spells_payload = await get_mobalytics_info(
-            champion_name, role, conn, champion_id, summoner_id
+            champion_name,
+            role,
+            conn,
+            champion_id,
+            summoner_data.summoner_id,
         )
 
-        if champion_tracker.last_id() != champion_id:
-            await asyncio.gather(
-                send_itemsets(conn, itemsets_payload, summoner_id),
-                send_perks(conn, perks_payload),
-                send_spells(conn, spells_payload),
-            )
-
+        await asyncio.gather(
+            send_itemsets(
+                conn,
+                itemsets_payload,
+                summoner_data.summoner_id,
+                context=ssl_context(),
+            ),
+            send_perks(conn, perks_payload, context=ssl_context()),
+            send_spells(conn, spells_payload, context=ssl_context()),
+        )
         champion_tracker.last_id(champion_id)
 
     except (
@@ -264,8 +264,48 @@ async def on_message(event: str | bytes, conn: Any, ws: Any) -> None:
         TypeError,
         IndexError,
         json.decoder.JSONDecodeError,
+        ValueError,
     ) as e:
         logger.debug(e)
 
-    except (KeyboardInterrupt, asyncio.exceptions.CancelledError):
+    except (KeyboardInterrupt, asyncio.exceptions.CancelledError) as e:
+        logger.exception(e)
         sys.exit(0)
+
+
+async def handle_auto_accept(conn: Any) -> None:
+    """Handles the automatic acceptance of game phases.
+
+    Continuously checks the gameflow session for phase changes.
+    If the phase is "ChampSelect", it breaks the loop.
+    If the phase is "ReadyCheck", it accepts the match and breaks.
+    For other phases, it logs the phase change if it's different
+    from the last observed phase.
+
+    Arguments:
+        conn: The connection object to interact with the game client.
+        last_phase: The last observed game phase, used for logging.
+
+    Returns:
+        None
+    """
+    while True:
+        context = ssl_context()
+
+        response = await conn.get("/lol-gameflow/v1/session", ssl=context)
+        content = await response.json()
+
+        phase = content.get("phase")
+
+        match phase:
+            case "ChampSelect":
+                break
+
+            case "ReadyCheck":
+                await conn.post(
+                    "/lol-matchmaking/v1/ready-check/accept",
+                    ssl=context,
+                )
+                break
+
+        await asyncio.sleep(1)

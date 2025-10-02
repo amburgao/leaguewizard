@@ -8,77 +8,49 @@ game events to the `on_message` handler. It also manages the system tray icon.
 from __future__ import annotations
 
 import asyncio
-import base64
-import json
 import os
-import ssl
+import random
 import sys
-import tempfile
-import urllib
 from pathlib import Path
 from typing import Any
 
 import aiohttp
 import psutil
 import websockets
-from infi.systray import SysTrayIcon  # type: ignore[import-untyped]
+from infi.systray import SysTrayIcon
 from loguru import logger
 
 from leaguewizard.api.callback_handler import on_message
+from leaguewizard.api.models import LockFile
+from leaguewizard.api.utils import ssl_context
 from leaguewizard.core.exceptions import LeWizardGenericError
 from leaguewizard.data import image_path
 
-RIOT_CERT = Path(tempfile.gettempdir(), "riotgames.pem")
-if not RIOT_CERT.exists():
-    urllib.request.urlretrieve(
-        "https://static.developer.riotgames.com/docs/lol/riotgames.pem", RIOT_CERT
-    )
 
-context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
-context.load_verify_locations(RIOT_CERT)
-context.check_hostname = False
-
-
-def _lcu_lockfile(league_exe: str) -> Path:
-    if not Path(league_exe).exists():
-        msg = "LeagueClient.exe not running or not found."
-        raise ProcessLookupError(msg)
-    league_dir = Path(league_exe).parent
-    return Path(league_dir / "lockfile")
-
-
-def _lcu_wss(lockfile: Path) -> dict[str, str]:
-    with lockfile.open(encoding="utf_8") as f:
-        content = f.read()
-    parts = content.split(":")
-
-    port = parts[2]
-    wss = f"wss://127.0.0.1:{port}"
-    https = f"https://127.0.0.1:{port}"
-
-    auth_key = parts[3]
-    raw_auth = f"riot:{auth_key}"
-    auth = base64.b64encode(bytes(raw_auth, "utf-8")).decode()
-    return {"auth": auth, "wss": wss, "https": https}
-
-
-def find_proc_by_name(name: str | list[str]) -> Any:
-    """Finds the executable path of a process by its name.
+def find_client_full_path(exe: str = "LeagueClient.exe") -> Path:
+    """Finds the full path of the League of Legends client executable.
 
     Args:
-        name (str | list[str]): The name(s) of the process to find (e.g.,
-            "LeagueClient.exe").
+        exe: The name of the executable to find. Defaults to "LeagueClient.exe".
 
     Returns:
-        Any: The full path to the executable if found, otherwise None.
+        The full path to the executable as a `pathlib.Path` object.
+
+    Raises:
+        LeWizardGenericError: If the executable is not found.
     """
-    if type(name) is str:
-        name = list(name)
-    proc_list = psutil.process_iter()
-    for proc in proc_list:
-        if proc.name() in name:
-            return proc.exe()
-    return None
+    proc_path: Any = next(
+        (i.exe() for i in psutil.process_iter() if i.name() == exe),
+        None,
+    )
+    if proc_path is None:
+        raise LeWizardGenericError(
+            message=f"{exe} not found. Is client running?",
+            show=True,
+            title="Error.",
+            terminate=True,
+        )
+    return Path(proc_path)
 
 
 async def start() -> None:
@@ -91,36 +63,52 @@ async def start() -> None:
     Returns:
         None: This function runs indefinitely until interrupted.
     """
-    with SysTrayIcon(image_path, "LeagueWizard", on_quit=lambda e: os._exit(0)) as tray:
-        exe = find_proc_by_name(["LeagueClient.exe", "LeagueClientUx.exe"])
-        if exe is None:
-            msg = "league.exe not found."
-            raise LeWizardGenericError(msg, True, "abc", True)
-        lockfile = _lcu_lockfile(exe)
-        lockfile_data = _lcu_wss(lockfile)
-        https = lockfile_data["https"]
-        wss = lockfile_data["wss"]
-        auth = lockfile_data["auth"]
-        header = {"Authorization": f"Basic {auth}"}
-
+    with SysTrayIcon(
+        str(image_path),
+        "LeagueWizard",
+        on_quit=lambda e: os._exit(0),
+    ) as tray:
+        logger.debug("Tray initialized")
         try:
+            league_client = find_client_full_path()
+            logger.debug(f"Client found: {league_client}")
+            lockfile = LockFile(league_client)
+            logger.debug(f"Lockfile found: {lockfile.lockfile_path}")
+            context = ssl_context()
+            assert lockfile.wss_addr is not None  # noqa: S101
             async with websockets.connect(
-                uri=wss,
-                additional_headers=header,
+                uri=lockfile.wss_addr,
+                additional_headers=lockfile.auth_header,
                 ssl=context,
             ) as ws:
-                await ws.send('[2,"0", "GetLolSummonerV1CurrentSummoner"]')
-                json.loads(await ws.recv())
+                logger.debug("Joining websocket session.")
+
                 await ws.send('[5, "OnJsonApiEvent_lol-champ-select_v1_session"]')
-                async with aiohttp.ClientSession(
-                    base_url=https, headers=header
-                ) as conn:
-                    async for event in ws:
-                        await on_message(event, conn, ws)
+                logger.debug(
+                    "Subscribed to OnJsonApiEvent_lol-champ-select_v1_session.",
+                )
+                aio_client = aiohttp.ClientSession(
+                    base_url=lockfile.https_addr,
+                    headers=lockfile.auth_header,
+                )
+                aio_client_id = random.randint(0, 1000)  # noqa: S311
+                async for event in ws:
+                    logger.debug("Event received.")
+                    min_event_length = 3
+                    if event is not None and len(event) >= min_event_length:
+                        await on_message(
+                            event,
+                            aio_client,
+                            aio_client_id,
+                        )
+
         except websockets.exceptions.ConnectionClosedError as e:
             logger.exception(e.args)
-        except (KeyboardInterrupt, asyncio.exceptions.CancelledError):
-            raise
+
+        except (KeyboardInterrupt, asyncio.exceptions.CancelledError) as e:
+            logger.exception(e.args)
+            raise LeWizardGenericError(show=False, terminate=True) from e
+
         finally:
             tray.shutdown()
             sys.exit(0)

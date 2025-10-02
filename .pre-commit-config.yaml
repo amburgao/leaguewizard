@@ -22,6 +22,7 @@ repos:
       - id: forbid-new-submodules
       - id: mixed-line-ending
       - id: name-tests-test
+      - id: no-commit-to-branch
         stages:
           - pre-push
       - id: sort-simple-yaml
@@ -45,7 +46,7 @@ repos:
         pass_filenames: false
       - id: uv-dev-sync
         name: uv-dev-sync
-        entry: uv sync --dev
+        entry: uv sync
         language: python
         stages:
           - post-checkout
@@ -86,14 +87,31 @@ repos:
         require_serial: true
       - id: pyproject-fmt
         name: pyproject-fmt
-        entry: pyproject-fmt --indent 4 --keep-full-version --max-supported-python 3.13
+        entry: pyproject-fmt
         language: python
         files: '(^|/)pyproject\.toml$'
         types:
           - toml
       - id: codespell
         name: codespell
-        entry: codespell -f -w
+        entry: codespell
         language: python
         types:
           - text
+      - id: check-jsonschema
+        name: check-jsonschema
+        entry: make check-jsonschema
+        language: python
+        files: (?x)^(
+          \.github/workflows/[^/]+|
+          \.gitlab-ci\.yml|
+          \.gitlab/workflows/[^/]+|
+          \.readthedocs\.yaml|
+          \.renovaterc\.json
+          )$
+        pass_filenames: false
+      - id: forbidden-files
+        name: forbidden files
+        entry: found Copier update rejection files; review them and remove them
+        language: fail
+        files: \.rej$
