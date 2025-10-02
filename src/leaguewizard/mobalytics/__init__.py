@@ -1,3 +1,7 @@
-"""."""
+"""Initializes the leaguewizard.mobalytics.mobalytics submodule.
 
-from .mobalytics import *
+This module imports all public objects from the
+leaguewizard.mobalytics.mobalytics module.
+"""
+
+from leaguewizard.mobalytics.mobalytics import *

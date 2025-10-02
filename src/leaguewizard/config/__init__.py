@@ -9,7 +9,6 @@ If a configuration file is found, its contents are loaded into the `WizConfig` v
 If no file is found, a default `WizConfig` is provided.
 """
 
-import loguru
 import tomli
 import tomli_w
 
@@ -33,6 +32,3 @@ if not _config_found:
 
 flash = _config["config"].get("flash")
 auto_accept = _config["config"].get("auto_accept")
-logger = loguru.logger
-logger.info(flash)
-logger.info(auto_accept)

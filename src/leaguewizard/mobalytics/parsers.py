@@ -54,7 +54,11 @@ class ItemsetsParser(BaseParser):
     """A parser for champion item sets."""
 
     def parse(
-        self, account_id: int, champion_id: int, champion_name: str, role: str
+        self,
+        account_id: int,
+        champion_id: int,
+        champion_name: str,
+        role: str,
     ) -> None:
         """Parses the item sets from the HTML for a specific champion and role.
 
@@ -68,7 +72,11 @@ class ItemsetsParser(BaseParser):
             self._get_aram_item_sets() if role == "aram" else self._get_sr_item_sets()
         )
         self._payload = self._get_item_sets_payload(
-            item_sets, account_id, champion_id, champion_name, role
+            item_sets,
+            account_id,
+            champion_id,
+            champion_name,
+            role,
         )
 
     def _get_sr_item_sets(self) -> dict[str, Any]:
@@ -135,7 +143,7 @@ class ItemsetsParser(BaseParser):
 
             for img in node.css("img"):
                 src = img.attributes.get("src")
-                matches = re.search("/(\\d+)\\.png", src) if src else None
+                matches = re.search(r"/(\d+)\.png", src) if src else None
 
                 if matches:
                     items.append(matches.group(1))
@@ -165,10 +173,8 @@ class ItemsetsParser(BaseParser):
         """
         blocks = []
         for block, items in item_sets.items():
-            _items = []
-            for item in items:
-                _items.append(Item(count=1, id=item))
-            blocks.append(Block(items=_items, type=block))
+            item_list = [Item(count=1, id=item) for item in items]
+            blocks.append(Block(items=item_list, type=block))
         itemset = ItemSet(
             associatedChampions=[champion_id],
             blocks=blocks,
@@ -198,15 +204,16 @@ class PerksParser(BaseParser):
 
     def _get_perks(self) -> Any:
         perks_selectors = [".m-68x97p", ".m-1iebrlh", ".m-1nx2cdb", ".m-1u3ui07"]
-        perks = []
-        for selector in perks_selectors:
-            nodes = self.html.css(selector)
-            for node in nodes:
-                src = node.attributes.get("src")
-                if src:
-                    matches = re.search("/(\\d+)\\.(svg|png)\\b", src)
-                    if matches:
-                        perks.append(int(matches.group(1)))
+        srcs = [
+            node.attributes.get("src")
+            for selector in perks_selectors
+            for node in self.html.css(selector)
+        ]
+        matches = [
+            re.search(r"/(\d+)\.(svg|png)\b", src) for src in srcs if src is not None
+        ]
+        if matches:
+            perks = [int(match.group(1)) for match in matches if match is not None]
         if len(perks) == 0:
             raise ValueError
         return perks
@@ -222,7 +229,9 @@ class SpellsParser(BaseParser):
         flash_pos = 0 if flash_config == "d" else 1
         spells = self._set_flash_position(spells, 4, flash_pos)
         self._payload = PayloadSpells(
-            spell1Id=spells[0], spell2Id=spells[1], selectedSkinId=0
+            spell1Id=spells[0],
+            spell2Id=spells[1],
+            selectedSkinId=0,
         )
 
     def _get_spells(self) -> list[int]:
@@ -241,7 +250,9 @@ class SpellsParser(BaseParser):
 
     @staticmethod
     def _set_flash_position(
-        spell_list: list[int], spell_id: int = 4, index: int = 1
+        spell_list: list[int],
+        spell_id: int = 4,
+        index: int = 1,
     ) -> list[int]:
         if spell_id not in spell_list:
             return spell_list
