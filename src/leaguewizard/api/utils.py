@@ -13,10 +13,10 @@ from leaguewizard.data import riot_cert_path
 
 def ssl_context(cert_path: Path = riot_cert_path) -> ssl.SSLContext:
     """Creates an SSL context for client connections.
-
+    
     Args:
         cert_path: The path to the CA certificate file.
-
+    
     Returns:
         An SSLContext object configured for client use.
     """
