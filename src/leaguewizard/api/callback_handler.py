@@ -29,12 +29,12 @@ async def _get_latest_version(
     url: str = "https://ddragon.leagueoflegends.com/api/versions.json",
 ) -> Any:
     """Retrieves the latest DDragon version from the Riot Games API.
-
+    
     Args:
         client (aiohttp.ClientSession): The aiohttp client session.
         url (str): The URL to fetch the versions from. Defaults to
             "https://ddragon.leagueoflegends.com/api/versions.json".
-
+    
     Returns:
         Any: The latest version string.
     """
@@ -74,7 +74,7 @@ async def send_itemsets(
     context: SSLContext,
 ) -> None:
     """Sends item set data for a given account ID.
-
+    
     Args:
         client: An aiohttp client session for making HTTP requests.
         payload: The PayloadItemSets object containing the item set data.
@@ -150,11 +150,11 @@ async def get_champion_name(
     champion_id: int,
 ) -> str | None:
     """Retrieves the name of a champion given their ID.
-
+    
     Args:
         client (aiohttp.ClientSession): The aiohttp client session.
         champion_id (int): The ID of the champion.
-
+    
     Returns:
         str | None: The champion's name if found, otherwise None.
     """
@@ -274,21 +274,7 @@ async def on_message(
 
 
 async def handle_auto_accept(conn: Any) -> None:
-    """Handles the automatic acceptance of game phases.
-
-    Continuously checks the gameflow session for phase changes.
-    If the phase is "ChampSelect", it breaks the loop.
-    If the phase is "ReadyCheck", it accepts the match and breaks.
-    For other phases, it logs the phase change if it's different
-    from the last observed phase.
-
-    Arguments:
-        conn: The connection object to interact with the game client.
-        last_phase: The last observed game phase, used for logging.
-
-    Returns:
-        None
-    """
+    """Handles the automatic acceptance of game phases."""
     while True:
         context = ssl_context()
 

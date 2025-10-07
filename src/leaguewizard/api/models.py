@@ -47,6 +47,7 @@ class LockFile:
         self._parse()
 
     def _parse(self) -> None:
+        """Parse the lockfile and set connection parameters."""
         with self.lockfile_path.open(encoding="utf-8") as f:
             parts: list[str] = f.read().split(":")
 
@@ -68,11 +69,7 @@ class LockFile:
 
     @property
     def https_addr(self) -> str | None:
-        """Gets the HTTPS address.
-
-        Returns:
-            The HTTPS address as a string, or None if not set.
-        """
+        """Gets the HTTPS address."""
         return self._https_addr
 
     @property
@@ -86,15 +83,12 @@ class LockFile:
 
     @property
     def auth_header(self) -> dict[str, str] | None:
-        """Returns the authentication header.
-
-        Returns:
-            A dictionary of authentication headers, or None if none exist.
-        """
+        """Returns the authentication header as a dictionary or None."""
         return self._auth_header
 
     @staticmethod
     def _lockfile(exe: str | Path) -> Path:
+        """Generate the path for the lockfile based on the executable path."""
         return Path(exe).parent / "lockfile"
 
 
