@@ -28,11 +28,7 @@ class MobaChampion:
         self.html: HTMLParser | None = None
 
     def _build_url(self) -> str:
-        """Builds the Mobalytics URL for the champion and role.
-
-        Returns:
-            str: The constructed URL.
-        """
+        """Builds the Mobalytics URL for the champion and role."""
         base_url = "https://mobalytics.gg/lol/champions"
         endpoint = (
             f"{self.champion_name}/build/{self.role}"
@@ -42,16 +38,16 @@ class MobaChampion:
         return f"{base_url}/{endpoint}"
 
     async def fetch_data(self, client: aiohttp.ClientSession) -> HTMLParser:
-        """Fetches the HTML content of the Mobalytics champion page.
-
+        """Fetches and parses the HTML content of the Mobalytics champion page.
+        
         Args:
             client (aiohttp.ClientSession): The aiohttp client session.
-
-        Raises:
-            LeWizardGenericError: If the champion HTML could not be retrieved.
-
+        
         Returns:
             HTMLParser: The parsed HTML content.
+        
+        Raises:
+            LeWizardGenericError: If the champion HTML could not be retrieved.
         """
         try:
             response = await client.get(self.url)
@@ -67,11 +63,11 @@ class MobaChampion:
 
     def itemsets_payload(self, summoner_id: int, champion_id: int) -> Any:
         """Generates the item sets payload for the LCU API.
-
+        
         Args:
             summoner_id (int): The summoner's ID.
             champion_id (int): The champion's ID.
-
+        
         Returns:
             Any: The PayloadItemSets object or None if HTML content is not available.
         """
@@ -87,11 +83,7 @@ class MobaChampion:
         return itemsets.payload
 
     def perks_payload(self) -> Any:
-        """Generates the perks payload for the LCU API.
-
-        Returns:
-            Any: The PayloadPerks object or an empty dictionary if not HTML.
-        """
+        """Generates the perks payload for the LCU API."""
         if self.html is None:
             return None
         perks = PerksParser(self.html)
@@ -99,11 +91,7 @@ class MobaChampion:
         return perks.payload
 
     def spells_payload(self) -> Any:
-        """Generates the spells payload for the LCU API.
-
-        Returns:
-            Any: The PayloadSpells object or an empty dictionary if not HTML.
-        """
+        """Generates the spells payload for the LCU API."""
         if self.html is None:
             return None
         spells = SpellsParser(self.html)
@@ -119,18 +107,7 @@ async def get_mobalytics_info(
     champion_id: int,
     summoner_id: int,
 ) -> Any:
-    """Fetches Mobalytics item sets, perks, spells for a given champion and role.
-
-    Args:
-        champion_name (str): The name of the champion.
-        role (str): The role of the champion (e.g., "top", "aram").
-        conn (aiohttp.ClientSession): Aiohttp client session for making HTTP requests.
-        champion_id (int): The ID of the champion.
-        summoner_id (int): The ID of the summoner.
-
-    Returns:
-        Any: A tuple containing the itemsets_payload, perks_payload, and spells_payload.
-    """
+    """Fetches Mobalytics item sets, perks, and spells for a champion and role."""
     try:
         if role is None:
             role = "aram"

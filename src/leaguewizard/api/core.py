@@ -28,17 +28,7 @@ from leaguewizard.data import image_path
 
 
 def find_client_full_path(exe: str = "LeagueClient.exe") -> Path:
-    """Finds the full path of the League of Legends client executable.
-
-    Args:
-        exe: The name of the executable to find. Defaults to "LeagueClient.exe".
-
-    Returns:
-        The full path to the executable as a `pathlib.Path` object.
-
-    Raises:
-        LeWizardGenericError: If the executable is not found.
-    """
+    """Finds the full path of the specified executable."""
     proc_path: Any = next(
         (i.exe() for i in psutil.process_iter() if i.name() == exe),
         None,
@@ -54,14 +44,13 @@ def find_client_full_path(exe: str = "LeagueClient.exe") -> Path:
 
 
 async def start() -> None:
-    """Initializes the application, connects to the LCU, and starts listening events.
-
-    Raises:
-        LeWizardGenericError: If 'LeagueClient.exe' or 'LeagueClientUx.exe'
-            is not found.
-
-    Returns:
-        None: This function runs indefinitely until interrupted.
+    """Initializes the application and starts listening for events.
+    
+    This function sets up a system tray icon and establishes a connection to the League
+    Client. It retrieves the client path and lockfile, then connects to the websocket to
+    listen for events. The function handles incoming events and processes them using the
+    `on_message` function. It also manages exceptions related to websocket connections and
+    application termination.
     """
     with SysTrayIcon(
         str(image_path),

@@ -80,14 +80,7 @@ class ItemsetsParser(BaseParser):
         )
 
     def _get_sr_item_sets(self) -> dict[str, Any]:
-        """Extracts Summoner's Rift item sets from the HTML.
-
-        Raises:
-            ValueError: If the main container for item sets is not found.
-
-        Returns:
-            dict[str, Any]: A dictionary of Summoner's Rift item sets.
-        """
+        """Extracts Summoner's Rift item sets from the HTML."""
         container_div = self.html.css_first("div.m-owe8v3:nth-child(2)")
 
         if container_div is None:
@@ -104,14 +97,7 @@ class ItemsetsParser(BaseParser):
         }
 
     def _get_aram_item_sets(self) -> dict[str, Any]:
-        """Extracts ARAM item sets from the HTML.
-
-        Raises:
-            ValueError: If the main container for item sets is not found.
-
-        Returns:
-            dict[str, Any]: A dictionary of ARAM item sets.
-        """
+        """Extracts ARAM item sets from the HTML."""
         container_div = self.html.css_first("div.m-owe8v3:nth-child(2)")
 
         if container_div is None:
@@ -129,12 +115,14 @@ class ItemsetsParser(BaseParser):
     @staticmethod
     def _get_itemsets(tree: list[Node]) -> list[list[Any]]:
         """Extracts item sets from a list of HTML nodes.
-
+        
+        This method processes a list of HTML nodes, extracting item IDs from  image sources
+        found within each node. It iterates through each node,  retrieves the image elements,
+        and uses a regular expression to match  and extract the item IDs from the image source
+        URLs. The resulting  item IDs are collected into groups and returned as a list of lists.
+        
         Args:
             tree (list[Node]): A list of HTML nodes containing item images.
-
-        Returns:
-            list[list[Any]]: A list of item sets, each item set is a list of item IDs.
         """
         item_sets_groups = []
 
@@ -159,18 +147,7 @@ class ItemsetsParser(BaseParser):
         champion_name: str,
         role: str,
     ) -> Any:
-        """Creates the payload for the item sets.
-
-        Args:
-            item_sets (dict): A dictionary of item sets.
-            account_id (int): The account ID.
-            champion_id (int): The champion ID.
-            champion_name (str): The champion name.
-            role (str): The role or game mode (e.g., 'aram').
-
-        Returns:
-            Any: The constructed payload for the item sets.
-        """
+        """Creates the payload for the item sets."""
         blocks = []
         for block, items in item_sets.items():
             item_list = [Item(count=1, id=item) for item in items]
@@ -203,6 +180,17 @@ class PerksParser(BaseParser):
         )
 
     def _get_perks(self) -> Any:
+        """Retrieve a list of perks from the HTML content.
+        
+        This function searches for specific image sources in the HTML using predefined CSS
+        selectors. It extracts the numeric values from the image filenames, which represent the
+        perks. If no valid perks are found, a ValueError is raised. The function relies on the
+        `self.html.css` method to access the HTML nodes and uses regular expressions to parse
+        the image source strings.
+        
+        Raises:
+            ValueError: If no perks are found in the HTML content.
+        """
         perks_selectors = [".m-68x97p", ".m-1iebrlh", ".m-1nx2cdb", ".m-1u3ui07"]
         srcs = [
             node.attributes.get("src")
@@ -223,7 +211,7 @@ class SpellsParser(BaseParser):
     """A parser for champion summoner spells."""
 
     def parse(self) -> None:
-        """Parses the summoner spells from HTML and creates a PayloadSpells object."""
+        """Parses summoner spells and creates a PayloadSpells object."""
         spells = self._get_spells()
         flash_config = config.flash
         flash_pos = 0 if flash_config == "d" else 1
@@ -235,6 +223,7 @@ class SpellsParser(BaseParser):
         )
 
     def _get_spells(self) -> list[int]:
+        """Retrieve a list of spell integers from HTML nodes."""
         spells = []
 
         nodes = self.html.css(".m-d3vnz1")
@@ -254,6 +243,7 @@ class SpellsParser(BaseParser):
         spell_id: int = 4,
         index: int = 1,
     ) -> list[int]:
+        """Sets the position of a spell ID in the spell list."""
         if spell_id not in spell_list:
             return spell_list
 
