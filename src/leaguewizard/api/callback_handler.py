@@ -28,16 +28,7 @@ async def _get_latest_version(
     client: aiohttp.ClientSession,
     url: str = "https://ddragon.leagueoflegends.com/api/versions.json",
 ) -> Any:
-    """Retrieves the latest DDragon version from the Riot Games API.
-    
-    Args:
-        client (aiohttp.ClientSession): The aiohttp client session.
-        url (str): The URL to fetch the versions from. Defaults to
-            "https://ddragon.leagueoflegends.com/api/versions.json".
-    
-    Returns:
-        Any: The latest version string.
-    """
+    """Fetches the latest DDragon version from the Riot Games API."""
     response = await client.get(url)
     content = await response.json()
     return content[0]

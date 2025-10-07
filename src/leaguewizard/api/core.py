@@ -46,11 +46,11 @@ def find_client_full_path(exe: str = "LeagueClient.exe") -> Path:
 async def start() -> None:
     """Initializes the application and starts listening for events.
     
-    This function sets up a system tray icon and establishes a connection to the League
-    Client. It retrieves the client path and lockfile, then connects to the websocket to
-    listen for events. The function handles incoming events and processes them using the
-    `on_message` function. It also manages exceptions related to websocket connections and
-    application termination.
+    This function sets up a system tray icon and establishes a connection to the
+    League Client. It retrieves the client path and lockfile, then connects to the
+    websocket to listen for events. The function handles incoming events and
+    processes them using the `on_message` function. It also manages exceptions
+    related to websocket connections and application termination.
     """
     with SysTrayIcon(
         str(image_path),
