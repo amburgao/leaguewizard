@@ -12,7 +12,7 @@ from leaguewizard.core.exceptions import LeWizardGenericError
 
 
 def main() -> None:
-    """LeagueWizard main entry point function."""
+    """Main entry point function for LeagueWizard."""
     LOG_DIR.mkdir(exist_ok=True, parents=True)
     logger.add(
         LOG_DIR / f"{datetime.now(timezone.utc).strftime('%Y-%m-%d_%H-%M-%S')}.log",
