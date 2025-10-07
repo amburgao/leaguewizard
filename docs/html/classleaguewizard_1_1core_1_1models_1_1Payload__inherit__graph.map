@@ -1,0 +1,19 @@
+<map id="leaguewizard.core.models.Payload" name="leaguewizard.core.models.Payload">
+<area shape="rect" id="Node000001" title=" " alt="" coords="672,119,861,199"/>
+<area shape="rect" id="Node000003" href="$classleaguewizard_1_1core_1_1models_1_1Action.html" title=" " alt="" coords="5,279,195,379"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="658,164,560,170,445,185,324,210,265,228,208,249,180,264,155,281,152,277,178,259,206,244,263,223,323,205,444,179,559,165,658,158"/>
+<area shape="rect" id="Node000004" href="$classleaguewizard_1_1core_1_1models_1_1Ally.html" title=" " alt="" coords="219,247,434,412"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="659,183,555,209,500,228,448,249,435,255,433,250,446,244,498,223,553,204,658,177"/>
+<area shape="rect" id="Node000005" href="$classleaguewizard_1_1core_1_1models_1_1EventSchema.html" title=" " alt="" coords="459,269,648,389"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="708,210,630,271,626,267,705,205"/>
+<area shape="rect" id="Node000006" href="$classleaguewizard_1_1core_1_1models_1_1ItemSet.html" title=" " alt="" coords="672,279,861,379"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="769,212,769,279,764,279,764,212"/>
+<area shape="rect" id="Node000007" href="$classleaguewizard_1_1core_1_1models_1_1PayloadItemSets.html" title=" " alt="" coords="885,269,1075,389"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="829,205,907,267,904,271,825,210"/>
+<area shape="rect" id="Node000008" href="$classleaguewizard_1_1core_1_1models_1_1PayloadPerks.html" title=" " alt="" coords="1099,269,1288,389"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="875,176,980,203,1035,222,1088,244,1126,267,1123,272,1085,249,1033,226,979,208,874,181"/>
+<area shape="rect" id="Node000009" href="$classleaguewizard_1_1core_1_1models_1_1PayloadSpells.html" title=" " alt="" coords="1312,269,1501,389"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="875,160,969,167,1078,182,1191,207,1247,224,1301,244,1341,267,1338,272,1299,249,1246,229,1190,212,1077,187,968,172,875,165"/>
+<area shape="rect" id="Node000002" href="$classBaseModel.html" title=" " alt="" coords="723,5,810,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="769,85,769,118,764,118,764,85"/>
+</map>

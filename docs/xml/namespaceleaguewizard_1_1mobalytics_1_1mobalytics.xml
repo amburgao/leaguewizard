@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespaceleaguewizard_1_1mobalytics_1_1mobalytics" kind="namespace" language="Python">
+    <compoundname>leaguewizard::mobalytics::mobalytics</compoundname>
+    <innerclass refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion" prot="public">leaguewizard::mobalytics::mobalytics::MobaChampion</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceleaguewizard_1_1mobalytics_1_1mobalytics_1a580fe863b407c020ab46e701674241f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Any</type>
+        <definition> Any leaguewizard.mobalytics.mobalytics.get_mobalytics_info</definition>
+        <argsstring>(str champion_name, str|None role, aiohttp.ClientSession conn, int champion_id, int summoner_id)</argsstring>
+        <name>get_mobalytics_info</name>
+        <qualifiedname>leaguewizard.mobalytics.mobalytics.get_mobalytics_info</qualifiedname>
+        <param>
+          <type>str</type>
+          <declname>champion_name</declname>
+        </param>
+        <param>
+          <type>str|None</type>
+          <declname>role</declname>
+        </param>
+        <param>
+          <type>aiohttp.ClientSession</type>
+          <declname>conn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>champion_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>summoner_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Fetches Mobalytics item sets, perks, and spells for a champion and role.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="103" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="109" bodyend="127"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Mobalytics handler module.</verbatim> </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

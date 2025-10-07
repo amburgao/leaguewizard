@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_cce5adb806ec36d2ae78869be2db0ac3" kind="dir">
+    <compoundname>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard</compoundname>
+    <innerdir refid="dir_796babe132c05beea6c9aad243083896">/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/docs</innerdir>
+    <innerdir refid="dir_c3ebecf05dd3a894924b20208a2cc092">/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts</innerdir>
+    <innerdir refid="dir_8409344b988e1653bc020c7f042df452">/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para></para>
+<para><ulink url=""><image type="html" name="https://raw.githubusercontent.com/amburgao/leaguewizard/86de1360c231a01b89cb0f86b7cb9a6df155a89e/.github/images/logo.png" alt="Project logo" inline="yes"></image>
+</ulink> </para>
+<sect1 id="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/README.md_1autotoc_md49">
+<title>Table of contents</title><para><orderedlist>
+<listitem><para>Introduction</para>
+</listitem><listitem><para>Features</para>
+</listitem><listitem><para>Installation<orderedlist>
+<listitem><para>Github Releases</para>
+</listitem></orderedlist>
+<orderedlist>
+<listitem><para>pipx</para>
+</listitem></orderedlist>
+</para>
+</listitem><listitem><para>Development</para>
+</listitem><listitem><para>Documentation</para>
+</listitem><listitem><para>License</para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/README.md_1autotoc_md50">
+<title>Introduction</title><para>Auto sync your itemsets, perks and spells with mobalytics.gg ones on champion selection.</para>
+<sect2 id="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/README.md_1autotoc_md51">
+<title>Features</title><para><itemizedlist>
+<listitem><para>No user interaction needed except for selecting your champion</para>
+</listitem><listitem><para>Import latest itemsets (champion build)</para>
+</listitem><listitem><para>Import latest perks (champion runes)</para>
+</listitem><listitem><para>Import latest summoner spells</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/README.md_1autotoc_md52">
+<title>Installation</title><sect3 id="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/README.md_1autotoc_md53">
+<title>Github-Releases</title><para>Go to the latest <ulink url="https://github.com/amburgao/leaguewizard/releases/latest">LeagueWizard Release</ulink> and download the standalone binary.</para>
+</sect3>
+<sect3 id="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/README.md_1autotoc_md54">
+<title>pipx</title><para>Install LeagueWizard using pipx</para>
+<para><programlisting filename=".pwsh"><codeline><highlight class="normal">pipx<sp/>install<sp/>leaguewizard</highlight></codeline>
+</programlisting></para>
+<para>Then run with</para>
+<para><programlisting filename=".pwsh"><codeline><highlight class="normal">leaguewizard.exe</highlight></codeline>
+</programlisting></para>
+</sect3>
+</sect2>
+<sect2 id="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/README.md_1autotoc_md55">
+<title>Development</title><para>Prerequisites</para>
+<para><programlisting filename=".pwsh"><codeline><highlight class="normal">pipx<sp/>install<sp/>uv</highlight></codeline>
+</programlisting></para>
+<para>Clone the repository</para>
+<para><programlisting filename=".pwsh"><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/amburgao/leaguewizard.git</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">cd<sp/>leaguewizard</highlight></codeline>
+</programlisting></para>
+<para>Install the project with dev and optional dependencies</para>
+<para><programlisting filename=".pwsh"><codeline><highlight class="normal">uv<sp/>sync<sp/>--dev<sp/>--all-groups</highlight></codeline>
+</programlisting></para>
+<para>Then just activate the environment</para>
+<para><programlisting filename=".pwsh"><codeline><highlight class="normal">./.venv/Scripts/activate</highlight></codeline>
+</programlisting></para>
+<para><emphasis>ps: you can use Make to setup the project, simple as:</emphasis></para>
+<para><programlisting filename=".pwsh"><codeline><highlight class="normal">cd<sp/>leaguewizard</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">./.venv/scripts/activate</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/README.md_1autotoc_md56">
+<title>Documentation</title><para><ulink url="https://amburgao.github.io/leaguewizard/">Documentation</ulink></para>
+</sect2>
+<sect2 id="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/README.md_1autotoc_md57">
+<title>License</title><para><ulink url="./LICENSE">MIT</ulink> </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/"/>
+  </compounddef>
+</doxygen>

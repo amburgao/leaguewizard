@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="config_2____init_____8py" kind="file" language="Python">
+    <compoundname>__init__.py</compoundname>
+    <innernamespace refid="namespaceleaguewizard">leaguewizard</innernamespace>
+    <innernamespace refid="namespaceleaguewizard_1_1config">leaguewizard::config</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceleaguewizard_1_1config" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;Handles<sp/>loading<sp/>the<sp/>application<sp/>configuration<sp/>from<sp/>a<sp/>&apos;config.toml&apos;<sp/>file.</highlight></codeline>
+<codeline lineno="2"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral">This<sp/>module<sp/>searches<sp/>for<sp/>&apos;config.toml&apos;<sp/>in<sp/>several<sp/>predefined<sp/>locations:</highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral">1.<sp/>User&apos;s<sp/>local<sp/>appdata<sp/>directory<sp/>(e.g.,<sp/>%LOCALAPPDATA%/LeagueWizard/config.toml).</highlight></codeline>
+<codeline lineno="5"><highlight class="stringliteral">2.<sp/>The<sp/>directory<sp/>of<sp/>the<sp/>executable<sp/>if<sp/>the<sp/>application<sp/>is<sp/>frozen.</highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral">3.<sp/>The<sp/>module&apos;s<sp/>own<sp/>directory<sp/>if<sp/>running<sp/>as<sp/>a<sp/>script.</highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="8"><highlight class="stringliteral">If<sp/>a<sp/>configuration<sp/>file<sp/>is<sp/>found,<sp/>its<sp/>contents<sp/>are<sp/>loaded<sp/>into<sp/>the<sp/>`WizConfig`<sp/>variable.</highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral">If<sp/>no<sp/>file<sp/>is<sp/>found,<sp/>a<sp/>default<sp/>`WizConfig`<sp/>is<sp/>provided.</highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>tomli</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>tomli_w</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespaceleaguewizard_1_1core_1_1constants" kindref="compound">leaguewizard.core.constants</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>APP_DIR,<sp/>CONFIG_FILE,<sp/>DEV_CONFIG_FILE</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="namespaceleaguewizard_1_1config_1ac49f338d1c11f18c5ed377d84b6e0ffa" refkind="member"><highlight class="normal">options<sp/>=<sp/>[DEV_CONFIG_FILE,<sp/>CONFIG_FILE]</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="namespaceleaguewizard_1_1config_1a1d01923b330160d473953f6a476f67a6" refkind="member"><highlight class="normal">_config_found<sp/>=<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>option<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>options:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>option.exists():</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>option.open(</highlight><highlight class="stringliteral">&quot;rb&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>fp:</highlight></codeline>
+<codeline lineno="23" refid="namespaceleaguewizard_1_1config_1a7310bd741d84cfd7354dfc8c6e307cee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_config<sp/>=<sp/>tomli.load(fp)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_config_found<sp/>=<sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>_config_found:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>_config<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;config&quot;</highlight><highlight class="normal">:<sp/>{</highlight><highlight class="stringliteral">&quot;flash&quot;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&quot;f&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;auto_accept&quot;</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="29" refid="namespaceleaguewizard_1_1config_1affce092fc76c024a07c15e60830c8203" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>APP_DIR.mkdir(exist_ok=</highlight><highlight class="keyword">True</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>CONFIG_FILE.open(</highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>fp:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tomli_w.dump(_config,<sp/>fp)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="namespaceleaguewizard_1_1config_1a94a51ae09a973c84a5d2e45148d907cb" refkind="member"><highlight class="normal">flash<sp/>=<sp/>_config[</highlight><highlight class="stringliteral">&quot;config&quot;</highlight><highlight class="normal">].get(</highlight><highlight class="stringliteral">&quot;flash&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="34" refid="namespaceleaguewizard_1_1config_1a21706b357f748b7fa73be72fd678b2fc" refkind="member"><highlight class="normal">auto_accept<sp/>=<sp/>_config[</highlight><highlight class="stringliteral">&quot;config&quot;</highlight><highlight class="normal">].get(</highlight><highlight class="stringliteral">&quot;auto_accept&quot;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py"/>
+  </compounddef>
+</doxygen>

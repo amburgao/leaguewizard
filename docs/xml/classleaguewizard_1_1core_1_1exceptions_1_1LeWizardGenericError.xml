@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classleaguewizard_1_1core_1_1exceptions_1_1LeWizardGenericError" kind="class" language="Python" prot="public">
+    <compoundname>leaguewizard::core::exceptions::LeWizardGenericError</compoundname>
+    <basecompoundref refid="classException" prot="public" virt="non-virtual">Exception</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classleaguewizard_1_1core_1_1exceptions_1_1LeWizardGenericError_1a566e5429b30c91b8880ad60e942d13e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.core.exceptions.LeWizardGenericError.__init__</definition>
+        <argsstring>(self, *, str message=&quot;&quot;, bool show=False, str title=&quot;&quot;, bool terminate=False)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>leaguewizard.core.exceptions.LeWizardGenericError.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>*</type>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>message</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>show</declname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>title</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>terminate</declname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes the LeWizardGenericError.
+
+Args:
+    message (str): The error message.
+    show (bool): If True, displays a message box with the error.
+        Defaults to False.
+    title (str): The title for the message box, if shown. Defaults to &quot;&quot;.
+    terminate (bool): If True, exits the application after handling the error.
+        Defaults to False.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/exceptions.py" line="10" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/exceptions.py" bodystart="17" bodyend="33"/>
+        <references refid="classleaguewizard_1_1core_1_1exceptions_1_1LeWizardGenericError_1a566e5429b30c91b8880ad60e942d13e1" compoundref="exceptions_8py" startline="17" endline="33">leaguewizard.core.exceptions.LeWizardGenericError.__init__</references>
+        <referencedby refid="classleaguewizard_1_1core_1_1exceptions_1_1LeWizardGenericError_1a566e5429b30c91b8880ad60e942d13e1" compoundref="exceptions_8py" startline="17" endline="33">leaguewizard.core.exceptions.LeWizardGenericError.__init__</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Base custom exception error for LeagueWizard.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Exception</label>
+        <link refid="classException"/>
+      </node>
+      <node id="1">
+        <label>leaguewizard.core.exceptions.LeWizardGenericError</label>
+        <link refid="classleaguewizard_1_1core_1_1exceptions_1_1LeWizardGenericError"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Exception</label>
+        <link refid="classException"/>
+      </node>
+      <node id="1">
+        <label>leaguewizard.core.exceptions.LeWizardGenericError</label>
+        <link refid="classleaguewizard_1_1core_1_1exceptions_1_1LeWizardGenericError"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/exceptions.py" line="7" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/exceptions.py" bodystart="7" bodyend="33"/>
+    <listofallmembers>
+      <member refid="classleaguewizard_1_1core_1_1exceptions_1_1LeWizardGenericError_1a566e5429b30c91b8880ad60e942d13e1" prot="public" virt="non-virtual"><scope>leaguewizard::core::exceptions::LeWizardGenericError</scope><name>__init__</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classleaguewizard_1_1api_1_1models_1_1LockFile" kind="class" language="Python" prot="public">
+    <compoundname>leaguewizard::api::models::LockFile</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1a8ca764a9f83e9be94e76516bdf61ba72" prot="public" static="no" mutable="no">
+        <type>str|Path</type>
+        <definition>str | Path leaguewizard.api.models.LockFile::exe</definition>
+        <argsstring></argsstring>
+        <name>exe</name>
+        <qualifiedname>leaguewizard.api.models.LockFile.exe</qualifiedname>
+        <initializer>=  league_exe</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="37" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1aa5ee44991655110bece6747eb091a088" prot="public" static="no" mutable="no">
+        <type>Path</type>
+        <definition>Path leaguewizard.api.models.LockFile::lockfile_path</definition>
+        <argsstring></argsstring>
+        <name>lockfile_path</name>
+        <qualifiedname>leaguewizard.api.models.LockFile.lockfile_path</qualifiedname>
+        <initializer>=  self._lockfile(self.exe)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="39" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a46f8384a4750c5c71ec97b8eb148a00a" compoundref="api_2models_8py" startline="49" endline="69">leaguewizard.api.models.LockFile._parse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1ad31f951784368bcfc6d662da0ea98b2a" prot="protected" static="no" mutable="no">
+        <type>str|None</type>
+        <definition>str | None leaguewizard.api.models.LockFile::_https_addr</definition>
+        <argsstring></argsstring>
+        <name>_https_addr</name>
+        <qualifiedname>leaguewizard.api.models.LockFile._https_addr</qualifiedname>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="41" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a46f8384a4750c5c71ec97b8eb148a00a" compoundref="api_2models_8py" startline="49" endline="69">leaguewizard.api.models.LockFile._parse</referencedby>
+        <referencedby refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1afea58a6242892bca804a6608ba5f3d12" compoundref="api_2models_8py" startline="71" endline="74">leaguewizard.api.models.LockFile.https_addr</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1aff0b9d19319c08e456221fcc0f967857" prot="protected" static="no" mutable="no">
+        <type>str|None</type>
+        <definition>str | None leaguewizard.api.models.LockFile::_wss_addr</definition>
+        <argsstring></argsstring>
+        <name>_wss_addr</name>
+        <qualifiedname>leaguewizard.api.models.LockFile._wss_addr</qualifiedname>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="42" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a46f8384a4750c5c71ec97b8eb148a00a" compoundref="api_2models_8py" startline="49" endline="69">leaguewizard.api.models.LockFile._parse</referencedby>
+        <referencedby refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1ab004d095730501ccd8004a5e96a1089c" compoundref="api_2models_8py" startline="76" endline="83">leaguewizard.api.models.LockFile.wss_addr</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1a981cc92158ba3573383286dab231cc47" prot="protected" static="no" mutable="no">
+        <type>dict[str, str]|None</type>
+        <definition>dict[str, str] | None leaguewizard.api.models.LockFile::_auth_header</definition>
+        <argsstring></argsstring>
+        <name>_auth_header</name>
+        <qualifiedname>leaguewizard.api.models.LockFile._auth_header</qualifiedname>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="43" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a46f8384a4750c5c71ec97b8eb148a00a" compoundref="api_2models_8py" startline="49" endline="69">leaguewizard.api.models.LockFile._parse</referencedby>
+        <referencedby refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a55bbfb90cc51172ce06bc0dcef7894ce" compoundref="api_2models_8py" startline="85" endline="88">leaguewizard.api.models.LockFile.auth_header</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1abe6e7579d8a3d82e5bb2f72db8f9f4ef" prot="protected" static="no" mutable="no">
+        <type>str|None</type>
+        <definition>str | None leaguewizard.api.models.LockFile::_port</definition>
+        <argsstring></argsstring>
+        <name>_port</name>
+        <qualifiedname>leaguewizard.api.models.LockFile._port</qualifiedname>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="44" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a46f8384a4750c5c71ec97b8eb148a00a" compoundref="api_2models_8py" startline="49" endline="69">leaguewizard.api.models.LockFile._parse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1a6192dae77f30aae1660c6f30312d971d" prot="protected" static="no" mutable="no">
+        <type>str|None</type>
+        <definition>str | None leaguewizard.api.models.LockFile::_password</definition>
+        <argsstring></argsstring>
+        <name>_password</name>
+        <qualifiedname>leaguewizard.api.models.LockFile._password</qualifiedname>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="45" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a46f8384a4750c5c71ec97b8eb148a00a" compoundref="api_2models_8py" startline="49" endline="69">leaguewizard.api.models.LockFile._parse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1ad7ae203a05343bb8e9e6fce32df3a2b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.api.models.LockFile.__init__</definition>
+        <argsstring>(self, str|Path league_exe)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>leaguewizard.api.models.LockFile.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str|Path</type>
+          <declname>league_exe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes the LeagueClient.
+
+Args:
+    league_exe: Path to the League of Legends executable.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="31" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="31" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1afea58a6242892bca804a6608ba5f3d12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str|None</type>
+        <definition> str | None leaguewizard.api.models.LockFile.https_addr</definition>
+        <argsstring>(self)</argsstring>
+        <name>https_addr</name>
+        <qualifiedname>leaguewizard.api.models.LockFile.https_addr</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Gets the HTTPS address.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="71" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="71" bodyend="74"/>
+        <references refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1ad31f951784368bcfc6d662da0ea98b2a" compoundref="api_2models_8py" startline="41">leaguewizard.api.models.LockFile._https_addr</references>
+      </memberdef>
+      <memberdef kind="function" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1ab004d095730501ccd8004a5e96a1089c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str|None</type>
+        <definition> str | None leaguewizard.api.models.LockFile.wss_addr</definition>
+        <argsstring>(self)</argsstring>
+        <name>wss_addr</name>
+        <qualifiedname>leaguewizard.api.models.LockFile.wss_addr</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Gets the WebSocket server address.
+
+Returns:
+    The WebSocket server address string, or None if not set.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="76" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="76" bodyend="83"/>
+        <references refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1aff0b9d19319c08e456221fcc0f967857" compoundref="api_2models_8py" startline="42">leaguewizard.api.models.LockFile._wss_addr</references>
+      </memberdef>
+      <memberdef kind="function" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1a55bbfb90cc51172ce06bc0dcef7894ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>dict[str, str]|None</type>
+        <definition> dict[str, str] | None leaguewizard.api.models.LockFile.auth_header</definition>
+        <argsstring>(self)</argsstring>
+        <name>auth_header</name>
+        <qualifiedname>leaguewizard.api.models.LockFile.auth_header</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns the authentication header as a dictionary or None.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="85" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="85" bodyend="88"/>
+        <references refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a981cc92158ba3573383286dab231cc47" compoundref="api_2models_8py" startline="43">leaguewizard.api.models.LockFile._auth_header</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1a46f8384a4750c5c71ec97b8eb148a00a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.api.models.LockFile._parse</definition>
+        <argsstring>(self)</argsstring>
+        <name>_parse</name>
+        <qualifiedname>leaguewizard.api.models.LockFile._parse</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Parse the lockfile and set connection parameters.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="49" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="49" bodyend="69"/>
+        <references refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a981cc92158ba3573383286dab231cc47" compoundref="api_2models_8py" startline="43">leaguewizard.api.models.LockFile._auth_header</references>
+        <references refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1ad31f951784368bcfc6d662da0ea98b2a" compoundref="api_2models_8py" startline="41">leaguewizard.api.models.LockFile._https_addr</references>
+        <references refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a6192dae77f30aae1660c6f30312d971d" compoundref="api_2models_8py" startline="45">leaguewizard.api.models.LockFile._password</references>
+        <references refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1abe6e7579d8a3d82e5bb2f72db8f9f4ef" compoundref="api_2models_8py" startline="44">leaguewizard.api.models.LockFile._port</references>
+        <references refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1aff0b9d19319c08e456221fcc0f967857" compoundref="api_2models_8py" startline="42">leaguewizard.api.models.LockFile._wss_addr</references>
+        <references refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1aa5ee44991655110bece6747eb091a088" compoundref="api_2models_8py" startline="39">leaguewizard.api.models.LockFile.lockfile_path</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classleaguewizard_1_1api_1_1models_1_1LockFile_1a68f6149e94802b80394a0d5c9fef5527" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Path</type>
+        <definition> Path leaguewizard.api.models.LockFile._lockfile</definition>
+        <argsstring>(str|Path exe)</argsstring>
+        <name>_lockfile</name>
+        <qualifiedname>leaguewizard.api.models.LockFile._lockfile</qualifiedname>
+        <param>
+          <type>str|Path</type>
+          <declname>exe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generate the path for the lockfile based on the executable path.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="90" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="90" bodyend="94"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Class to manage League of Legends lockfile.
+
+Handles parsing the lockfile to extract connection details for the
+League client API.
+
+Attributes:
+    exe (str): Path to the League of Legends executable.
+    https_addr (str | None): The HTTPS address for the League client API.
+    wss_addr (str | None): The WSS address for the League client API.
+    auth_header (dict[str, str] | None): The Authorization header for API
+        requests.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>Path</label>
+      </node>
+      <node id="5">
+        <label>dict[str, str]|None</label>
+      </node>
+      <node id="1">
+        <label>leaguewizard.api.models.LockFile</label>
+        <link refid="classleaguewizard_1_1api_1_1models_1_1LockFile"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+exe</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+lockfile_path</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#_https_addr</edgelabel>
+          <edgelabel>#_password</edgelabel>
+          <edgelabel>#_port</edgelabel>
+          <edgelabel>#_wss_addr</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#_auth_header</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>str|None</label>
+      </node>
+      <node id="2">
+        <label>str|Path</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="17" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" bodystart="17" bodyend="94"/>
+    <listofallmembers>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1ad7ae203a05343bb8e9e6fce32df3a2b5" prot="public" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>__init__</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a981cc92158ba3573383286dab231cc47" prot="protected" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>_auth_header</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1ad31f951784368bcfc6d662da0ea98b2a" prot="protected" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>_https_addr</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a68f6149e94802b80394a0d5c9fef5527" prot="protected" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>_lockfile</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a46f8384a4750c5c71ec97b8eb148a00a" prot="protected" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>_parse</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a6192dae77f30aae1660c6f30312d971d" prot="protected" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>_password</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1abe6e7579d8a3d82e5bb2f72db8f9f4ef" prot="protected" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>_port</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1aff0b9d19319c08e456221fcc0f967857" prot="protected" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>_wss_addr</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a55bbfb90cc51172ce06bc0dcef7894ce" prot="public" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>auth_header</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a8ca764a9f83e9be94e76516bdf61ba72" prot="public" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>exe</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1afea58a6242892bca804a6608ba5f3d12" prot="public" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>https_addr</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1aa5ee44991655110bece6747eb091a088" prot="public" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>lockfile_path</name></member>
+      <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1ab004d095730501ccd8004a5e96a1089c" prot="public" virt="non-virtual"><scope>leaguewizard::api::models::LockFile</scope><name>wss_addr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

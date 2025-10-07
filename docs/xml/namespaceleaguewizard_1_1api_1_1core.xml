@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespaceleaguewizard_1_1api_1_1core" kind="namespace" language="Python">
+    <compoundname>leaguewizard::api::core</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceleaguewizard_1_1api_1_1core_1a2e8f0379b4fd57eb0515dd46c5d13bea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Path</type>
+        <definition> Path leaguewizard.api.core.find_client_full_path</definition>
+        <argsstring>(str exe=&quot;LeagueClient.exe&quot;)</argsstring>
+        <name>find_client_full_path</name>
+        <qualifiedname>leaguewizard.api.core.find_client_full_path</qualifiedname>
+        <param>
+          <type>str</type>
+          <declname>exe</declname>
+          <defval>&quot;LeagueClient.exe&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Finds the full path of the specified executable.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/core.py" line="30" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/core.py" bodystart="30" bodyend="45"/>
+        <referencedby refid="namespaceleaguewizard_1_1api_1_1core_1a4e8ca526f6aa7a10934a062a0e923f1d" compoundref="core_8py" startline="46" endline="104">leaguewizard.api.core.start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceleaguewizard_1_1api_1_1core_1a4e8ca526f6aa7a10934a062a0e923f1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.api.core.start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>leaguewizard.api.core.start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes the application and starts listening for events.
+
+This function sets up a system tray icon and establishes a connection to the League
+Client. It retrieves the client path and lockfile, then connects to the websocket to
+listen for events. The function handles incoming events and processes them using the
+`on_message` function. It also manages exceptions related to websocket connections and
+application termination.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/core.py" line="46" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/core.py" bodystart="46" bodyend="104"/>
+        <references refid="namespaceleaguewizard_1_1api_1_1core_1a2e8f0379b4fd57eb0515dd46c5d13bea" compoundref="core_8py" startline="30" endline="45">leaguewizard.api.core.find_client_full_path</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Core module for LeagueWizard, handling LCU connection and event processing.
+
+This module establishes a connection to the League of Legends client (LCU) via
+WebSocket, retrieves necessary authentication details, and dispatches incoming
+game events to the `on_message` handler. It also manages the system tray icon.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/core.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['selected_5fperk_5fids_0',['selected_perk_ids',['../classleaguewizard_1_1core_1_1models_1_1PayloadPerks.html#ac93439e4edd4d760fba5d060508dc5af',1,'leaguewizard::core::models::PayloadPerks']]],
+  ['selected_5fskin_5fid_1',['selected_skin_id',['../classleaguewizard_1_1api_1_1models_1_1SummonerData.html#aacaa843d5ccca473359534c1f26de3e6',1,'leaguewizard.api.models.SummonerData.selected_skin_id'],['../classleaguewizard_1_1core_1_1models_1_1PayloadSpells.html#a158c926a76180284fcaa10aeac6372ac',1,'leaguewizard.core.models.PayloadSpells.selected_skin_id'],['../classleaguewizard_1_1core_1_1models_1_1Ally.html#ab8b4b6bd71c9827c96a12cb1b32c5fc9',1,'leaguewizard.core.models.Ally.selected_skin_id']]],
+  ['send_5fitemsets_2',['send_itemsets',['../namespaceleaguewizard_1_1api_1_1callback__handler.html#ae7069e1c4ff33fc39f3ce4f8a49d0ece',1,'leaguewizard::api::callback_handler']]],
+  ['send_5fperks_3',['send_perks',['../namespaceleaguewizard_1_1api_1_1callback__handler.html#a974d4adf1ba96f698951f14c48da662a',1,'leaguewizard::api::callback_handler']]],
+  ['send_5fspells_4',['send_spells',['../namespaceleaguewizard_1_1api_1_1callback__handler.html#a030482f8549390aeaf684fb3e78067c4',1,'leaguewizard::api::callback_handler']]],
+  ['spell1_5fid_5',['spell1_id',['../classleaguewizard_1_1core_1_1models_1_1PayloadSpells.html#af08eca1785b5d1c0aabd5ccad70de7b0',1,'leaguewizard::core::models::PayloadSpells']]],
+  ['spell2_5fid_6',['spell2_id',['../classleaguewizard_1_1core_1_1models_1_1PayloadSpells.html#a925f27259f67b21612be93cc33db12d4',1,'leaguewizard::core::models::PayloadSpells']]],
+  ['spells_7',['SPELLS',['../namespaceleaguewizard_1_1core_1_1constants.html#a94a0209461716e7f0af0feed2ed0141e',1,'leaguewizard::core::constants']]],
+  ['spells_5fpayload_8',['spells_payload',['../classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion.html#a33ec4daf0c8c7d882f88ca4612bdf904',1,'leaguewizard::mobalytics::mobalytics::MobaChampion']]],
+  ['spellsparser_9',['SpellsParser',['../classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser.html',1,'leaguewizard::mobalytics::parsers']]],
+  ['src_10',['src',['../namespacegen__ref__pages.html#a79b3025560de68fb48d715a9ac4e3527',1,'gen_ref_pages']]],
+  ['ssl_5fcontext_11',['ssl_context',['../namespaceleaguewizard_1_1api_1_1utils.html#a9f4c424dc4f689eb33075d72869d2382',1,'leaguewizard::api::utils']]],
+  ['start_12',['start',['../namespaceleaguewizard_1_1api_1_1core.html#a4e8ca526f6aa7a10934a062a0e923f1d',1,'leaguewizard::api::core']]],
+  ['sub_5fstyle_5fid_13',['sub_style_id',['../classleaguewizard_1_1core_1_1models_1_1PayloadPerks.html#a1bebc77608c9bd21e32cbd286bcadb46',1,'leaguewizard::core::models::PayloadPerks']]],
+  ['summoner_5fid_14',['summoner_id',['../classleaguewizard_1_1api_1_1models_1_1SummonerData.html#adb28bc3648a79d44e761e9adb6ea336a',1,'leaguewizard.api.models.SummonerData.summoner_id'],['../classleaguewizard_1_1core_1_1models_1_1Ally.html#ab6bb314f5bac3e475d1362304ba4268e',1,'leaguewizard.core.models.Ally.summoner_id']]],
+  ['summonerdata_15',['SummonerData',['../classleaguewizard_1_1api_1_1models_1_1SummonerData.html',1,'leaguewizard::api::models']]]
+];

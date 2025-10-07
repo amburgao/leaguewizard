@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="index_8md" kind="file" language="Markdown">
+    <compoundname>index.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;!DOCTYPE<sp/>html&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;html<sp/>lang=&quot;en&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;head&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;meta<sp/>http-equiv=&quot;refresh&quot;<sp/>content=&quot;0;<sp/>url=reference/leaguewizard/index.html&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/head&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;body&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;p&gt;Redirecting<sp/>to<sp/>&lt;a<sp/>href=&quot;reference/leaguewizard/index.html&quot;&gt;documentation&lt;/a&gt;...&lt;/p&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/body&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;/html&gt;</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/docs/index.md"/>
+  </compounddef>
+</doxygen>

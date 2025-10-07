@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classException" kind="class" language="Python" prot="public">
+    <compoundname>Exception</compoundname>
+    <derivedcompoundref refid="classleaguewizard_1_1core_1_1exceptions_1_1LeWizardGenericError" prot="public" virt="non-virtual">leaguewizard.core.exceptions.LeWizardGenericError</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Exception</label>
+        <link refid="classException"/>
+      </node>
+      <node id="2">
+        <label>leaguewizard.core.exceptions.LeWizardGenericError</label>
+        <link refid="classleaguewizard_1_1core_1_1exceptions_1_1LeWizardGenericError"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Exception</label>
+        <link refid="classException"/>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/exceptions.py" line="7" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

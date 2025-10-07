@@ -1,0 +1,25 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classBaseModel.html" title=" " alt="" coords="5,106,100,131"/>
+<area shape="rect" id="Node000001" href="$classleaguewizard_1_1api_1_1models_1_1SummonerData.html" title=" " alt="" coords="167,5,356,45"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="80,95,111,74,147,55,178,43,180,48,149,60,114,79,83,100"/>
+<area shape="rect" id="Node000002" href="$classleaguewizard_1_1core_1_1models_1_1Block.html" title=" " alt="" coords="163,69,360,109"/>
+<area shape="poly" id="edge6_Node000000_Node000002" title=" " alt="" coords="113,108,162,101,163,106,114,113"/>
+<area shape="rect" id="Node000003" href="$classleaguewizard_1_1core_1_1models_1_1Item.html" title=" " alt="" coords="148,134,375,159"/>
+<area shape="poly" id="edge7_Node000000_Node000003" title=" " alt="" coords="114,124,167,131,166,137,113,129"/>
+<area shape="rect" id="Node000004" href="$classleaguewizard_1_1core_1_1models_1_1Payload.html" title=" " alt="" coords="163,184,360,224"/>
+<area shape="poly" id="edge8_Node000000_Node000004" title=" " alt="" coords="87,136,149,168,185,181,184,186,147,173,84,141"/>
+<area shape="rect" id="Node000005" href="$classleaguewizard_1_1core_1_1models_1_1Action.html" title=" " alt="" coords="435,5,633,45"/>
+<area shape="poly" id="edge9_Node000004_Node000005" title=" " alt="" coords="366,174,373,169,385,155,391,142,396,113,401,84,408,70,421,55,438,43,441,48,424,59,413,73,406,86,401,114,396,144,389,158,377,173,369,179"/>
+<area shape="rect" id="Node000006" href="$classleaguewizard_1_1core_1_1models_1_1Ally.html" title=" " alt="" coords="423,70,645,95"/>
+<area shape="poly" id="edge10_Node000004_Node000006" title=" " alt="" coords="361,176,373,169,388,154,396,138,405,121,421,106,448,93,450,98,424,110,409,125,401,140,392,157,376,173,364,180"/>
+<area shape="rect" id="Node000007" href="$classleaguewizard_1_1core_1_1models_1_1EventSchema.html" title=" " alt="" coords="435,120,633,160"/>
+<area shape="poly" id="edge11_Node000004_Node000007" title=" " alt="" coords="360,178,448,157,449,163,361,183"/>
+<area shape="rect" id="Node000008" href="$classleaguewizard_1_1core_1_1models_1_1ItemSet.html" title=" " alt="" coords="435,184,633,224"/>
+<area shape="poly" id="edge12_Node000004_Node000008" title=" " alt="" coords="374,201,435,201,435,207,374,207"/>
+<area shape="rect" id="Node000009" href="$classleaguewizard_1_1core_1_1models_1_1PayloadItemSets.html" title=" " alt="" coords="435,248,633,288"/>
+<area shape="poly" id="edge13_Node000004_Node000009" title=" " alt="" coords="361,225,449,245,448,251,360,230"/>
+<area shape="rect" id="Node000010" href="$classleaguewizard_1_1core_1_1models_1_1PayloadPerks.html" title=" " alt="" coords="435,312,633,352"/>
+<area shape="poly" id="edge14_Node000004_Node000010" title=" " alt="" coords="304,229,359,264,424,298,455,309,453,314,422,302,357,269,301,234"/>
+<area shape="rect" id="Node000011" href="$classleaguewizard_1_1core_1_1models_1_1PayloadSpells.html" title=" " alt="" coords="435,376,633,416"/>
+<area shape="poly" id="edge15_Node000004_Node000011" title=" " alt="" coords="288,234,345,299,383,333,424,362,449,374,446,378,421,366,380,337,342,302,284,237"/>
+</map>

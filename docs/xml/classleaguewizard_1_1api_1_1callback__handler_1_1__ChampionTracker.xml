@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker" kind="class" language="Python" prot="protected">
+    <compoundname>leaguewizard::api::callback_handler::_ChampionTracker</compoundname>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker_1a8601a4d957260e139a814a6e53ab7aaa" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int leaguewizard.api.callback_handler._ChampionTracker::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <qualifiedname>leaguewizard.api.callback_handler._ChampionTracker._value</qualifiedname>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="170" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="170" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker_1a2e53e008bc4d8c46f6db944793a463fc" compoundref="callback__handler_8py" startline="172" endline="186">leaguewizard.api.callback_handler._ChampionTracker.last_id</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker_1afb717c393b50a301df5d0ad7546f96df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.api.callback_handler._ChampionTracker.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>leaguewizard.api.callback_handler._ChampionTracker.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="169" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker_1a2e53e008bc4d8c46f6db944793a463fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition> int leaguewizard.api.callback_handler._ChampionTracker.last_id</definition>
+        <argsstring>(self, int|None value=None)</argsstring>
+        <name>last_id</name>
+        <qualifiedname>leaguewizard.api.callback_handler._ChampionTracker.last_id</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>int|None</type>
+          <declname>value</declname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Gets or sets the last champion ID.
+
+Args:
+    value (int | None): The new champion ID to set. If None, the current
+        value is returned. Defaults to None.
+
+Returns:
+    int: The current or newly set last champion ID.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="172" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="172" bodyend="186"/>
+        <references refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker_1a8601a4d957260e139a814a6e53ab7aaa" compoundref="callback__handler_8py" startline="170">leaguewizard.api.callback_handler._ChampionTracker._value</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Tracks the last processed champion ID to avoid redundant updates.</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>int</label>
+      </node>
+      <node id="1">
+        <label>leaguewizard.api.callback_handler._ChampionTracker</label>
+        <link refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#_value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="166" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="166" bodyend="186"/>
+    <listofallmembers>
+      <member refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker_1afb717c393b50a301df5d0ad7546f96df" prot="public" virt="non-virtual"><scope>leaguewizard::api::callback_handler::_ChampionTracker</scope><name>__init__</name></member>
+      <member refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker_1a8601a4d957260e139a814a6e53ab7aaa" prot="protected" virt="non-virtual"><scope>leaguewizard::api::callback_handler::_ChampionTracker</scope><name>_value</name></member>
+      <member refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker_1a2e53e008bc4d8c46f6db944793a463fc" prot="public" virt="non-virtual"><scope>leaguewizard::api::callback_handler::_ChampionTracker</scope><name>last_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

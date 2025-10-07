@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2docs_2index" kind="page">
+    <compoundname>md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2docs_2index</compoundname>
+    <title>index</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>&lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt;</para>
+<para>&lt;head&gt; &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=reference/leaguewizard/index.html&quot;&gt; &lt;/head&gt;</para>
+<para>&lt;body&gt; </para>
+<para>Redirecting to <ulink url="reference/leaguewizard/index.html">documentation</ulink>...</para>
+<para>&lt;/body&gt;</para>
+<para>&lt;/html&gt; </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/docs/index.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,9 @@
+<map id="leaguewizard.mobalytics.parsers.SpellsParser" name="leaguewizard.mobalytics.parsers.SpellsParser">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,303,239,423"/>
+<area shape="rect" id="Node000002" href="$classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser.html" title=" " alt="" coords="5,133,239,253"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,267,125,303,119,303,119,267"/>
+<area shape="rect" id="Node000003" href="$classABC.html" title=" " alt="" coords="69,5,111,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="102,84,112,133,107,134,97,85"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="135,5,173,71"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="150,72,140,118,135,117,145,70"/>
+</map>

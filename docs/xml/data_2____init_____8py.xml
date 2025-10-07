@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="data_2____init_____8py" kind="file" language="Python">
+    <compoundname>__init__.py</compoundname>
+    <innernamespace refid="namespaceleaguewizard">leaguewizard</innernamespace>
+    <innernamespace refid="namespaceleaguewizard_1_1data">leaguewizard::data</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceleaguewizard_1_1data" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;League<sp/>Wizard<sp/>data<sp/>path<sp/>constants.</highlight></codeline>
+<codeline lineno="2"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral">This<sp/>module<sp/>defines<sp/>paths<sp/>to<sp/>important<sp/>data<sp/>files<sp/>for<sp/>the</highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral">League<sp/>Wizard<sp/>application.<sp/>It<sp/>includes<sp/>the<sp/>path<sp/>to<sp/>the</highlight></codeline>
+<codeline lineno="5"><highlight class="stringliteral">application&apos;s<sp/>logo<sp/>icon<sp/>and<sp/>the<sp/>Riot<sp/>Games<sp/>certificate<sp/>for</highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral">secure<sp/>communication.</highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>importlib.resources<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>files</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pathlib<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Path</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="namespaceleaguewizard_1_1data_1af3b9ac006f89948201b021e6683c3ca9" refkind="member"><highlight class="normal">image_path<sp/>=<sp/>Path(str(files(</highlight><highlight class="stringliteral">&quot;leaguewizard.data.images&quot;</highlight><highlight class="normal">)<sp/>/<sp/></highlight><highlight class="stringliteral">&quot;logo.ico&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="13" refid="namespaceleaguewizard_1_1data_1a3a46f2be217e4c6909a6161970c69412" refkind="member"><highlight class="normal">riot_cert_path<sp/>=<sp/>Path(str(files(</highlight><highlight class="stringliteral">&quot;leaguewizard.data.certs&quot;</highlight><highlight class="normal">)<sp/>/<sp/></highlight><highlight class="stringliteral">&quot;riotgames.pem&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="namespaceleaguewizard_1_1data_1a6487b6180f38f3dfb7132ee3967c3bfb" refkind="member"><highlight class="normal">__all__<sp/>=<sp/>[</highlight><highlight class="stringliteral">&quot;image_path&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;riot_cert_path&quot;</highlight><highlight class="normal">]</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/data/__init__.py"/>
+  </compounddef>
+</doxygen>

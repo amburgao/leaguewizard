@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;a<sp/>href=&quot;&quot;<sp/>rel=&quot;noopener&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>&lt;img<sp/>width=256px<sp/>height=256px<sp/>src=&quot;https://raw.githubusercontent.com/amburgao/leaguewizard/86de1360c231a01b89cb0f86b7cb9a6df155a89e/.github/images/logo.png&quot;<sp/>alt=&quot;Project<sp/>logo&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Table<sp/>of<sp/>contents</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>[Introduction](#introduction)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>[Features](#features)</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>[Installation](#installation)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>1.<sp/>[Github<sp/>Releases](#github-releases)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>1.<sp/>[pipx](#pipx)</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>[Development](#development)</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>[Documentation](#documentation)</highlight></codeline>
+<codeline><highlight class="normal">6.<sp/>[License](#license)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Introduction</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Auto<sp/>sync<sp/>your<sp/>itemsets,<sp/>perks<sp/>and<sp/>spells<sp/>with<sp/>mobalytics.gg<sp/>ones<sp/>on<sp/>champion<sp/>selection.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>No<sp/>user<sp/>interaction<sp/>needed<sp/>except<sp/>for<sp/>selecting<sp/>your<sp/>champion</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Import<sp/>latest<sp/>itemsets<sp/>(champion<sp/>build)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Import<sp/>latest<sp/>perks<sp/>(champion<sp/>runes)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Import<sp/>latest<sp/>summoner<sp/>spells</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Github-Releases</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Go<sp/>to<sp/>the<sp/>latest<sp/>[LeagueWizard<sp/>Release](https://github.com/amburgao/leaguewizard/releases/latest)<sp/>and<sp/>download<sp/>the<sp/>standalone<sp/>binary.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>pipx</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Install<sp/>LeagueWizard<sp/>using<sp/>pipx</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">~~~pwsh</highlight></codeline>
+<codeline><highlight class="normal">pipx<sp/>install<sp/>leaguewizard</highlight></codeline>
+<codeline><highlight class="normal">~~~</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Then<sp/>run<sp/>with</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">~~~pwsh</highlight></codeline>
+<codeline><highlight class="normal">leaguewizard.exe</highlight></codeline>
+<codeline><highlight class="normal">~~~</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Development</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Prerequisites</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">~~~pwsh</highlight></codeline>
+<codeline><highlight class="normal">pipx<sp/>install<sp/>uv</highlight></codeline>
+<codeline><highlight class="normal">~~~</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Clone<sp/>the<sp/>repository</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">~~~pwsh</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/amburgao/leaguewizard.git</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">cd<sp/>leaguewizard</highlight></codeline>
+<codeline><highlight class="normal">~~~</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Install<sp/>the<sp/>project<sp/>with<sp/>dev<sp/>and<sp/>optional<sp/>dependencies</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">~~~pwsh</highlight></codeline>
+<codeline><highlight class="normal">uv<sp/>sync<sp/>--dev<sp/>--all-groups</highlight></codeline>
+<codeline><highlight class="normal">~~~</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Then<sp/>just<sp/>activate<sp/>the<sp/>environment</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">~~~pwsh</highlight></codeline>
+<codeline><highlight class="normal">./.venv/Scripts/activate</highlight></codeline>
+<codeline><highlight class="normal">~~~</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*ps:<sp/>you<sp/>can<sp/>use<sp/>Make<sp/>to<sp/>setup<sp/>the<sp/>project,<sp/>simple<sp/>as:*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">~~~pwsh</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>leaguewizard</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">./.venv/scripts/activate</highlight></codeline>
+<codeline><highlight class="normal">~~~</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Documentation](https://amburgao.github.io/leaguewizard/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[MIT](./LICENSE)</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/README.md"/>
+  </compounddef>
+</doxygen>

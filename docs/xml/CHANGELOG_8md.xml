@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="CHANGELOG_8md" kind="file" language="Markdown">
+    <compoundname>CHANGELOG.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;unreleased&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[Unreleased]</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.5.0&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.5.0]<sp/>-<sp/>2025-10-02</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Chore</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Bumps<sp/>version<sp/>to<sp/>0.5.0</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>enhance<sp/>development<sp/>tooling<sp/>and<sp/>configuration</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Feat</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Bundle<sp/>application<sp/>icon<sp/>instead<sp/>of<sp/>downloading<sp/>at<sp/>runtime</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Refactor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>improve<sp/>type<sp/>annotations<sp/>and<sp/>error<sp/>handling<sp/>across<sp/>codebase</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**project-structure:**<sp/>reorganizes<sp/>internal<sp/>modules<sp/>and<sp/>entry<sp/>point</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.4.6&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.4.6]<sp/>-<sp/>2025-09-28</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Feat</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Bundle<sp/>application<sp/>icon<sp/>instead<sp/>of<sp/>downloading<sp/>at<sp/>runtime</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;0.4.6.dev4&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[0.4.6.dev4]<sp/>-<sp/>2025-09-28</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Chore</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Enhance<sp/>development<sp/>tooling<sp/>and<sp/>scripts</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Refactor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**project-structure:**<sp/>Reorganizes<sp/>internal<sp/>modules<sp/>and<sp/>entry<sp/>point</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;0.4.6.dev3&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[0.4.6.dev3]<sp/>-<sp/>2025-09-28</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Feat</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Implement<sp/>auto-accept<sp/>for<sp/>ready<sp/>checks</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Refactor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**config:**<sp/>Overhaul<sp/>configuration<sp/>and<sp/>constants<sp/>handling</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;0.4.6.dev2&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[0.4.6.dev2]<sp/>-<sp/>2025-09-28</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Refactor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**config:**<sp/>Overhaul<sp/>configuration<sp/>and<sp/>constants<sp/>handling</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.4.6.dev1&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.4.6.dev1]<sp/>-<sp/>2025-09-27</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Feat</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**lobby:**<sp/>Add<sp/>auto-accept<sp/>ready<sp/>check</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Refactor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Consolidate<sp/>editor<sp/>settings;<sp/>add<sp/>cleanup</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.4.5&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.4.5]<sp/>-<sp/>2025-09-24</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Build</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**makefile:**<sp/>add<sp/>safeguards<sp/>to<sp/>clean-deploys<sp/>target</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**makefile:**<sp/>refine<sp/>targets<sp/>and<sp/>improve<sp/>experience<sp/>at<sp/>all</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Fix</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Change<sp/>app<sp/>socket<sp/>port<sp/>to<sp/>avoid<sp/>conflicts<sp/>on<sp/>Windows</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.4.4&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.4.4]<sp/>-<sp/>2025-09-18</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Build</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**deps:**<sp/>refactor<sp/>dependency<sp/>management<sp/>and<sp/>update<sp/>project<sp/>configuration</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.4.3&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.4.3]<sp/>-<sp/>2025-09-17</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Refactor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Migrate<sp/>to<sp/>Pydantic<sp/>models<sp/>and<sp/>centralize<sp/>parsing<sp/>logic</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.4.2&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.4.2]<sp/>-<sp/>2025-09-17</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.4.1&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.4.1]<sp/>-<sp/>2025-09-16</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.4.0&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.4.0]<sp/>-<sp/>2025-09-16</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;0.4.0&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[0.4.0]<sp/>-<sp/>2025-09-16</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;0.3.0&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[0.3.0]<sp/>-<sp/>2025-09-16</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.3.0&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.3.0]<sp/>-<sp/>2025-09-16</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Docs</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>update<sp/>docs<sp/>style</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Refactor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>extract<sp/>callback<sp/>handler<sp/>and<sp/>improve<sp/>Mobalytics<sp/>parsing</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;0.2.3&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[0.2.3]<sp/>-<sp/>2025-09-12</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.2.3&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.2.3]<sp/>-<sp/>2025-09-12</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Chore</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>simplified<sp/>lockfile<sp/>search<sp/>logic</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Hotfix</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>riotgames.pem<sp/>was<sp/>not<sp/>available<sp/>on<sp/>pip</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;0.2.1&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[0.2.1]<sp/>-<sp/>2025-09-11</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Chore</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>simplified<sp/>lockfile<sp/>search<sp/>logic</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Fix</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>improve<sp/>leaguewizard<sp/>process<sp/>lock</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.2.0&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.2.0]<sp/>-<sp/>2025-09-11</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.2.1&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>[v0.2.1]<sp/>-<sp/>2025-09-11</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Chore</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>update<sp/>readme.md</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Docs</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>update<sp/>mkdocs<sp/>config</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>add<sp/>initial<sp/>docs<sp/>idea</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Feat</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**logs:**<sp/>add<sp/>and<sp/>config<sp/>initial<sp/>log<sp/>system</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Fix</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>reuse<sp/>aiohttp<sp/>session<sp/>between<sp/>events</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Perf</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>add<sp/>alru_cache<sp/>for<sp/>some<sp/>funcs</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Refactor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>moved<sp/>scrape<sp/>logic<sp/>to<sp/>mobalytics.py</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>name=&quot;v0.1.0&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>v0.1.0<sp/>-<sp/>2025-09-10</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Unreleased]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.5.0...HEAD</highlight></codeline>
+<codeline><highlight class="normal">[v0.5.0]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.4.6...v0.5.0</highlight></codeline>
+<codeline><highlight class="normal">[v0.4.6]:<sp/>https://github.com/amburgao/leaguewizard/compare/0.4.6.dev4...v0.4.6</highlight></codeline>
+<codeline><highlight class="normal">[0.4.6.dev4]:<sp/>https://github.com/amburgao/leaguewizard/compare/0.4.6.dev3...0.4.6.dev4</highlight></codeline>
+<codeline><highlight class="normal">[0.4.6.dev3]:<sp/>https://github.com/amburgao/leaguewizard/compare/0.4.6.dev2...0.4.6.dev3</highlight></codeline>
+<codeline><highlight class="normal">[0.4.6.dev2]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.4.6.dev1...0.4.6.dev2</highlight></codeline>
+<codeline><highlight class="normal">[v0.4.6.dev1]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.4.5...v0.4.6.dev1</highlight></codeline>
+<codeline><highlight class="normal">[v0.4.5]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.4.4...v0.4.5</highlight></codeline>
+<codeline><highlight class="normal">[v0.4.4]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.4.3...v0.4.4</highlight></codeline>
+<codeline><highlight class="normal">[v0.4.3]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.4.2...v0.4.3</highlight></codeline>
+<codeline><highlight class="normal">[v0.4.2]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.4.1...v0.4.2</highlight></codeline>
+<codeline><highlight class="normal">[v0.4.1]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.4.0...v0.4.1</highlight></codeline>
+<codeline><highlight class="normal">[v0.4.0]:<sp/>https://github.com/amburgao/leaguewizard/compare/0.4.0...v0.4.0</highlight></codeline>
+<codeline><highlight class="normal">[0.4.0]:<sp/>https://github.com/amburgao/leaguewizard/compare/0.3.0...0.4.0</highlight></codeline>
+<codeline><highlight class="normal">[0.3.0]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.3.0...0.3.0</highlight></codeline>
+<codeline><highlight class="normal">[v0.3.0]:<sp/>https://github.com/amburgao/leaguewizard/compare/0.2.3...v0.3.0</highlight></codeline>
+<codeline><highlight class="normal">[0.2.3]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.2.3...0.2.3</highlight></codeline>
+<codeline><highlight class="normal">[v0.2.3]:<sp/>https://github.com/amburgao/leaguewizard/compare/0.2.1...v0.2.3</highlight></codeline>
+<codeline><highlight class="normal">[0.2.1]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.2.0...0.2.1</highlight></codeline>
+<codeline><highlight class="normal">[v0.2.0]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.2.1...v0.2.0</highlight></codeline>
+<codeline><highlight class="normal">[v0.2.1]:<sp/>https://github.com/amburgao/leaguewizard/compare/v0.1.0...v0.2.1</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/CHANGELOG.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser" kind="class" language="Python" prot="public">
+    <compoundname>leaguewizard::mobalytics::parsers::BaseParser</compoundname>
+    <basecompoundref refid="classABC" prot="public" virt="non-virtual">ABC</basecompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser" prot="public" virt="non-virtual">leaguewizard.mobalytics.parsers.ItemsetsParser</derivedcompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1PerksParser" prot="public" virt="non-virtual">leaguewizard.mobalytics.parsers.PerksParser</derivedcompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser" prot="public" virt="non-virtual">leaguewizard.mobalytics.parsers.SpellsParser</derivedcompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a9a7136bde087f4eb76f7e1e2cc791132" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>leaguewizard.mobalytics.parsers.BaseParser::html</definition>
+        <argsstring></argsstring>
+        <name>html</name>
+        <qualifiedname>leaguewizard.mobalytics.parsers.BaseParser.html</qualifiedname>
+        <initializer>=  html</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" line="35" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser_1a4b2ec7b577625ca61d5c7f594f5cd1c2" compoundref="parsers_8py" startline="99" endline="114">leaguewizard.mobalytics.parsers.ItemsetsParser._get_aram_item_sets</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1PerksParser_1a0eff80c94e97086e413f420f901c66b0" compoundref="parsers_8py" startline="182" endline="209">leaguewizard.mobalytics.parsers.PerksParser._get_perks</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1ad12c102d48d6d0fa6c07771d7ed89868" compoundref="parsers_8py" startline="225" endline="239">leaguewizard.mobalytics.parsers.SpellsParser._get_spells</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser_1a7e5c3f46d2d47c9dc30a6a0d4bd4aa95" compoundref="parsers_8py" startline="82" endline="98">leaguewizard.mobalytics.parsers.ItemsetsParser._get_sr_item_sets</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a697d7f2117254c4d6aabffa71cdd3741" prot="protected" static="no" mutable="no">
+        <type>Any</type>
+        <definition>Any leaguewizard.mobalytics.parsers.BaseParser::_payload</definition>
+        <argsstring></argsstring>
+        <name>_payload</name>
+        <qualifiedname>leaguewizard.mobalytics.parsers.BaseParser._payload</qualifiedname>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" line="36" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1ad9fd7ee1d30482cd365588f80eb9ebc1" compoundref="parsers_8py" startline="44" endline="52">leaguewizard.mobalytics.parsers.BaseParser.payload</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1abde019c3e356f8128f7df242fa26a376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.mobalytics.parsers.BaseParser.__init__</definition>
+        <argsstring>(self, HTMLParser html)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>leaguewizard.mobalytics.parsers.BaseParser.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>HTMLParser</type>
+          <declname>html</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes the BaseParser.
+
+Args:
+    html (HTMLParser): The HTML content to parse.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" line="29" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" bodystart="29" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a3b9410b32037be93c0e92b7f84c92115" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.mobalytics.parsers.BaseParser.parse</definition>
+        <argsstring>(self, *Any args, **Any kwargs)</argsstring>
+        <name>parse</name>
+        <qualifiedname>leaguewizard.mobalytics.parsers.BaseParser.parse</qualifiedname>
+        <reimplementedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser_1a849970c9d29b7e85b47251ef443fc436">parse</reimplementedby>
+        <reimplementedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1PerksParser_1a4060e9c71ca0c8e51a1a9de954b90584">parse</reimplementedby>
+        <reimplementedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1a5c9e658daffbfd6332f52e9fa8dc898a">parse</reimplementedby>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>*Any</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>**Any</type>
+          <declname>kwargs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Parses the HTML content.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" line="39" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1ad9fd7ee1d30482cd365588f80eb9ebc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Any</type>
+        <definition> Any leaguewizard.mobalytics.parsers.BaseParser.payload</definition>
+        <argsstring>(self)</argsstring>
+        <name>payload</name>
+        <qualifiedname>leaguewizard.mobalytics.parsers.BaseParser.payload</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns the parsed payload.
+
+Returns:
+    Any: The parsed payload.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" line="44" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" bodystart="44" bodyend="52"/>
+        <references refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a697d7f2117254c4d6aabffa71cdd3741" compoundref="parsers_8py" startline="36">leaguewizard.mobalytics.parsers.BaseParser._payload</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>An abstract base class for parsers.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ABC</label>
+        <link refid="classABC"/>
+      </node>
+      <node id="1">
+        <label>leaguewizard.mobalytics.parsers.BaseParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>leaguewizard.mobalytics.parsers.ItemsetsParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>leaguewizard.mobalytics.parsers.PerksParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1PerksParser"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>leaguewizard.mobalytics.parsers.SpellsParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ABC</label>
+        <link refid="classABC"/>
+      </node>
+      <node id="3">
+        <label>Any</label>
+      </node>
+      <node id="1">
+        <label>leaguewizard.mobalytics.parsers.BaseParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#_payload</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" line="26" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" bodystart="26" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1abde019c3e356f8128f7df242fa26a376" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::BaseParser</scope><name>__init__</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a697d7f2117254c4d6aabffa71cdd3741" prot="protected" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::BaseParser</scope><name>_payload</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a9a7136bde087f4eb76f7e1e2cc791132" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::BaseParser</scope><name>html</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a3b9410b32037be93c0e92b7f84c92115" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::BaseParser</scope><name>parse</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1ad9fd7ee1d30482cd365588f80eb9ebc1" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::BaseParser</scope><name>payload</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

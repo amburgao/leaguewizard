@@ -1,0 +1,11 @@
+<map id="ABC" name="ABC">
+<area shape="rect" id="Node000001" title=" " alt="" coords="359,5,400,71"/>
+<area shape="rect" id="Node000002" href="$classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser.html" title=" " alt="" coords="263,119,496,259"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="382,84,382,118,377,118,377,84"/>
+<area shape="rect" id="Node000003" href="$classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser.html" title=" " alt="" coords="5,307,239,467"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="279,269,228,309,224,304,276,265"/>
+<area shape="rect" id="Node000004" href="$classleaguewizard_1_1mobalytics_1_1parsers_1_1PerksParser.html" title=" " alt="" coords="263,337,496,437"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="382,272,382,336,377,336,377,272"/>
+<area shape="rect" id="Node000005" href="$classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser.html" title=" " alt="" coords="520,327,753,447"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="482,265,561,324,558,329,479,269"/>
+</map>

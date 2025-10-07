@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG" kind="page">
+    <compoundname>md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG</compoundname>
+    <title>CHANGELOG</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1unreleased"/></para>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md0_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md0">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.5.0...HEAD">Unreleased</ulink></title><para><anchor id="_1v0.5.0"/></para>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md1_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md1">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.4.6...v0.5.0">v0.5.0</ulink> - 2025-10-02</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md2">
+<title>Chore</title><para><itemizedlist>
+<listitem><para>Bumps version to 0.5.0</para>
+</listitem><listitem><para>enhance development tooling and configuration</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md3">
+<title>Feat</title><para><itemizedlist>
+<listitem><para>Bundle application icon instead of downloading at runtime</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md4">
+<title>Refactor</title><para><itemizedlist>
+<listitem><para>improve type annotations and error handling across codebase</para>
+</listitem><listitem><para><bold>project-structure:</bold> reorganizes internal modules and entry point</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_1v0.4.6"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md5_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md5">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/0.4.6.dev4...v0.4.6">v0.4.6</ulink> - 2025-09-28</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md6">
+<title>Feat</title><para><itemizedlist>
+<listitem><para>Bundle application icon instead of downloading at runtime</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_10.4.6.dev4"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md7_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md7">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/0.4.6.dev3...0.4.6.dev4">0.4.6.dev4</ulink> - 2025-09-28</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md8">
+<title>Chore</title><para><itemizedlist>
+<listitem><para>Enhance development tooling and scripts</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md9">
+<title>Refactor</title><para><itemizedlist>
+<listitem><para><bold>project-structure:</bold> Reorganizes internal modules and entry point</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_10.4.6.dev3"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md10_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md10">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/0.4.6.dev2...0.4.6.dev3">0.4.6.dev3</ulink> - 2025-09-28</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md11">
+<title>Feat</title><para><itemizedlist>
+<listitem><para>Implement auto-accept for ready checks</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md12">
+<title>Refactor</title><para><itemizedlist>
+<listitem><para><bold>config:</bold> Overhaul configuration and constants handling</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_10.4.6.dev2"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md13_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md13">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.4.6.dev1...0.4.6.dev2">0.4.6.dev2</ulink> - 2025-09-28</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md14">
+<title>Refactor</title><para><itemizedlist>
+<listitem><para><bold>config:</bold> Overhaul configuration and constants handling</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_1v0.4.6.dev1"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md15_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md15">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.4.5...v0.4.6.dev1">v0.4.6.dev1</ulink> - 2025-09-27</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md16">
+<title>Feat</title><para><itemizedlist>
+<listitem><para><bold>lobby:</bold> Add auto-accept ready check</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md17">
+<title>Refactor</title><para><itemizedlist>
+<listitem><para>Consolidate editor settings; add cleanup</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_1v0.4.5"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md18_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md18">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.4.4...v0.4.5">v0.4.5</ulink> - 2025-09-24</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md19">
+<title>Build</title><para><itemizedlist>
+<listitem><para><bold>makefile:</bold> add safeguards to clean-deploys target</para>
+</listitem><listitem><para><bold>makefile:</bold> refine targets and improve experience at all</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md20">
+<title>Fix</title><para><itemizedlist>
+<listitem><para>Change app socket port to avoid conflicts on Windows</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_1v0.4.4"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md21_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md21">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.4.3...v0.4.4">v0.4.4</ulink> - 2025-09-18</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md22">
+<title>Build</title><para><itemizedlist>
+<listitem><para><bold>deps:</bold> refactor dependency management and update project configuration</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_1v0.4.3"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md23_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md23">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.4.2...v0.4.3">v0.4.3</ulink> - 2025-09-17</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md24">
+<title>Refactor</title><para><itemizedlist>
+<listitem><para>Migrate to Pydantic models and centralize parsing logic</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_1v0.4.2"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md25_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md25">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.4.1...v0.4.2">v0.4.2</ulink> - 2025-09-17</title><para><anchor id="_1v0.4.1"/></para>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md26_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md26">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.4.0...v0.4.1">v0.4.1</ulink> - 2025-09-16</title><para><anchor id="_1v0.4.0"/></para>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md27_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md27">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/0.4.0...v0.4.0">v0.4.0</ulink> - 2025-09-16</title><para><anchor id="_10.4.0"/></para>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md28_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md28">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/0.3.0...0.4.0">0.4.0</ulink> - 2025-09-16</title><para><anchor id="_10.3.0"/></para>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md29_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md29">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.3.0...0.3.0">0.3.0</ulink> - 2025-09-16</title><para><anchor id="_1v0.3.0"/></para>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md30_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md30">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/0.2.3...v0.3.0">v0.3.0</ulink> - 2025-09-16</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md31">
+<title>Docs</title><para><itemizedlist>
+<listitem><para>update docs style</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md32">
+<title>Refactor</title><para><itemizedlist>
+<listitem><para>extract callback handler and improve Mobalytics parsing</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_10.2.3"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md33_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md33">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.2.3...0.2.3">0.2.3</ulink> - 2025-09-12</title><para><anchor id="_1v0.2.3"/></para>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md34_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md34">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/0.2.1...v0.2.3">v0.2.3</ulink> - 2025-09-12</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md35">
+<title>Chore</title><para><itemizedlist>
+<listitem><para>simplified lockfile search logic</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md36">
+<title>Hotfix</title><para><itemizedlist>
+<listitem><para>riotgames.pem was not available on pip</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_10.2.1"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md37_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md37">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.2.0...0.2.1">0.2.1</ulink> - 2025-09-11</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md38">
+<title>Chore</title><para><itemizedlist>
+<listitem><para>simplified lockfile search logic</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md39">
+<title>Fix</title><para><itemizedlist>
+<listitem><para>improve leaguewizard process lock</para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_1v0.2.0"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md40_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md40">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.2.1...v0.2.0">v0.2.0</ulink> - 2025-09-11</title><para><anchor id="_1v0.2.1"/></para>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md41_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md41">
+<title><ulink url="https://github.com/amburgao/leaguewizard/compare/v0.1.0...v0.2.1">v0.2.1</ulink> - 2025-09-11</title><sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md42">
+<title>Chore</title><para><itemizedlist>
+<listitem><para>update readme.md</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md43">
+<title>Docs</title><para><itemizedlist>
+<listitem><para>update mkdocs config</para>
+</listitem><listitem><para>add initial docs idea</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md44">
+<title>Feat</title><para><itemizedlist>
+<listitem><para><bold>logs:</bold> add and config initial log system</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md45">
+<title>Fix</title><para><itemizedlist>
+<listitem><para>reuse aiohttp session between events</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md46">
+<title>Perf</title><para><itemizedlist>
+<listitem><para>add alru_cache for some funcs</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md47">
+<title>Refactor</title><para><itemizedlist>
+<listitem><para>moved scrape logic to <ref refid="mobalytics_8py" kindref="compound">mobalytics.py</ref></para>
+</listitem></itemizedlist>
+</para>
+<para><anchor id="_1v0.1.0"/></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md48_1s1"><sect2 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG_1autotoc_md48">
+<title>v0.1.0 - 2025-09-10</title></sect2></sect1>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/CHANGELOG.md"/>
+  </compounddef>
+</doxygen>

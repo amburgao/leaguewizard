@@ -1,0 +1,11 @@
+<map id="leaguewizard.core.models.PayloadPerks" name="leaguewizard.core.models.PayloadPerks">
+<area shape="rect" id="Node000001" title=" " alt="" coords="140,277,329,357"/>
+<area shape="rect" id="Node000002" href="$classleaguewizard_1_1core_1_1models_1_1Payload.html" title=" " alt="" coords="5,120,195,200"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,209,203,275,199,279,141,212"/>
+<area shape="rect" id="Node000003" href="$classBaseModel.html" title=" " alt="" coords="57,5,143,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,84,103,120,97,120,97,84"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="219,127,250,193"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="237,193,237,261,232,261,232,193"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="373,127,408,193"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="389,194,381,225,363,255,345,273,341,269,359,252,376,223,384,192"/>
+</map>

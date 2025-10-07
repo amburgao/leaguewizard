@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespaceleaguewizard_1_1config" kind="namespace" language="Python">
+    <compoundname>leaguewizard::config</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceleaguewizard_1_1config_1ac49f338d1c11f18c5ed377d84b6e0ffa" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list leaguewizard::config.options</definition>
+        <argsstring></argsstring>
+        <name>options</name>
+        <qualifiedname>leaguewizard.config.options</qualifiedname>
+        <initializer>=  [DEV_CONFIG_FILE, CONFIG_FILE]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" line="17" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceleaguewizard_1_1config_1a1d01923b330160d473953f6a476f67a6" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool leaguewizard::config::_config_found</definition>
+        <argsstring></argsstring>
+        <name>_config_found</name>
+        <qualifiedname>leaguewizard.config._config_found</qualifiedname>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" line="19" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceleaguewizard_1_1config_1a7310bd741d84cfd7354dfc8c6e307cee" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>dict leaguewizard::config::_config</definition>
+        <argsstring></argsstring>
+        <name>_config</name>
+        <qualifiedname>leaguewizard.config._config</qualifiedname>
+        <initializer>=  tomli.load(fp)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" line="23" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceleaguewizard_1_1config_1affce092fc76c024a07c15e60830c8203" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>leaguewizard::config.exist_ok</definition>
+        <argsstring></argsstring>
+        <name>exist_ok</name>
+        <qualifiedname>leaguewizard.config.exist_ok</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" line="29" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceleaguewizard_1_1config_1a94a51ae09a973c84a5d2e45148d907cb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>leaguewizard::config.flash</definition>
+        <argsstring></argsstring>
+        <name>flash</name>
+        <qualifiedname>leaguewizard.config.flash</qualifiedname>
+        <initializer>=  <ref refid="namespaceleaguewizard_1_1config_1a7310bd741d84cfd7354dfc8c6e307cee" kindref="member">_config</ref>[&quot;config&quot;].get(&quot;flash&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" line="33" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceleaguewizard_1_1config_1a21706b357f748b7fa73be72fd678b2fc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>leaguewizard::config.auto_accept</definition>
+        <argsstring></argsstring>
+        <name>auto_accept</name>
+        <qualifiedname>leaguewizard.config.auto_accept</qualifiedname>
+        <initializer>=  <ref refid="namespaceleaguewizard_1_1config_1a7310bd741d84cfd7354dfc8c6e307cee" kindref="member">_config</ref>[&quot;config&quot;].get(&quot;auto_accept&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" line="34" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Handles loading the application configuration from a &apos;config.toml&apos; file.
+
+This module searches for &apos;config.toml&apos; in several predefined locations:
+1. User&apos;s local appdata directory (e.g., %LOCALAPPDATA%/LeagueWizard/config.toml).
+2. The directory of the executable if the application is frozen.
+3. The module&apos;s own directory if running as a script.
+
+If a configuration file is found, its contents are loaded into the `WizConfig` variable.
+If no file is found, a default `WizConfig` is provided.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>
