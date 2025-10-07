@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="api_2____init_____8py" kind="file" language="Python">
+    <compoundname>__init__.py</compoundname>
+    <innernamespace refid="namespaceleaguewizard">leaguewizard</innernamespace>
+    <innernamespace refid="namespaceleaguewizard_1_1api">leaguewizard::api</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceleaguewizard_1_1api" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;Generic<sp/>__init__.py.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/__init__.py"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classleaguewizard_1_1core_1_1models_1_1Action" kind="class" language="Python" prot="public">
+    <compoundname>leaguewizard::core::models::Action</compoundname>
+    <basecompoundref refid="classleaguewizard_1_1core_1_1models_1_1Payload" prot="public" virt="non-virtual">leaguewizard.core.models.Payload</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classleaguewizard_1_1core_1_1models_1_1Action_1a9f3e6c4070318e51542e3656c771edc9" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int leaguewizard.core.models.Action::actor_cell_id</definition>
+        <argsstring></argsstring>
+        <name>actor_cell_id</name>
+        <qualifiedname>leaguewizard.core.models.Action.actor_cell_id</qualifiedname>
+        <initializer>=  Field(..., alias=&quot;actorCellId&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="134" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classleaguewizard_1_1core_1_1models_1_1Action_1a94e4f12bdc47ac86e615110aacd615b1" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int leaguewizard.core.models.Action::champion_id</definition>
+        <argsstring></argsstring>
+        <name>champion_id</name>
+        <qualifiedname>leaguewizard.core.models.Action.champion_id</qualifiedname>
+        <initializer>=  Field(..., alias=&quot;championId&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="135" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" bodystart="135" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Champion selection action.
+
+Attributes:
+    actor_cell_id (int): Cell ID of the player performing the action.
+    champion_id (int): Selected champion ID.
+    completed (bool): Whether the action is completed.
+    type (str): Type of action.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>BaseModel</label>
+        <link refid="classBaseModel"/>
+      </node>
+      <node id="1">
+        <label>leaguewizard.core.models.Action</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Action"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>leaguewizard.core.models.Payload</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Payload"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>BaseModel</label>
+        <link refid="classBaseModel"/>
+      </node>
+      <node id="4">
+        <label>int</label>
+      </node>
+      <node id="1">
+        <label>leaguewizard.core.models.Action</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Action"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+actor_cell_id</edgelabel>
+          <edgelabel>+champion_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>leaguewizard.core.models.Payload</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Payload"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="124" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" bodystart="124" bodyend="139"/>
+    <listofallmembers>
+      <member refid="classleaguewizard_1_1core_1_1models_1_1Action_1a9f3e6c4070318e51542e3656c771edc9" prot="public" virt="non-virtual"><scope>leaguewizard::core::models::Action</scope><name>actor_cell_id</name></member>
+      <member refid="classleaguewizard_1_1core_1_1models_1_1Payload_1ac65bb995d052eaf8e2e5df2ff602d602" prot="public" virt="non-virtual"><scope>leaguewizard::core::models::Action</scope><name>asjson</name></member>
+      <member refid="classleaguewizard_1_1core_1_1models_1_1Action_1a94e4f12bdc47ac86e615110aacd615b1" prot="public" virt="non-virtual"><scope>leaguewizard::core::models::Action</scope><name>champion_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+<map id="leaguewizard.core.models.Ally" name="leaguewizard.core.models.Ally">
+<area shape="rect" id="Node000001" title=" " alt="" coords="127,321,342,387"/>
+<area shape="rect" id="Node000002" href="$classleaguewizard_1_1core_1_1models_1_1Payload.html" title=" " alt="" coords="5,120,195,200"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,210,215,319,210,323,133,213"/>
+<area shape="rect" id="Node000003" href="$classBaseModel.html" title=" " alt="" coords="57,5,143,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,84,103,120,97,120,97,84"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="219,127,250,193"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="237,193,237,305,232,305,232,193"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="383,127,414,193"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="402,193,396,246,387,274,371,299,356,314,352,310,367,296,382,272,391,245,397,193"/>
+</map>

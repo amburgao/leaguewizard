@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classABC" kind="class" language="Python" prot="public">
+    <compoundname>ABC</compoundname>
+    <derivedcompoundref refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser" prot="public" virt="non-virtual">leaguewizard.mobalytics.parsers.BaseParser</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ABC</label>
+        <link refid="classABC"/>
+      </node>
+      <node id="2">
+        <label>leaguewizard.mobalytics.parsers.BaseParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>leaguewizard.mobalytics.parsers.ItemsetsParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>leaguewizard.mobalytics.parsers.PerksParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1PerksParser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>leaguewizard.mobalytics.parsers.SpellsParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ABC</label>
+        <link refid="classABC"/>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" line="26" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

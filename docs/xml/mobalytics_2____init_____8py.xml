@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="mobalytics_2____init_____8py" kind="file" language="Python">
+    <compoundname>__init__.py</compoundname>
+    <innernamespace refid="namespaceleaguewizard">leaguewizard</innernamespace>
+    <innernamespace refid="namespaceleaguewizard_1_1mobalytics">leaguewizard::mobalytics</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceleaguewizard_1_1mobalytics" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;Initializes<sp/>the<sp/>leaguewizard.mobalytics.mobalytics<sp/>submodule.</highlight></codeline>
+<codeline lineno="2"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral">This<sp/>module<sp/>imports<sp/>all<sp/>public<sp/>objects<sp/>from<sp/>the</highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral">leaguewizard.mobalytics.mobalytics<sp/>module.</highlight></codeline>
+<codeline lineno="5"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespaceleaguewizard_1_1mobalytics_1_1mobalytics" kindref="compound">leaguewizard.mobalytics.mobalytics</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/__init__.py"/>
+  </compounddef>
+</doxygen>

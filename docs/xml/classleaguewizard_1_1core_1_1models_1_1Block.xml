@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classleaguewizard_1_1core_1_1models_1_1Block" kind="class" language="Python" prot="public">
+    <compoundname>leaguewizard::core::models::Block</compoundname>
+    <basecompoundref refid="classBaseModel" prot="public" virt="non-virtual">BaseModel</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classleaguewizard_1_1core_1_1models_1_1Block_1a5e745e336574caaedec33edc03f1bc07" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list leaguewizard.core.models.Block::items</definition>
+        <argsstring></argsstring>
+        <name>items</name>
+        <qualifiedname>leaguewizard.core.models.Block.items</qualifiedname>
+        <initializer>[<ref refid="classleaguewizard_1_1core_1_1models_1_1Item" kindref="compound">Item</ref>]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="62" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A group of items within an item set.
+
+Attributes:
+    items (list[Item]): List of items in the block.
+    type (str): Block title or category (e.g., &quot;Core Items&quot;).
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BaseModel</label>
+        <link refid="classBaseModel"/>
+      </node>
+      <node id="1">
+        <label>leaguewizard.core.models.Block</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Block"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BaseModel</label>
+        <link refid="classBaseModel"/>
+      </node>
+      <node id="1">
+        <label>leaguewizard.core.models.Block</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Block"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+items</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>list</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="54" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" bodystart="54" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classleaguewizard_1_1core_1_1models_1_1Block_1a5e745e336574caaedec33edc03f1bc07" prot="public" virt="non-virtual"><scope>leaguewizard::core::models::Block</scope><name>items</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

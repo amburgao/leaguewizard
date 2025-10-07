@@ -1,0 +1,11 @@
+<map id="leaguewizard.api.models.LockFile" name="leaguewizard.api.models.LockFile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="87,177,269,357"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,68,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="42,70,51,111,67,152,79,171,75,174,62,155,46,112,37,72"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="93,5,135,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,71,112,110,118,153,120,161,115,163,113,154,107,111,108,71"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="209,5,278,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="238,72,217,154,214,162,209,161,211,153,233,70"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="302,5,430,71"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="363,71,350,113,328,155,307,180,283,202,280,198,303,176,324,152,345,111,358,70"/>
+</map>

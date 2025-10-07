@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker" kind="class"><name>leaguewizard::api::callback_handler::_ChampionTracker</name>
+    <member refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker_1a8601a4d957260e139a814a6e53ab7aaa" kind="variable"><name>_value</name></member>
+    <member refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker_1afb717c393b50a301df5d0ad7546f96df" kind="function"><name>__init__</name></member>
+    <member refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker_1a2e53e008bc4d8c46f6db944793a463fc" kind="function"><name>last_id</name></member>
+  </compound>
+  <compound refid="classABC" kind="class"><name>ABC</name>
+  </compound>
+  <compound refid="classleaguewizard_1_1core_1_1models_1_1Action" kind="class"><name>leaguewizard::core::models::Action</name>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1Action_1a9f3e6c4070318e51542e3656c771edc9" kind="variable"><name>actor_cell_id</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1Action_1a94e4f12bdc47ac86e615110aacd615b1" kind="variable"><name>champion_id</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1core_1_1models_1_1Ally" kind="class"><name>leaguewizard::core::models::Ally</name>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1Ally_1a74ec83294557504405ce17b014be3078" kind="variable"><name>assigned_position</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1Ally_1a4c4f44b7541236d156752be1cad06e33" kind="variable"><name>cell_id</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1Ally_1a025442d6850b0b0373dea5fa259c480e" kind="variable"><name>champion_id</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1Ally_1ab8b4b6bd71c9827c96a12cb1b32c5fc9" kind="variable"><name>selected_skin_id</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1Ally_1ab6bb314f5bac3e475d1362304ba4268e" kind="variable"><name>summoner_id</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1Ally_1a25a90140d8aeb73e9a6929715efe0167" kind="variable"><name>ward_skin_id</name></member>
+  </compound>
+  <compound refid="classBaseModel" kind="class"><name>BaseModel</name>
+  </compound>
+  <compound refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser" kind="class"><name>leaguewizard::mobalytics::parsers::BaseParser</name>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a9a7136bde087f4eb76f7e1e2cc791132" kind="variable"><name>html</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a697d7f2117254c4d6aabffa71cdd3741" kind="variable"><name>_payload</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1abde019c3e356f8128f7df242fa26a376" kind="function"><name>__init__</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a3b9410b32037be93c0e92b7f84c92115" kind="function"><name>parse</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1ad9fd7ee1d30482cd365588f80eb9ebc1" kind="function"><name>payload</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1core_1_1models_1_1Block" kind="class"><name>leaguewizard::core::models::Block</name>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1Block_1a5e745e336574caaedec33edc03f1bc07" kind="variable"><name>items</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1core_1_1models_1_1EventSchema" kind="class"><name>leaguewizard::core::models::EventSchema</name>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1EventSchema_1ac33608dbb9e56ea2128c15e4a54dde8b" kind="variable"><name>actions</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1EventSchema_1a217decdaf8c5b408ab1e16baf74157bf" kind="variable"><name>local_player_cell_id</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1EventSchema_1ab355ca82ebc4c1f0f235affdd8bfb411" kind="variable"><name>my_team</name></member>
+  </compound>
+  <compound refid="classException" kind="class"><name>Exception</name>
+  </compound>
+  <compound refid="classleaguewizard_1_1core_1_1models_1_1Item" kind="class"><name>leaguewizard::core::models::Item</name>
+  </compound>
+  <compound refid="classleaguewizard_1_1core_1_1models_1_1ItemSet" kind="class"><name>leaguewizard::core::models::ItemSet</name>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1ItemSet_1afb1f865349fc53d4cf659be5c8ed8e93" kind="variable"><name>associated_champions</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1ItemSet_1a02e6870a32b935864dca568166b996f4" kind="variable"><name>blocks</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser" kind="class"><name>leaguewizard::mobalytics::parsers::ItemsetsParser</name>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser_1a849970c9d29b7e85b47251ef443fc436" kind="function"><name>parse</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser_1a7e5c3f46d2d47c9dc30a6a0d4bd4aa95" kind="function"><name>_get_sr_item_sets</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser_1a4b2ec7b577625ca61d5c7f594f5cd1c2" kind="function"><name>_get_aram_item_sets</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser_1a2a50d84cce19dfcbe57a0c5a43b409ff" kind="function"><name>_get_itemsets</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser_1a548c763c72e9b92ca29664e6031f47a9" kind="function"><name>_get_item_sets_payload</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1core_1_1exceptions_1_1LeWizardGenericError" kind="class"><name>leaguewizard::core::exceptions::LeWizardGenericError</name>
+    <member refid="classleaguewizard_1_1core_1_1exceptions_1_1LeWizardGenericError_1a566e5429b30c91b8880ad60e942d13e1" kind="function"><name>__init__</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1api_1_1models_1_1LockFile" kind="class"><name>leaguewizard::api::models::LockFile</name>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a8ca764a9f83e9be94e76516bdf61ba72" kind="variable"><name>exe</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1aa5ee44991655110bece6747eb091a088" kind="variable"><name>lockfile_path</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1ad31f951784368bcfc6d662da0ea98b2a" kind="variable"><name>_https_addr</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1aff0b9d19319c08e456221fcc0f967857" kind="variable"><name>_wss_addr</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a981cc92158ba3573383286dab231cc47" kind="variable"><name>_auth_header</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1abe6e7579d8a3d82e5bb2f72db8f9f4ef" kind="variable"><name>_port</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a6192dae77f30aae1660c6f30312d971d" kind="variable"><name>_password</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1ad7ae203a05343bb8e9e6fce32df3a2b5" kind="function"><name>__init__</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1afea58a6242892bca804a6608ba5f3d12" kind="function"><name>https_addr</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1ab004d095730501ccd8004a5e96a1089c" kind="function"><name>wss_addr</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a55bbfb90cc51172ce06bc0dcef7894ce" kind="function"><name>auth_header</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a46f8384a4750c5c71ec97b8eb148a00a" kind="function"><name>_parse</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1LockFile_1a68f6149e94802b80394a0d5c9fef5527" kind="function"><name>_lockfile</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion" kind="class"><name>leaguewizard::mobalytics::mobalytics::MobaChampion</name>
+    <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a9b0dbdc91cbcc4de61a9644dc992b70c" kind="variable"><name>champion_name</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a25f360e2d7308fa2c48fd171610b5e19" kind="variable"><name>role</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a14f10be2cc8053fdc8daa3918f8c7c1e" kind="variable"><name>url</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2ba8736f237736a4d03b0a547e38bbb3" kind="variable"><name>html</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a6136a9d15affce70d94defc2f37d52a3" kind="function"><name>__init__</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a6dac960b96b052fd8c7923e9e4621ae7" kind="function"><name>fetch_data</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a553d725181cfd16de6315ae6334fc9a8" kind="function"><name>itemsets_payload</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2c4740935c825e48dd646e6c5d5cfbce" kind="function"><name>perks_payload</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a33ec4daf0c8c7d882f88ca4612bdf904" kind="function"><name>spells_payload</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a1c46f15db98d7226f20e2a17a6d68614" kind="function"><name>_build_url</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1core_1_1models_1_1Payload" kind="class"><name>leaguewizard::core::models::Payload</name>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1Payload_1ac65bb995d052eaf8e2e5df2ff602d602" kind="function"><name>asjson</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets" kind="class"><name>leaguewizard::core::models::PayloadItemSets</name>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets_1a9506a1b610943dab672c1807342b0785" kind="variable"><name>account_id</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets_1a2d680871b3eac3443ccfaaea4b0a19f5" kind="variable"><name>item_sets</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets_1a85a3b34db4a7dcf8ba11094a0d0fb8f1" kind="variable"><name>timestamp</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks" kind="class"><name>leaguewizard::core::models::PayloadPerks</name>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks_1a6a5e247cd4671f083a08f6fb530eb949" kind="variable"><name>primary_style_id</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks_1a1bebc77608c9bd21e32cbd286bcadb46" kind="variable"><name>sub_style_id</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks_1ac93439e4edd4d760fba5d060508dc5af" kind="variable"><name>selected_perk_ids</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells" kind="class"><name>leaguewizard::core::models::PayloadSpells</name>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells_1af08eca1785b5d1c0aabd5ccad70de7b0" kind="variable"><name>spell1_id</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells_1a925f27259f67b21612be93cc33db12d4" kind="variable"><name>spell2_id</name></member>
+    <member refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells_1a158c926a76180284fcaa10aeac6372ac" kind="variable"><name>selected_skin_id</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1PerksParser" kind="class"><name>leaguewizard::mobalytics::parsers::PerksParser</name>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1PerksParser_1a4060e9c71ca0c8e51a1a9de954b90584" kind="function"><name>parse</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1PerksParser_1a0eff80c94e97086e413f420f901c66b0" kind="function"><name>_get_perks</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser" kind="class"><name>leaguewizard::mobalytics::parsers::SpellsParser</name>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1a5c9e658daffbfd6332f52e9fa8dc898a" kind="function"><name>parse</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1ad12c102d48d6d0fa6c07771d7ed89868" kind="function"><name>_get_spells</name></member>
+    <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1afa8ca4123251f3cbd769960f98d07e95" kind="function"><name>_set_flash_position</name></member>
+  </compound>
+  <compound refid="classleaguewizard_1_1api_1_1models_1_1SummonerData" kind="class"><name>leaguewizard::api::models::SummonerData</name>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1SummonerData_1a3afdb24603eb462113daf028397a84de" kind="variable"><name>assigned_position</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1SummonerData_1a19928dd5409e7ab68d4d1d4e7e967ac7" kind="variable"><name>cell_id</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1SummonerData_1a651505d70309cd2b433dc20dee30cf79" kind="variable"><name>champion_id</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1SummonerData_1a84353ab274d06b0b4c5459c8d6f642d8" kind="variable"><name>champion_pick_intent</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1SummonerData_1aacaa843d5ccca473359534c1f26de3e6" kind="variable"><name>selected_skin_id</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1SummonerData_1a2c30339d0f7e1dad5eacb31170b9e517" kind="variable"><name>ward_skin_id</name></member>
+    <member refid="classleaguewizard_1_1api_1_1models_1_1SummonerData_1adb28bc3648a79d44e761e9adb6ea336a" kind="variable"><name>summoner_id</name></member>
+  </compound>
+  <compound refid="namespacegen__ref__pages" kind="namespace"><name>gen_ref_pages</name>
+    <member refid="namespacegen__ref__pages_1a4a3a4c153af46cac5b4073d4f43aecc4" kind="variable"><name>nav</name></member>
+    <member refid="namespacegen__ref__pages_1a28dac4daa38e3cec011b6992e8bf6a5c" kind="variable"><name>root</name></member>
+    <member refid="namespacegen__ref__pages_1a79b3025560de68fb48d715a9ac4e3527" kind="variable"><name>src</name></member>
+    <member refid="namespacegen__ref__pages_1aff8793bf12776a5e8642b74040fa74b5" kind="variable"><name>module_path</name></member>
+    <member refid="namespacegen__ref__pages_1ad76cc954362f569835ee67d0221b5f9b" kind="variable"><name>doc_path</name></member>
+    <member refid="namespacegen__ref__pages_1ab06888e2ebd8bd5c419e2bb60e6a7fc9" kind="variable"><name>full_doc_path</name></member>
+    <member refid="namespacegen__ref__pages_1a1b28cd26478738bdbb9317d74b7f47d2" kind="variable"><name>parts</name></member>
+    <member refid="namespacegen__ref__pages_1a7a1ebac292a88ca2aa98dfecba12f10f" kind="variable"><name>ident</name></member>
+  </compound>
+  <compound refid="namespaceleaguewizard" kind="namespace"><name>leaguewizard</name>
+    <member refid="namespaceleaguewizard_1a550862645131b544aa63c7303505e073" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1____main____" kind="namespace"><name>leaguewizard::__main__</name>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1api" kind="namespace"><name>leaguewizard::api</name>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1api_1_1callback__handler" kind="namespace"><name>leaguewizard::api::callback_handler</name>
+    <member refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a26e7460b7bf54ebdf15b05ba8fa68c58" kind="variable"><name>champion_tracker</name></member>
+    <member refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a06176f37532095e427663de4ea639ac8" kind="function"><name>_get_latest_version</name></member>
+    <member refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a5721c8586e4905dbf65067f6a2239575" kind="function"><name>_get_champion_dict</name></member>
+    <member refid="namespaceleaguewizard_1_1api_1_1callback__handler_1ae7069e1c4ff33fc39f3ce4f8a49d0ece" kind="function"><name>send_itemsets</name></member>
+    <member refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a974d4adf1ba96f698951f14c48da662a" kind="function"><name>send_perks</name></member>
+    <member refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a030482f8549390aeaf684fb3e78067c4" kind="function"><name>send_spells</name></member>
+    <member refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a07ee15ae9a506982f360ddaaa7f4977d" kind="function"><name>get_champion_name</name></member>
+    <member refid="namespaceleaguewizard_1_1api_1_1callback__handler_1afe6575082fa13034d479a11fe8cea0df" kind="function"><name>on_message</name></member>
+    <member refid="namespaceleaguewizard_1_1api_1_1callback__handler_1aeea1d241fa2c5c1593c43604f3be2c77" kind="function"><name>handle_auto_accept</name></member>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1api_1_1core" kind="namespace"><name>leaguewizard::api::core</name>
+    <member refid="namespaceleaguewizard_1_1api_1_1core_1a2e8f0379b4fd57eb0515dd46c5d13bea" kind="function"><name>find_client_full_path</name></member>
+    <member refid="namespaceleaguewizard_1_1api_1_1core_1a4e8ca526f6aa7a10934a062a0e923f1d" kind="function"><name>start</name></member>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1api_1_1models" kind="namespace"><name>leaguewizard::api::models</name>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1api_1_1utils" kind="namespace"><name>leaguewizard::api::utils</name>
+    <member refid="namespaceleaguewizard_1_1api_1_1utils_1a9f4c424dc4f689eb33075d72869d2382" kind="function"><name>ssl_context</name></member>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1config" kind="namespace"><name>leaguewizard::config</name>
+    <member refid="namespaceleaguewizard_1_1config_1ac49f338d1c11f18c5ed377d84b6e0ffa" kind="variable"><name>options</name></member>
+    <member refid="namespaceleaguewizard_1_1config_1a1d01923b330160d473953f6a476f67a6" kind="variable"><name>_config_found</name></member>
+    <member refid="namespaceleaguewizard_1_1config_1a7310bd741d84cfd7354dfc8c6e307cee" kind="variable"><name>_config</name></member>
+    <member refid="namespaceleaguewizard_1_1config_1affce092fc76c024a07c15e60830c8203" kind="variable"><name>exist_ok</name></member>
+    <member refid="namespaceleaguewizard_1_1config_1a94a51ae09a973c84a5d2e45148d907cb" kind="variable"><name>flash</name></member>
+    <member refid="namespaceleaguewizard_1_1config_1a21706b357f748b7fa73be72fd678b2fc" kind="variable"><name>auto_accept</name></member>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1core" kind="namespace"><name>leaguewizard::core</name>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1core_1_1constants" kind="namespace"><name>leaguewizard::core::constants</name>
+    <member refid="namespaceleaguewizard_1_1core_1_1constants_1a64bdf853c511e726df11473c2e0098fe" kind="variable"><name>ROLES</name></member>
+    <member refid="namespaceleaguewizard_1_1core_1_1constants_1a94a0209461716e7f0af0feed2ed0141e" kind="variable"><name>SPELLS</name></member>
+    <member refid="namespaceleaguewizard_1_1core_1_1constants_1a849b2ad4fc1e5358b7b0e5d924b3c5af" kind="variable"><name>RESPONSE_ERROR_CODE</name></member>
+    <member refid="namespaceleaguewizard_1_1core_1_1constants_1a2b387a9706090fea435dc09eb1d3c231" kind="variable"><name>MIN_PY_VER</name></member>
+    <member refid="namespaceleaguewizard_1_1core_1_1constants_1a4a3bf4538d3e407352838e0b908d04a3" kind="variable"><name>APP_DIR</name></member>
+    <member refid="namespaceleaguewizard_1_1core_1_1constants_1aa4d756573f96cbeaf4e398922af55c30" kind="variable"><name>CONFIG_FILE</name></member>
+    <member refid="namespaceleaguewizard_1_1core_1_1constants_1a2c6fe93a0c0dad95689a954007fa8d6f" kind="variable"><name>DEV_CONFIG_FILE</name></member>
+    <member refid="namespaceleaguewizard_1_1core_1_1constants_1a5ba8812d61865c449a1f3b68218f377d" kind="variable"><name>LOG_DIR</name></member>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1core_1_1exceptions" kind="namespace"><name>leaguewizard::core::exceptions</name>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1core_1_1models" kind="namespace"><name>leaguewizard::core::models</name>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1data" kind="namespace"><name>leaguewizard::data</name>
+    <member refid="namespaceleaguewizard_1_1data_1af3b9ac006f89948201b021e6683c3ca9" kind="variable"><name>image_path</name></member>
+    <member refid="namespaceleaguewizard_1_1data_1a3a46f2be217e4c6909a6161970c69412" kind="variable"><name>riot_cert_path</name></member>
+    <member refid="namespaceleaguewizard_1_1data_1a6487b6180f38f3dfb7132ee3967c3bfb" kind="variable"><name>__all__</name></member>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1data_1_1certs" kind="namespace"><name>leaguewizard::data::certs</name>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1data_1_1images" kind="namespace"><name>leaguewizard::data::images</name>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1mobalytics" kind="namespace"><name>leaguewizard::mobalytics</name>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1mobalytics_1_1mobalytics" kind="namespace"><name>leaguewizard::mobalytics::mobalytics</name>
+    <member refid="namespaceleaguewizard_1_1mobalytics_1_1mobalytics_1a580fe863b407c020ab46e701674241f1" kind="function"><name>get_mobalytics_info</name></member>
+  </compound>
+  <compound refid="namespaceleaguewizard_1_1mobalytics_1_1parsers" kind="namespace"><name>leaguewizard::mobalytics::parsers</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="CHANGELOG_8md" kind="file"><name>CHANGELOG.md</name>
+  </compound>
+  <compound refid="index_8md" kind="file"><name>index.md</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="gen__ref__pages_8py" kind="file"><name>gen_ref_pages.py</name>
+  </compound>
+  <compound refid="____main_____8py" kind="file"><name>__main__.py</name>
+  </compound>
+  <compound refid="callback__handler_8py" kind="file"><name>callback_handler.py</name>
+  </compound>
+  <compound refid="core_8py" kind="file"><name>core.py</name>
+  </compound>
+  <compound refid="api_2models_8py" kind="file"><name>models.py</name>
+  </compound>
+  <compound refid="core_2models_8py" kind="file"><name>models.py</name>
+  </compound>
+  <compound refid="utils_8py" kind="file"><name>utils.py</name>
+  </compound>
+  <compound refid="constants_8py" kind="file"><name>constants.py</name>
+  </compound>
+  <compound refid="exceptions_8py" kind="file"><name>exceptions.py</name>
+  </compound>
+  <compound refid="____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="api_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="config_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="core_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="data_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="data_2certs_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="data_2images_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="mobalytics_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="mobalytics_8py" kind="file"><name>mobalytics.py</name>
+  </compound>
+  <compound refid="parsers_8py" kind="file"><name>parsers.py</name>
+  </compound>
+  <compound refid="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG" kind="page"><name>md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2CHANGELOG</name>
+  </compound>
+  <compound refid="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2docs_2index" kind="page"><name>md__2app_2doc__state_2github__reposRepoArchDocGenContext_2amburgao_2leaguewizard_2docs_2index</name>
+  </compound>
+  <compound refid="dir_cdbcd37c31d88ceb1cb23c565e060573" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api</name>
+  </compound>
+  <compound refid="dir_828d17932a2563e18bcaa2fdebfeed48" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/data/certs</name>
+  </compound>
+  <compound refid="dir_ec3428a0ff298e3ab974fc9a2bf0e453" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/config</name>
+  </compound>
+  <compound refid="dir_374e5039d5bdfc16fa830af59901f000" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core</name>
+  </compound>
+  <compound refid="dir_a5ca91d9953878ace481e9728efdb7c3" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/data</name>
+  </compound>
+  <compound refid="dir_796babe132c05beea6c9aad243083896" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/docs</name>
+  </compound>
+  <compound refid="dir_249ebbfeca94eff9c0daa37aee066147" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/data/images</name>
+  </compound>
+  <compound refid="dir_cce5adb806ec36d2ae78869be2db0ac3" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard</name>
+  </compound>
+  <compound refid="dir_e55bf7384dc20247fa3bf08add4586ea" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard</name>
+  </compound>
+  <compound refid="dir_6cadab460fab7df3b62e7d80739ec0bb" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics</name>
+  </compound>
+  <compound refid="dir_c3ebecf05dd3a894924b20208a2cc092" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts</name>
+  </compound>
+  <compound refid="dir_8409344b988e1653bc020c7f042df452" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src</name>
+  </compound>
+</doxygenindex>

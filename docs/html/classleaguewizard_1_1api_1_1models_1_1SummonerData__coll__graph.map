@@ -1,0 +1,9 @@
+<map id="leaguewizard.api.models.SummonerData" name="leaguewizard.api.models.SummonerData">
+<area shape="rect" id="Node000001" title=" " alt="" coords="41,207,222,287"/>
+<area shape="rect" id="Node000002" href="$classBaseModel.html" title=" " alt="" coords="5,5,92,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,83,118,206,113,208,64,85"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="116,5,147,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,71,134,190,129,190,129,71"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="280,5,311,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="299,72,293,127,284,157,268,184,238,211,235,207,264,181,279,155,288,126,294,71"/>
+</map>

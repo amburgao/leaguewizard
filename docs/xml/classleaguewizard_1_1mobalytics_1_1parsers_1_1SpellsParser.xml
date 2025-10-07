@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser" kind="class" language="Python" prot="public">
+    <compoundname>leaguewizard::mobalytics::parsers::SpellsParser</compoundname>
+    <basecompoundref refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser" prot="public" virt="non-virtual">leaguewizard.mobalytics.parsers.BaseParser</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1a5c9e658daffbfd6332f52e9fa8dc898a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.mobalytics.parsers.SpellsParser.parse</definition>
+        <argsstring>(self)</argsstring>
+        <name>parse</name>
+        <qualifiedname>leaguewizard.mobalytics.parsers.SpellsParser.parse</qualifiedname>
+        <reimplements refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a3b9410b32037be93c0e92b7f84c92115">parse</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Parses summoner spells and creates a PayloadSpells object.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" line="213" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" bodystart="213" bodyend="224"/>
+        <references refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1ad12c102d48d6d0fa6c07771d7ed89868" compoundref="parsers_8py" startline="225" endline="239">leaguewizard.mobalytics.parsers.SpellsParser._get_spells</references>
+        <references refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1afa8ca4123251f3cbd769960f98d07e95" compoundref="parsers_8py" startline="245" endline="253">leaguewizard.mobalytics.parsers.SpellsParser._set_flash_position</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1ad12c102d48d6d0fa6c07771d7ed89868" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>list[int]</type>
+        <definition> list[int] leaguewizard.mobalytics.parsers.SpellsParser._get_spells</definition>
+        <argsstring>(self)</argsstring>
+        <name>_get_spells</name>
+        <qualifiedname>leaguewizard.mobalytics.parsers.SpellsParser._get_spells</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Retrieve a list of spell integers from HTML nodes.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" line="225" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" bodystart="225" bodyend="239"/>
+        <references refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2ba8736f237736a4d03b0a547e38bbb3" compoundref="mobalytics_8py" startline="28">leaguewizard.mobalytics.mobalytics.MobaChampion.html</references>
+        <references refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a9a7136bde087f4eb76f7e1e2cc791132" compoundref="parsers_8py" startline="35">leaguewizard.mobalytics.parsers.BaseParser.html</references>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1a5c9e658daffbfd6332f52e9fa8dc898a" compoundref="parsers_8py" startline="213" endline="224">leaguewizard.mobalytics.parsers.SpellsParser.parse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1afa8ca4123251f3cbd769960f98d07e95" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>list[int]</type>
+        <definition> list[int] leaguewizard.mobalytics.parsers.SpellsParser._set_flash_position</definition>
+        <argsstring>(list[int] spell_list, int spell_id=4, int index=1)</argsstring>
+        <name>_set_flash_position</name>
+        <qualifiedname>leaguewizard.mobalytics.parsers.SpellsParser._set_flash_position</qualifiedname>
+        <param>
+          <type>list</type>
+          <declname>spell_list</declname>
+          <array>[int]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>spell_id</declname>
+          <defval>4</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Sets the position of a spell ID in the spell list.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" line="241" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" bodystart="245" bodyend="253"/>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1a5c9e658daffbfd6332f52e9fa8dc898a" compoundref="parsers_8py" startline="213" endline="224">leaguewizard.mobalytics.parsers.SpellsParser.parse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A parser for champion summoner spells.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ABC</label>
+        <link refid="classABC"/>
+      </node>
+      <node id="1">
+        <label>leaguewizard.mobalytics.parsers.SpellsParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>leaguewizard.mobalytics.parsers.BaseParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ABC</label>
+        <link refid="classABC"/>
+      </node>
+      <node id="4">
+        <label>Any</label>
+      </node>
+      <node id="1">
+        <label>leaguewizard.mobalytics.parsers.SpellsParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>leaguewizard.mobalytics.parsers.BaseParser</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#_payload</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" line="210" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/parsers.py" bodystart="210" bodyend="253"/>
+    <listofallmembers>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1abde019c3e356f8128f7df242fa26a376" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::SpellsParser</scope><name>__init__</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1ad12c102d48d6d0fa6c07771d7ed89868" prot="protected" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::SpellsParser</scope><name>_get_spells</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a697d7f2117254c4d6aabffa71cdd3741" prot="protected" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::SpellsParser</scope><name>_payload</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1afa8ca4123251f3cbd769960f98d07e95" prot="protected" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::SpellsParser</scope><name>_set_flash_position</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1a9a7136bde087f4eb76f7e1e2cc791132" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::SpellsParser</scope><name>html</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1a5c9e658daffbfd6332f52e9fa8dc898a" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::SpellsParser</scope><name>parse</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1BaseParser_1ad9fd7ee1d30482cd365588f80eb9ebc1" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::parsers::SpellsParser</scope><name>payload</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,7 @@
+<map id="leaguewizard.core.models.EventSchema" name="leaguewizard.core.models.EventSchema">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,247,195,367"/>
+<area shape="rect" id="Node000002" href="$classleaguewizard_1_1core_1_1models_1_1Payload.html" title=" " alt="" coords="5,119,195,199"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,213,103,247,97,247,97,213"/>
+<area shape="rect" id="Node000003" href="$classBaseModel.html" title=" " alt="" coords="57,5,143,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,85,103,118,97,118,97,85"/>
+</map>

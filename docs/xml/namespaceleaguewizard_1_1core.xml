@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespaceleaguewizard_1_1core" kind="namespace" language="Python">
+    <compoundname>leaguewizard::core</compoundname>
+    <innernamespace refid="namespaceleaguewizard_1_1core_1_1constants">leaguewizard::core::constants</innernamespace>
+    <innernamespace refid="namespaceleaguewizard_1_1core_1_1exceptions">leaguewizard::core::exceptions</innernamespace>
+    <innernamespace refid="namespaceleaguewizard_1_1core_1_1models">leaguewizard::core::models</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Generic __init__.py.</verbatim> </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

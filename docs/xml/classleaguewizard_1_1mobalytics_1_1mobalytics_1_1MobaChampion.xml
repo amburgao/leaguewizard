@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion" kind="class" language="Python" prot="public">
+    <compoundname>leaguewizard::mobalytics::mobalytics::MobaChampion</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a9b0dbdc91cbcc4de61a9644dc992b70c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>leaguewizard.mobalytics.mobalytics.MobaChampion::champion_name</definition>
+        <argsstring></argsstring>
+        <name>champion_name</name>
+        <qualifiedname>leaguewizard.mobalytics.mobalytics.MobaChampion.champion_name</qualifiedname>
+        <initializer>=  champion_name</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="25" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a553d725181cfd16de6315ae6334fc9a8" compoundref="mobalytics_8py" startline="64" endline="84">leaguewizard.mobalytics.mobalytics.MobaChampion.itemsets_payload</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2c4740935c825e48dd646e6c5d5cfbce" compoundref="mobalytics_8py" startline="85" endline="92">leaguewizard.mobalytics.mobalytics.MobaChampion.perks_payload</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a25f360e2d7308fa2c48fd171610b5e19" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>leaguewizard.mobalytics.mobalytics.MobaChampion::role</definition>
+        <argsstring></argsstring>
+        <name>role</name>
+        <qualifiedname>leaguewizard.mobalytics.mobalytics.MobaChampion.role</qualifiedname>
+        <initializer>=  role</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="26" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a1c46f15db98d7226f20e2a17a6d68614" compoundref="mobalytics_8py" startline="30" endline="39">leaguewizard.mobalytics.mobalytics.MobaChampion._build_url</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a553d725181cfd16de6315ae6334fc9a8" compoundref="mobalytics_8py" startline="64" endline="84">leaguewizard.mobalytics.mobalytics.MobaChampion.itemsets_payload</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2c4740935c825e48dd646e6c5d5cfbce" compoundref="mobalytics_8py" startline="85" endline="92">leaguewizard.mobalytics.mobalytics.MobaChampion.perks_payload</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a14f10be2cc8053fdc8daa3918f8c7c1e" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str leaguewizard.mobalytics.mobalytics.MobaChampion::url</definition>
+        <argsstring></argsstring>
+        <name>url</name>
+        <qualifiedname>leaguewizard.mobalytics.mobalytics.MobaChampion.url</qualifiedname>
+        <initializer>=  self._build_url()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="27" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a6dac960b96b052fd8c7923e9e4621ae7" compoundref="mobalytics_8py" startline="40" endline="63">leaguewizard.mobalytics.mobalytics.MobaChampion.fetch_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2ba8736f237736a4d03b0a547e38bbb3" prot="public" static="no" mutable="no">
+        <type>HTMLParser|None</type>
+        <definition>HTMLParser | None leaguewizard.mobalytics.mobalytics.MobaChampion::html</definition>
+        <argsstring></argsstring>
+        <name>html</name>
+        <qualifiedname>leaguewizard.mobalytics.mobalytics.MobaChampion.html</qualifiedname>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="28" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser_1a4b2ec7b577625ca61d5c7f594f5cd1c2" compoundref="parsers_8py" startline="99" endline="114">leaguewizard.mobalytics.parsers.ItemsetsParser._get_aram_item_sets</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1PerksParser_1a0eff80c94e97086e413f420f901c66b0" compoundref="parsers_8py" startline="182" endline="209">leaguewizard.mobalytics.parsers.PerksParser._get_perks</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1SpellsParser_1ad12c102d48d6d0fa6c07771d7ed89868" compoundref="parsers_8py" startline="225" endline="239">leaguewizard.mobalytics.parsers.SpellsParser._get_spells</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1parsers_1_1ItemsetsParser_1a7e5c3f46d2d47c9dc30a6a0d4bd4aa95" compoundref="parsers_8py" startline="82" endline="98">leaguewizard.mobalytics.parsers.ItemsetsParser._get_sr_item_sets</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a6dac960b96b052fd8c7923e9e4621ae7" compoundref="mobalytics_8py" startline="40" endline="63">leaguewizard.mobalytics.mobalytics.MobaChampion.fetch_data</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a553d725181cfd16de6315ae6334fc9a8" compoundref="mobalytics_8py" startline="64" endline="84">leaguewizard.mobalytics.mobalytics.MobaChampion.itemsets_payload</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2c4740935c825e48dd646e6c5d5cfbce" compoundref="mobalytics_8py" startline="85" endline="92">leaguewizard.mobalytics.mobalytics.MobaChampion.perks_payload</referencedby>
+        <referencedby refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a33ec4daf0c8c7d882f88ca4612bdf904" compoundref="mobalytics_8py" startline="93" endline="102">leaguewizard.mobalytics.mobalytics.MobaChampion.spells_payload</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a6136a9d15affce70d94defc2f37d52a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.mobalytics.mobalytics.MobaChampion.__init__</definition>
+        <argsstring>(self, str champion_name, str role)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>leaguewizard.mobalytics.mobalytics.MobaChampion.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>champion_name</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes the MobaChampion instance.
+
+Args:
+    champion_name (str): The name of the champion.
+    role (str): The role of the champion (e.g., &quot;top&quot;, &quot;aram&quot;).
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="18" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="18" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a6dac960b96b052fd8c7923e9e4621ae7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HTMLParser</type>
+        <definition> HTMLParser leaguewizard.mobalytics.mobalytics.MobaChampion.fetch_data</definition>
+        <argsstring>(self, aiohttp.ClientSession client)</argsstring>
+        <name>fetch_data</name>
+        <qualifiedname>leaguewizard.mobalytics.mobalytics.MobaChampion.fetch_data</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>aiohttp.ClientSession</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Fetches and parses the HTML content of the Mobalytics champion page.
+
+Args:
+    client (aiohttp.ClientSession): The aiohttp client session.
+
+Returns:
+    HTMLParser: The parsed HTML content.
+
+Raises:
+    LeWizardGenericError: If the champion HTML could not be retrieved.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="40" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="40" bodyend="63"/>
+        <references refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2ba8736f237736a4d03b0a547e38bbb3" compoundref="mobalytics_8py" startline="28">leaguewizard.mobalytics.mobalytics.MobaChampion.html</references>
+        <references refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a14f10be2cc8053fdc8daa3918f8c7c1e" compoundref="mobalytics_8py" startline="27">leaguewizard.mobalytics.mobalytics.MobaChampion.url</references>
+      </memberdef>
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a553d725181cfd16de6315ae6334fc9a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Any</type>
+        <definition> Any leaguewizard.mobalytics.mobalytics.MobaChampion.itemsets_payload</definition>
+        <argsstring>(self, int summoner_id, int champion_id)</argsstring>
+        <name>itemsets_payload</name>
+        <qualifiedname>leaguewizard.mobalytics.mobalytics.MobaChampion.itemsets_payload</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>summoner_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>champion_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generates the item sets payload for the LCU API.
+
+Args:
+    summoner_id (int): The summoner&apos;s ID.
+    champion_id (int): The champion&apos;s ID.
+
+Returns:
+    Any: The PayloadItemSets object or None if HTML content is not available.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="64" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="64" bodyend="84"/>
+        <references refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a9b0dbdc91cbcc4de61a9644dc992b70c" compoundref="mobalytics_8py" startline="25">leaguewizard.mobalytics.mobalytics.MobaChampion.champion_name</references>
+        <references refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2ba8736f237736a4d03b0a547e38bbb3" compoundref="mobalytics_8py" startline="28">leaguewizard.mobalytics.mobalytics.MobaChampion.html</references>
+        <references refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a25f360e2d7308fa2c48fd171610b5e19" compoundref="mobalytics_8py" startline="26">leaguewizard.mobalytics.mobalytics.MobaChampion.role</references>
+      </memberdef>
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2c4740935c825e48dd646e6c5d5cfbce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Any</type>
+        <definition> Any leaguewizard.mobalytics.mobalytics.MobaChampion.perks_payload</definition>
+        <argsstring>(self)</argsstring>
+        <name>perks_payload</name>
+        <qualifiedname>leaguewizard.mobalytics.mobalytics.MobaChampion.perks_payload</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generates the perks payload for the LCU API.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="85" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="85" bodyend="92"/>
+        <references refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a9b0dbdc91cbcc4de61a9644dc992b70c" compoundref="mobalytics_8py" startline="25">leaguewizard.mobalytics.mobalytics.MobaChampion.champion_name</references>
+        <references refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2ba8736f237736a4d03b0a547e38bbb3" compoundref="mobalytics_8py" startline="28">leaguewizard.mobalytics.mobalytics.MobaChampion.html</references>
+        <references refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a25f360e2d7308fa2c48fd171610b5e19" compoundref="mobalytics_8py" startline="26">leaguewizard.mobalytics.mobalytics.MobaChampion.role</references>
+      </memberdef>
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a33ec4daf0c8c7d882f88ca4612bdf904" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Any</type>
+        <definition> Any leaguewizard.mobalytics.mobalytics.MobaChampion.spells_payload</definition>
+        <argsstring>(self)</argsstring>
+        <name>spells_payload</name>
+        <qualifiedname>leaguewizard.mobalytics.mobalytics.MobaChampion.spells_payload</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generates the spells payload for the LCU API.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="93" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="93" bodyend="102"/>
+        <references refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2ba8736f237736a4d03b0a547e38bbb3" compoundref="mobalytics_8py" startline="28">leaguewizard.mobalytics.mobalytics.MobaChampion.html</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a1c46f15db98d7226f20e2a17a6d68614" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str leaguewizard.mobalytics.mobalytics.MobaChampion._build_url</definition>
+        <argsstring>(self)</argsstring>
+        <name>_build_url</name>
+        <qualifiedname>leaguewizard.mobalytics.mobalytics.MobaChampion._build_url</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Builds the Mobalytics URL for the champion and role.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="30" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="30" bodyend="39"/>
+        <references refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a25f360e2d7308fa2c48fd171610b5e19" compoundref="mobalytics_8py" startline="26">leaguewizard.mobalytics.mobalytics.MobaChampion.role</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Represents the champion mobalytics webpage.</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>HTMLParser|None</label>
+      </node>
+      <node id="1">
+        <label>leaguewizard.mobalytics.mobalytics.MobaChampion</label>
+        <link refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+url</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+html</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>str</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" line="15" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/mobalytics.py" bodystart="15" bodyend="102"/>
+    <listofallmembers>
+      <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a6136a9d15affce70d94defc2f37d52a3" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::mobalytics::MobaChampion</scope><name>__init__</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a1c46f15db98d7226f20e2a17a6d68614" prot="protected" virt="non-virtual"><scope>leaguewizard::mobalytics::mobalytics::MobaChampion</scope><name>_build_url</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a9b0dbdc91cbcc4de61a9644dc992b70c" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::mobalytics::MobaChampion</scope><name>champion_name</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a6dac960b96b052fd8c7923e9e4621ae7" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::mobalytics::MobaChampion</scope><name>fetch_data</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2ba8736f237736a4d03b0a547e38bbb3" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::mobalytics::MobaChampion</scope><name>html</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a553d725181cfd16de6315ae6334fc9a8" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::mobalytics::MobaChampion</scope><name>itemsets_payload</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a2c4740935c825e48dd646e6c5d5cfbce" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::mobalytics::MobaChampion</scope><name>perks_payload</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a25f360e2d7308fa2c48fd171610b5e19" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::mobalytics::MobaChampion</scope><name>role</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a33ec4daf0c8c7d882f88ca4612bdf904" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::mobalytics::MobaChampion</scope><name>spells_payload</name></member>
+      <member refid="classleaguewizard_1_1mobalytics_1_1mobalytics_1_1MobaChampion_1a14f10be2cc8053fdc8daa3918f8c7c1e" prot="public" virt="non-virtual"><scope>leaguewizard::mobalytics::mobalytics::MobaChampion</scope><name>url</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

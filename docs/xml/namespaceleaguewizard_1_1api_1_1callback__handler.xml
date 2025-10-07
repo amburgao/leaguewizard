@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespaceleaguewizard_1_1api_1_1callback__handler" kind="namespace" language="Python">
+    <compoundname>leaguewizard::api::callback_handler</compoundname>
+    <innerclass refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker" prot="protected">leaguewizard::api::callback_handler::_ChampionTracker</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceleaguewizard_1_1api_1_1callback__handler_1a26e7460b7bf54ebdf15b05ba8fa68c58" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>leaguewizard::api::callback_handler.champion_tracker</definition>
+        <argsstring></argsstring>
+        <name>champion_tracker</name>
+        <qualifiedname>leaguewizard.api.callback_handler.champion_tracker</qualifiedname>
+        <initializer>=  <ref refid="classleaguewizard_1_1api_1_1callback__handler_1_1__ChampionTracker" kindref="compound">_ChampionTracker</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="187" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="187" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceleaguewizard_1_1api_1_1callback__handler_1a06176f37532095e427663de4ea639ac8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Any</type>
+        <definition> Any leaguewizard.api.callback_handler._get_latest_version</definition>
+        <argsstring>(aiohttp.ClientSession client, str url=&quot;https://ddragon.leagueoflegends.com/api/versions.json&quot;)</argsstring>
+        <name>_get_latest_version</name>
+        <qualifiedname>leaguewizard.api.callback_handler._get_latest_version</qualifiedname>
+        <param>
+          <type>aiohttp.ClientSession</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>url</declname>
+          <defval>&quot;https://ddragon.leagueoflegends.com/api/versions.json&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Retrieves the latest DDragon version from the Riot Games API.
+
+Args:
+    client (aiohttp.ClientSession): The aiohttp client session.
+    url (str): The URL to fetch the versions from. Defaults to
+        &quot;https://ddragon.leagueoflegends.com/api/versions.json&quot;.
+
+Returns:
+    Any: The latest version string.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="27" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="30" bodyend="46"/>
+        <referencedby refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a5721c8586e4905dbf65067f6a2239575" compoundref="callback__handler_8py" startline="47" endline="69">leaguewizard.api.callback_handler._get_champion_dict</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceleaguewizard_1_1api_1_1callback__handler_1a5721c8586e4905dbf65067f6a2239575" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Any</type>
+        <definition> Any leaguewizard.api.callback_handler._get_champion_dict</definition>
+        <argsstring>(aiohttp.ClientSession client)</argsstring>
+        <name>_get_champion_dict</name>
+        <qualifiedname>leaguewizard.api.callback_handler._get_champion_dict</qualifiedname>
+        <param>
+          <type>aiohttp.ClientSession</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Retrieves a dictionary mapping champion IDs to champion names.
+
+Args:
+    client (aiohttp.ClientSession): The aiohttp client session.
+
+Returns:
+    Any: A dictionary of champion IDs (int) mapped to their champion names (str).
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="47" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="47" bodyend="69"/>
+        <references refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a06176f37532095e427663de4ea639ac8" compoundref="callback__handler_8py" startline="30" endline="46">leaguewizard.api.callback_handler._get_latest_version</references>
+        <referencedby refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a07ee15ae9a506982f360ddaaa7f4977d" compoundref="callback__handler_8py" startline="151" endline="165">leaguewizard.api.callback_handler.get_champion_name</referencedby>
+        <referencedby refid="namespaceleaguewizard_1_1api_1_1callback__handler_1afe6575082fa13034d479a11fe8cea0df" compoundref="callback__handler_8py" startline="194" endline="275">leaguewizard.api.callback_handler.on_message</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceleaguewizard_1_1api_1_1callback__handler_1ae7069e1c4ff33fc39f3ce4f8a49d0ece" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.api.callback_handler.send_itemsets</definition>
+        <argsstring>(aiohttp.ClientSession client, PayloadItemSets payload, int account_id, SSLContext context)</argsstring>
+        <name>send_itemsets</name>
+        <qualifiedname>leaguewizard.api.callback_handler.send_itemsets</qualifiedname>
+        <param>
+          <type>aiohttp.ClientSession</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type><ref refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets" kindref="compound">PayloadItemSets</ref></type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>account_id</declname>
+        </param>
+        <param>
+          <type>SSLContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Sends item set data for a given account ID.
+
+Args:
+    client: An aiohttp client session for making HTTP requests.
+    payload: The PayloadItemSets object containing the item set data.
+    account_id: The unique identifier for the League of Legends account.
+    context: An SSLContext object for secure HTTP connections.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="70" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="75" bodyend="91"/>
+        <referencedby refid="namespaceleaguewizard_1_1api_1_1callback__handler_1afe6575082fa13034d479a11fe8cea0df" compoundref="callback__handler_8py" startline="194" endline="275">leaguewizard.api.callback_handler.on_message</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceleaguewizard_1_1api_1_1callback__handler_1a974d4adf1ba96f698951f14c48da662a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.api.callback_handler.send_perks</definition>
+        <argsstring>(aiohttp.ClientSession client, PayloadPerks payload, SSLContext context)</argsstring>
+        <name>send_perks</name>
+        <qualifiedname>leaguewizard.api.callback_handler.send_perks</qualifiedname>
+        <param>
+          <type>aiohttp.ClientSession</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type><ref refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks" kindref="compound">PayloadPerks</ref></type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>SSLContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Deletes the current rune page and creates a new one.
+
+Deletes the current rune page if it exists and then creates a new rune
+page based on the provided payload.
+
+Args:
+    client: An aiohttp.ClientSession for making HTTP requests.
+    payload: A PayloadPerks object containing the data for the new rune page.
+    context: An SSLContext for establishing secure connections.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="92" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="96" bodyend="127"/>
+        <referencedby refid="namespaceleaguewizard_1_1api_1_1callback__handler_1afe6575082fa13034d479a11fe8cea0df" compoundref="callback__handler_8py" startline="194" endline="275">leaguewizard.api.callback_handler.on_message</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceleaguewizard_1_1api_1_1callback__handler_1a030482f8549390aeaf684fb3e78067c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.api.callback_handler.send_spells</definition>
+        <argsstring>(aiohttp.ClientSession client, PayloadSpells payload, SSLContext context)</argsstring>
+        <name>send_spells</name>
+        <qualifiedname>leaguewizard.api.callback_handler.send_spells</qualifiedname>
+        <param>
+          <type>aiohttp.ClientSession</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type><ref refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells" kindref="compound">PayloadSpells</ref></type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>SSLContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Sends a spell to the League of Legends client.
+
+Args:
+    client: An aiohttp client session.
+    payload: The payload containing spell information.
+    context: The SSL context for the client.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="128" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="132" bodyend="147"/>
+        <referencedby refid="namespaceleaguewizard_1_1api_1_1callback__handler_1afe6575082fa13034d479a11fe8cea0df" compoundref="callback__handler_8py" startline="194" endline="275">leaguewizard.api.callback_handler.on_message</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceleaguewizard_1_1api_1_1callback__handler_1a07ee15ae9a506982f360ddaaa7f4977d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str|None</type>
+        <definition> str | None leaguewizard.api.callback_handler.get_champion_name</definition>
+        <argsstring>(aiohttp.ClientSession client, int champion_id)</argsstring>
+        <name>get_champion_name</name>
+        <qualifiedname>leaguewizard.api.callback_handler.get_champion_name</qualifiedname>
+        <param>
+          <type>aiohttp.ClientSession</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>champion_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Retrieves the name of a champion given their ID.
+
+Args:
+    client (aiohttp.ClientSession): The aiohttp client session.
+    champion_id (int): The ID of the champion.
+
+Returns:
+    str | None: The champion&apos;s name if found, otherwise None.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="148" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="151" bodyend="165"/>
+        <references refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a5721c8586e4905dbf65067f6a2239575" compoundref="callback__handler_8py" startline="47" endline="69">leaguewizard.api.callback_handler._get_champion_dict</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceleaguewizard_1_1api_1_1callback__handler_1afe6575082fa13034d479a11fe8cea0df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.api.callback_handler.on_message</definition>
+        <argsstring>(str|bytes event, aiohttp.ClientSession conn, int aio_client_id)</argsstring>
+        <name>on_message</name>
+        <qualifiedname>leaguewizard.api.callback_handler.on_message</qualifiedname>
+        <param>
+          <type>str|bytes</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>aiohttp.ClientSession</type>
+          <declname>conn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>aio_client_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Handles incoming messages from a connection.
+
+Args:
+    event: The incoming message event.
+    conn: The aiohttp client session for the connection.
+    aio_client_id: Random int to ensure there is only one
+        aiohttp ClientSession being used.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="190" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="194" bodyend="275"/>
+        <references refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a5721c8586e4905dbf65067f6a2239575" compoundref="callback__handler_8py" startline="47" endline="69">leaguewizard.api.callback_handler._get_champion_dict</references>
+        <references refid="namespaceleaguewizard_1_1api_1_1callback__handler_1aeea1d241fa2c5c1593c43604f3be2c77" compoundref="callback__handler_8py" startline="276" endline="298">leaguewizard.api.callback_handler.handle_auto_accept</references>
+        <references refid="namespaceleaguewizard_1_1api_1_1callback__handler_1ae7069e1c4ff33fc39f3ce4f8a49d0ece" compoundref="callback__handler_8py" startline="75" endline="91">leaguewizard.api.callback_handler.send_itemsets</references>
+        <references refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a974d4adf1ba96f698951f14c48da662a" compoundref="callback__handler_8py" startline="96" endline="127">leaguewizard.api.callback_handler.send_perks</references>
+        <references refid="namespaceleaguewizard_1_1api_1_1callback__handler_1a030482f8549390aeaf684fb3e78067c4" compoundref="callback__handler_8py" startline="132" endline="147">leaguewizard.api.callback_handler.send_spells</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceleaguewizard_1_1api_1_1callback__handler_1aeea1d241fa2c5c1593c43604f3be2c77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None leaguewizard.api.callback_handler.handle_auto_accept</definition>
+        <argsstring>(Any conn)</argsstring>
+        <name>handle_auto_accept</name>
+        <qualifiedname>leaguewizard.api.callback_handler.handle_auto_accept</qualifiedname>
+        <param>
+          <type>Any</type>
+          <declname>conn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Handles the automatic acceptance of game phases.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="276" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" bodystart="276" bodyend="298"/>
+        <referencedby refid="namespaceleaguewizard_1_1api_1_1callback__handler_1afe6575082fa13034d479a11fe8cea0df" compoundref="callback__handler_8py" startline="194" endline="275">leaguewizard.api.callback_handler.on_message</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Handles WebSocket messages from the League of Legends client to update game data.
+
+This module provides functions to process real-time game events, fetch champion-specific
+information from external sources like Mobalytics, and then send updated item sets,
+rune pages, and summoner spells back to the League of Legends client.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/callback_handler.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

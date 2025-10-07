@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespaceleaguewizard_1_1mobalytics" kind="namespace" language="Python">
+    <compoundname>leaguewizard::mobalytics</compoundname>
+    <innernamespace refid="namespaceleaguewizard_1_1mobalytics_1_1mobalytics">leaguewizard::mobalytics::mobalytics</innernamespace>
+    <innernamespace refid="namespaceleaguewizard_1_1mobalytics_1_1parsers">leaguewizard::mobalytics::parsers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Initializes the leaguewizard.mobalytics.mobalytics submodule.
+
+This module imports all public objects from the
+leaguewizard.mobalytics.mobalytics module.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

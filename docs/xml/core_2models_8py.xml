@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="core_2models_8py" kind="file" language="Python">
+    <compoundname>models.py</compoundname>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1Payload" prot="public">leaguewizard::core::models::Payload</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets" prot="public">leaguewizard::core::models::PayloadItemSets</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1ItemSet" prot="public">leaguewizard::core::models::ItemSet</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1Block" prot="public">leaguewizard::core::models::Block</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1Item" prot="public">leaguewizard::core::models::Item</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks" prot="public">leaguewizard::core::models::PayloadPerks</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells" prot="public">leaguewizard::core::models::PayloadSpells</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1EventSchema" prot="public">leaguewizard::core::models::EventSchema</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1Action" prot="public">leaguewizard::core::models::Action</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1Ally" prot="public">leaguewizard::core::models::Ally</innerclass>
+    <innernamespace refid="namespaceleaguewizard">leaguewizard</innernamespace>
+    <innernamespace refid="namespaceleaguewizard_1_1core">leaguewizard::core</innernamespace>
+    <innernamespace refid="namespaceleaguewizard_1_1core_1_1models">leaguewizard::core::models</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceleaguewizard_1_1core_1_1models" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;Defines<sp/>Pydantic<sp/>models<sp/>for<sp/>various<sp/>LeagueClientUpdates<sp/>payloads<sp/>and<sp/>event<sp/>schemas.</highlight></codeline>
+<codeline lineno="2"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral">These<sp/>models<sp/>are<sp/>used<sp/>for<sp/>serializing<sp/>and<sp/>deserializing<sp/>data<sp/>exchanged<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral">League<sp/>of<sp/>Legends<sp/>client,<sp/>ensuring<sp/>type<sp/>safety<sp/>and<sp/>data<sp/>validation.</highlight></codeline>
+<codeline lineno="5"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>__future__<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>annotations</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>typing<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Any</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pydantic<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>BaseModel,<sp/>Field</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classleaguewizard_1_1core_1_1models_1_1Payload" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classleaguewizard_1_1core_1_1models_1_1Payload" kindref="compound">Payload</ref>(<ref refid="classBaseModel" kindref="compound">BaseModel</ref>):</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Base<sp/>class<sp/>for<sp/>all<sp/>payload<sp/>models,<sp/>providing<sp/>common<sp/>serialization.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classleaguewizard_1_1core_1_1models_1_1Payload_1ac65bb995d052eaf8e2e5df2ff602d602" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classleaguewizard_1_1core_1_1models_1_1Payload_1ac65bb995d052eaf8e2e5df2ff602d602" kindref="member">asjson</ref>(self)<sp/>-&gt;<sp/>dict[str,<sp/>Any]:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Converts<sp/>the<sp/>model<sp/>instance<sp/>to<sp/>a<sp/>dictionary,<sp/>using<sp/>aliases<sp/>for<sp/>field<sp/>names.</highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Returns:</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dict[str,<sp/>Any]:<sp/>A<sp/>dictionary<sp/>representation<sp/>of<sp/>the<sp/>model.</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.model_dump(by_alias=</highlight><highlight class="keyword">True</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets" kindref="compound">PayloadItemSets</ref>(<ref refid="classleaguewizard_1_1core_1_1models_1_1Payload" kindref="compound">Payload</ref>):</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Payload<sp/>for<sp/>the<sp/>itemsets<sp/>endpoint<sp/>(/lol-item-sets/v1/item-sets/{accountId}/sets).</highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="29"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Attributes:</highlight></codeline>
+<codeline lineno="30"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>account_id<sp/>(int):<sp/>Summoner<sp/>account<sp/>ID.</highlight></codeline>
+<codeline lineno="31"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item_sets<sp/>(list[ItemSet]):<sp/>List<sp/>of<sp/>item<sp/>sets.<sp/>Defaults<sp/>to<sp/>None.</highlight></codeline>
+<codeline lineno="32"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timestamp<sp/>(int):<sp/>Timestamp<sp/>value.<sp/>Defaults<sp/>to<sp/>1<sp/>(unused).</highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets_1a9506a1b610943dab672c1807342b0785" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>account_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;accountId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="36" refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets_1a2d680871b3eac3443ccfaaea4b0a19f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>item_sets:<sp/>list[ItemSet]<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;itemSets&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="37" refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets_1a85a3b34db4a7dcf8ba11094a0d0fb8f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>timestamp:<sp/>int<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classleaguewizard_1_1core_1_1models_1_1ItemSet" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classleaguewizard_1_1core_1_1models_1_1ItemSet" kindref="compound">ItemSet</ref>(<ref refid="classleaguewizard_1_1core_1_1models_1_1Payload" kindref="compound">Payload</ref>):</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Represents<sp/>a<sp/>single<sp/>item<sp/>set<sp/>configuration.</highlight></codeline>
+<codeline lineno="42"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="43"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Attributes:</highlight></codeline>
+<codeline lineno="44"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>associated_champions<sp/>(list[int]):<sp/>Champion<sp/>IDs<sp/>this<sp/>set<sp/>applies<sp/>to.</highlight></codeline>
+<codeline lineno="45"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blocks<sp/>(list[Block]):<sp/>List<sp/>of<sp/>item<sp/>blocks<sp/>in<sp/>the<sp/>set.</highlight></codeline>
+<codeline lineno="46"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>title<sp/>(str):<sp/>Name<sp/>of<sp/>the<sp/>item<sp/>set<sp/>(e.g.,<sp/>&quot;Ezreal<sp/>-<sp/>ADC&quot;).</highlight></codeline>
+<codeline lineno="47"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classleaguewizard_1_1core_1_1models_1_1ItemSet_1afb1f865349fc53d4cf659be5c8ed8e93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>associated_champions:<sp/>list[int]<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;associatedChampions&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="50" refid="classleaguewizard_1_1core_1_1models_1_1ItemSet_1a02e6870a32b935864dca568166b996f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>blocks:<sp/>list[Block]</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>title:<sp/>str</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classleaguewizard_1_1core_1_1models_1_1Block" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classleaguewizard_1_1core_1_1models_1_1Block" kindref="compound">Block</ref>(<ref refid="classBaseModel" kindref="compound">BaseModel</ref>):</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;A<sp/>group<sp/>of<sp/>items<sp/>within<sp/>an<sp/>item<sp/>set.</highlight></codeline>
+<codeline lineno="56"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="57"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Attributes:</highlight></codeline>
+<codeline lineno="58"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items<sp/>(list[Item]):<sp/>List<sp/>of<sp/>items<sp/>in<sp/>the<sp/>block.</highlight></codeline>
+<codeline lineno="59"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>(str):<sp/>Block<sp/>title<sp/>or<sp/>category<sp/>(e.g.,<sp/>&quot;Core<sp/>Items&quot;).</highlight></codeline>
+<codeline lineno="60"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classleaguewizard_1_1core_1_1models_1_1Block_1a5e745e336574caaedec33edc03f1bc07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>items:<sp/>list[Item]</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>type:<sp/>str</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classleaguewizard_1_1core_1_1models_1_1Item" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classleaguewizard_1_1core_1_1models_1_1Item" kindref="compound">Item</ref>(<ref refid="classBaseModel" kindref="compound">BaseModel</ref>):</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Individual<sp/>item<sp/>configuration.</highlight></codeline>
+<codeline lineno="68"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="69"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Attributes:</highlight></codeline>
+<codeline lineno="70"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count<sp/>(int):<sp/>Number<sp/>of<sp/>item<sp/>units<sp/>to<sp/>display.</highlight></codeline>
+<codeline lineno="71"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id<sp/>(str):<sp/>Item<sp/>identifier.</highlight></codeline>
+<codeline lineno="72"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>count:<sp/>int</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>id:<sp/>str</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks" kindref="compound">PayloadPerks</ref>(<ref refid="classleaguewizard_1_1core_1_1models_1_1Payload" kindref="compound">Payload</ref>):</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Payload<sp/>for<sp/>the<sp/>rune<sp/>pages<sp/>endpoint<sp/>(/lol-perks/v1/pages).</highlight></codeline>
+<codeline lineno="80"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="81"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Attributes:</highlight></codeline>
+<codeline lineno="82"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name<sp/>(str):<sp/>Rune<sp/>page<sp/>name.</highlight></codeline>
+<codeline lineno="83"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>primary_style_id<sp/>(int):<sp/>Primary<sp/>rune<sp/>style<sp/>ID.</highlight></codeline>
+<codeline lineno="84"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sub_style_id<sp/>(int):<sp/>Secondary<sp/>rune<sp/>style<sp/>ID.</highlight></codeline>
+<codeline lineno="85"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current<sp/>(bool):<sp/>Whether<sp/>this<sp/>is<sp/>the<sp/>current<sp/>page.<sp/>Defaults<sp/>to<sp/>True.</highlight></codeline>
+<codeline lineno="86"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>selected_perk_ids<sp/>(list[int]):<sp/>List<sp/>of<sp/>selected<sp/>perk<sp/>IDs.</highlight></codeline>
+<codeline lineno="87"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>name:<sp/>str</highlight></codeline>
+<codeline lineno="90" refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks_1a6a5e247cd4671f083a08f6fb530eb949" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>primary_style_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;primaryStyleId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="91" refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks_1a1bebc77608c9bd21e32cbd286bcadb46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>sub_style_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;subStyleId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>current:<sp/>bool</highlight></codeline>
+<codeline lineno="93" refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks_1ac93439e4edd4d760fba5d060508dc5af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>selected_perk_ids:<sp/>list[int]<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;selectedPerkIds&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells" kindref="compound">PayloadSpells</ref>(<ref refid="classleaguewizard_1_1core_1_1models_1_1Payload" kindref="compound">Payload</ref>):</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Payload<sp/>for<sp/>the<sp/>spells<sp/>endpoint<sp/>(/lol-champ-select/v1/session/my-selection).</highlight></codeline>
+<codeline lineno="98"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="99"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Attributes:</highlight></codeline>
+<codeline lineno="100"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spell1_id<sp/>(int):<sp/>Summoner<sp/>spell<sp/>ID<sp/>for<sp/>the<sp/>D<sp/>key.</highlight></codeline>
+<codeline lineno="101"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spell2_id<sp/>(int):<sp/>Summoner<sp/>spell<sp/>ID<sp/>for<sp/>the<sp/>F<sp/>key.</highlight></codeline>
+<codeline lineno="102"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>selected_skin_id<sp/>(int):<sp/>Selected<sp/>champion<sp/>skin<sp/>ID.</highlight></codeline>
+<codeline lineno="103"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells_1af08eca1785b5d1c0aabd5ccad70de7b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>spell1_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;spell1Id&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="106" refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells_1a925f27259f67b21612be93cc33db12d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>spell2_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;spell2Id&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="107" refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells_1a158c926a76180284fcaa10aeac6372ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>selected_skin_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;selectedSkinId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classleaguewizard_1_1core_1_1models_1_1EventSchema" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classleaguewizard_1_1core_1_1models_1_1EventSchema" kindref="compound">EventSchema</ref>(<ref refid="classleaguewizard_1_1core_1_1models_1_1Payload" kindref="compound">Payload</ref>):</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Champion<sp/>selection<sp/>event<sp/>data<sp/>structure.</highlight></codeline>
+<codeline lineno="112"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="113"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Attributes:</highlight></codeline>
+<codeline lineno="114"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actions<sp/>(list[Action]):<sp/>List<sp/>of<sp/>champion<sp/>selection<sp/>actions.</highlight></codeline>
+<codeline lineno="115"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>local_player_cell_id<sp/>(int):<sp/>Local<sp/>player&apos;s<sp/>cell<sp/>ID.</highlight></codeline>
+<codeline lineno="116"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>my_team<sp/>(list[Ally]):<sp/>List<sp/>of<sp/>ally<sp/>team<sp/>members.</highlight></codeline>
+<codeline lineno="117"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classleaguewizard_1_1core_1_1models_1_1EventSchema_1ac33608dbb9e56ea2128c15e4a54dde8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>actions:<sp/>list[Action]</highlight></codeline>
+<codeline lineno="120" refid="classleaguewizard_1_1core_1_1models_1_1EventSchema_1a217decdaf8c5b408ab1e16baf74157bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>local_player_cell_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;localPlayerCellId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="121" refid="classleaguewizard_1_1core_1_1models_1_1EventSchema_1ab355ca82ebc4c1f0f235affdd8bfb411" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>my_team:<sp/>list[Ally]<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;myTeam&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="classleaguewizard_1_1core_1_1models_1_1Action" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classleaguewizard_1_1core_1_1models_1_1Action" kindref="compound">Action</ref>(<ref refid="classleaguewizard_1_1core_1_1models_1_1Payload" kindref="compound">Payload</ref>):</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Champion<sp/>selection<sp/>action.</highlight></codeline>
+<codeline lineno="126"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="127"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Attributes:</highlight></codeline>
+<codeline lineno="128"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actor_cell_id<sp/>(int):<sp/>Cell<sp/>ID<sp/>of<sp/>the<sp/>player<sp/>performing<sp/>the<sp/>action.</highlight></codeline>
+<codeline lineno="129"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>champion_id<sp/>(int):<sp/>Selected<sp/>champion<sp/>ID.</highlight></codeline>
+<codeline lineno="130"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>completed<sp/>(bool):<sp/>Whether<sp/>the<sp/>action<sp/>is<sp/>completed.</highlight></codeline>
+<codeline lineno="131"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>(str):<sp/>Type<sp/>of<sp/>action.</highlight></codeline>
+<codeline lineno="132"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="classleaguewizard_1_1core_1_1models_1_1Action_1a9f3e6c4070318e51542e3656c771edc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>actor_cell_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;actorCellId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="135" refid="classleaguewizard_1_1core_1_1models_1_1Action_1a94e4f12bdc47ac86e615110aacd615b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>champion_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;championId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>completed:<sp/>bool</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>type:<sp/>str</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="classleaguewizard_1_1core_1_1models_1_1Ally" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classleaguewizard_1_1core_1_1models_1_1Ally" kindref="compound">Ally</ref>(<ref refid="classleaguewizard_1_1core_1_1models_1_1Payload" kindref="compound">Payload</ref>):</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Ally<sp/>team<sp/>member<sp/>information.</highlight></codeline>
+<codeline lineno="142"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="143"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Attributes:</highlight></codeline>
+<codeline lineno="144"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assigned_position<sp/>(str):<sp/>Assigned<sp/>lane<sp/>or<sp/>role.</highlight></codeline>
+<codeline lineno="145"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cell_id<sp/>(int):<sp/>Player&apos;s<sp/>cell<sp/>ID.</highlight></codeline>
+<codeline lineno="146"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>champion_id<sp/>(int):<sp/>Selected<sp/>champion<sp/>ID.</highlight></codeline>
+<codeline lineno="147"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>selected_skin_id<sp/>(int):<sp/>Selected<sp/>skin<sp/>ID.</highlight></codeline>
+<codeline lineno="148"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>summoner_id<sp/>(int):<sp/>Player&apos;s<sp/>summoner<sp/>ID.</highlight></codeline>
+<codeline lineno="149"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wardSkin_id<sp/>(int):<sp/>Selected<sp/>ward<sp/>skin<sp/>ID.</highlight></codeline>
+<codeline lineno="150"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="classleaguewizard_1_1core_1_1models_1_1Ally_1a74ec83294557504405ce17b014be3078" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>assigned_position:<sp/>str<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;assignedPosition&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="153" refid="classleaguewizard_1_1core_1_1models_1_1Ally_1a4c4f44b7541236d156752be1cad06e33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>cell_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;cellId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="154" refid="classleaguewizard_1_1core_1_1models_1_1Ally_1a025442d6850b0b0373dea5fa259c480e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>champion_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;championId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="155" refid="classleaguewizard_1_1core_1_1models_1_1Ally_1ab8b4b6bd71c9827c96a12cb1b32c5fc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>selected_skin_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;selectedSkinId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="156" refid="classleaguewizard_1_1core_1_1models_1_1Ally_1ab6bb314f5bac3e475d1362304ba4268e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>summoner_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;summonerId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="157" refid="classleaguewizard_1_1core_1_1models_1_1Ally_1a25a90140d8aeb73e9a6929715efe0167" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ward_skin_id:<sp/>int<sp/>=<sp/>Field(...,<sp/>alias=</highlight><highlight class="stringliteral">&quot;wardSkinId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py"/>
+  </compounddef>
+</doxygen>

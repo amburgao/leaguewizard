@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespaceleaguewizard_1_1api_1_1models" kind="namespace" language="Python">
+    <compoundname>leaguewizard::api::models</compoundname>
+    <innerclass refid="classleaguewizard_1_1api_1_1models_1_1LockFile" prot="public">leaguewizard::api::models::LockFile</innerclass>
+    <innerclass refid="classleaguewizard_1_1api_1_1models_1_1SummonerData" prot="public">leaguewizard::api::models::SummonerData</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Manages the League of Legends lockfile.
+
+This module provides the `LockFile` class to parse the League of Legends
+lockfile and extract necessary connection details for interacting with
+the client&apos;s API.
+
+Classes:
+    LockFile: Manages parsing the lockfile for API connection details.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

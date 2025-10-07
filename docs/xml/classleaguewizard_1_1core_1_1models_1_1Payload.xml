@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classleaguewizard_1_1core_1_1models_1_1Payload" kind="class" language="Python" prot="public">
+    <compoundname>leaguewizard::core::models::Payload</compoundname>
+    <basecompoundref refid="classBaseModel" prot="public" virt="non-virtual">BaseModel</basecompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1core_1_1models_1_1Action" prot="public" virt="non-virtual">leaguewizard.core.models.Action</derivedcompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1core_1_1models_1_1Ally" prot="public" virt="non-virtual">leaguewizard.core.models.Ally</derivedcompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1core_1_1models_1_1EventSchema" prot="public" virt="non-virtual">leaguewizard.core.models.EventSchema</derivedcompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1core_1_1models_1_1ItemSet" prot="public" virt="non-virtual">leaguewizard.core.models.ItemSet</derivedcompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets" prot="public" virt="non-virtual">leaguewizard.core.models.PayloadItemSets</derivedcompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks" prot="public" virt="non-virtual">leaguewizard.core.models.PayloadPerks</derivedcompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells" prot="public" virt="non-virtual">leaguewizard.core.models.PayloadSpells</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classleaguewizard_1_1core_1_1models_1_1Payload_1ac65bb995d052eaf8e2e5df2ff602d602" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>dict[str, Any]</type>
+        <definition> dict[str, Any] leaguewizard.core.models.Payload.asjson</definition>
+        <argsstring>(self)</argsstring>
+        <name>asjson</name>
+        <qualifiedname>leaguewizard.core.models.Payload.asjson</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Converts the model instance to a dictionary, using aliases for field names.
+
+Returns:
+    dict[str, Any]: A dictionary representation of the model.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="17" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" bodystart="17" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Base class for all payload models, providing common serialization.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BaseModel</label>
+        <link refid="classBaseModel"/>
+      </node>
+      <node id="1">
+        <label>leaguewizard.core.models.Payload</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Payload"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>leaguewizard.core.models.Action</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Action"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>leaguewizard.core.models.Ally</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Ally"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>leaguewizard.core.models.EventSchema</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1EventSchema"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>leaguewizard.core.models.ItemSet</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1ItemSet"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>leaguewizard.core.models.PayloadItemSets</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>leaguewizard.core.models.PayloadPerks</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>leaguewizard.core.models.PayloadSpells</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BaseModel</label>
+        <link refid="classBaseModel"/>
+      </node>
+      <node id="1">
+        <label>leaguewizard.core.models.Payload</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Payload"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="14" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" bodystart="14" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classleaguewizard_1_1core_1_1models_1_1Payload_1ac65bb995d052eaf8e2e5df2ff602d602" prot="public" virt="non-virtual"><scope>leaguewizard::core::models::Payload</scope><name>asjson</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

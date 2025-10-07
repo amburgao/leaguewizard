@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespaceleaguewizard_1_1core_1_1models" kind="namespace" language="Python">
+    <compoundname>leaguewizard::core::models</compoundname>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1Action" prot="public">leaguewizard::core::models::Action</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1Ally" prot="public">leaguewizard::core::models::Ally</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1Block" prot="public">leaguewizard::core::models::Block</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1EventSchema" prot="public">leaguewizard::core::models::EventSchema</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1Item" prot="public">leaguewizard::core::models::Item</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1ItemSet" prot="public">leaguewizard::core::models::ItemSet</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1Payload" prot="public">leaguewizard::core::models::Payload</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets" prot="public">leaguewizard::core::models::PayloadItemSets</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks" prot="public">leaguewizard::core::models::PayloadPerks</innerclass>
+    <innerclass refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells" prot="public">leaguewizard::core::models::PayloadSpells</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Defines Pydantic models for various LeagueClientUpdates payloads and event schemas.
+
+These models are used for serializing and deserializing data exchanged with the
+League of Legends client, ensuring type safety and data validation.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

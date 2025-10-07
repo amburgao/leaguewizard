@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_6cadab460fab7df3b62e7d80739ec0bb" kind="dir">
+    <compoundname>/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics</compoundname>
+    <innerfile refid="mobalytics_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="mobalytics_8py">mobalytics.py</innerfile>
+    <innerfile refid="parsers_8py">parsers.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/mobalytics/"/>
+  </compounddef>
+</doxygen>

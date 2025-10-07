@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classBaseModel" kind="class" language="Python" prot="public">
+    <compoundname>BaseModel</compoundname>
+    <derivedcompoundref refid="classleaguewizard_1_1api_1_1models_1_1SummonerData" prot="public" virt="non-virtual">leaguewizard.api.models.SummonerData</derivedcompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1core_1_1models_1_1Block" prot="public" virt="non-virtual">leaguewizard.core.models.Block</derivedcompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1core_1_1models_1_1Item" prot="public" virt="non-virtual">leaguewizard.core.models.Item</derivedcompoundref>
+    <derivedcompoundref refid="classleaguewizard_1_1core_1_1models_1_1Payload" prot="public" virt="non-virtual">leaguewizard.core.models.Payload</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BaseModel</label>
+        <link refid="classBaseModel"/>
+      </node>
+      <node id="2">
+        <label>leaguewizard.api.models.SummonerData</label>
+        <link refid="classleaguewizard_1_1api_1_1models_1_1SummonerData"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>leaguewizard.core.models.Action</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Action"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>leaguewizard.core.models.Ally</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Ally"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>leaguewizard.core.models.Block</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Block"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>leaguewizard.core.models.EventSchema</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1EventSchema"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>leaguewizard.core.models.Item</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Item"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>leaguewizard.core.models.ItemSet</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1ItemSet"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>leaguewizard.core.models.Payload</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Payload"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>leaguewizard.core.models.PayloadItemSets</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1PayloadItemSets"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>leaguewizard.core.models.PayloadPerks</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1PayloadPerks"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>leaguewizard.core.models.PayloadSpells</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1PayloadSpells"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BaseModel</label>
+        <link refid="classBaseModel"/>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/models.py" line="95" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

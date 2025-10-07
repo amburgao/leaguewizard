@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classleaguewizard_1_1core_1_1models_1_1EventSchema" kind="class" language="Python" prot="public">
+    <compoundname>leaguewizard::core::models::EventSchema</compoundname>
+    <basecompoundref refid="classleaguewizard_1_1core_1_1models_1_1Payload" prot="public" virt="non-virtual">leaguewizard.core.models.Payload</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classleaguewizard_1_1core_1_1models_1_1EventSchema_1ac33608dbb9e56ea2128c15e4a54dde8b" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list leaguewizard.core.models.EventSchema::actions</definition>
+        <argsstring></argsstring>
+        <name>actions</name>
+        <qualifiedname>leaguewizard.core.models.EventSchema.actions</qualifiedname>
+        <initializer>[<ref refid="classleaguewizard_1_1core_1_1models_1_1Action" kindref="compound">Action</ref>]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="119" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classleaguewizard_1_1core_1_1models_1_1EventSchema_1a217decdaf8c5b408ab1e16baf74157bf" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int leaguewizard.core.models.EventSchema::local_player_cell_id</definition>
+        <argsstring></argsstring>
+        <name>local_player_cell_id</name>
+        <qualifiedname>leaguewizard.core.models.EventSchema.local_player_cell_id</qualifiedname>
+        <initializer>=  Field(..., alias=&quot;localPlayerCellId&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="120" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classleaguewizard_1_1core_1_1models_1_1EventSchema_1ab355ca82ebc4c1f0f235affdd8bfb411" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list leaguewizard.core.models.EventSchema::my_team</definition>
+        <argsstring></argsstring>
+        <name>my_team</name>
+        <qualifiedname>leaguewizard.core.models.EventSchema.my_team</qualifiedname>
+        <initializer>=  Field(..., alias=&quot;myTeam&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="121" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" bodystart="121" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Champion selection event data structure.
+
+Attributes:
+    actions (list[Action]): List of champion selection actions.
+    local_player_cell_id (int): Local player&apos;s cell ID.
+    my_team (list[Ally]): List of ally team members.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>BaseModel</label>
+        <link refid="classBaseModel"/>
+      </node>
+      <node id="1">
+        <label>leaguewizard.core.models.EventSchema</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1EventSchema"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>leaguewizard.core.models.Payload</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Payload"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>BaseModel</label>
+        <link refid="classBaseModel"/>
+      </node>
+      <node id="5">
+        <label>int</label>
+      </node>
+      <node id="1">
+        <label>leaguewizard.core.models.EventSchema</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1EventSchema"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+actions</edgelabel>
+          <edgelabel>+my_team</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+local_player_cell_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>leaguewizard.core.models.Payload</label>
+        <link refid="classleaguewizard_1_1core_1_1models_1_1Payload"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>list</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" line="110" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/core/models.py" bodystart="110" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classleaguewizard_1_1core_1_1models_1_1EventSchema_1ac33608dbb9e56ea2128c15e4a54dde8b" prot="public" virt="non-virtual"><scope>leaguewizard::core::models::EventSchema</scope><name>actions</name></member>
+      <member refid="classleaguewizard_1_1core_1_1models_1_1Payload_1ac65bb995d052eaf8e2e5df2ff602d602" prot="public" virt="non-virtual"><scope>leaguewizard::core::models::EventSchema</scope><name>asjson</name></member>
+      <member refid="classleaguewizard_1_1core_1_1models_1_1EventSchema_1a217decdaf8c5b408ab1e16baf74157bf" prot="public" virt="non-virtual"><scope>leaguewizard::core::models::EventSchema</scope><name>local_player_cell_id</name></member>
+      <member refid="classleaguewizard_1_1core_1_1models_1_1EventSchema_1ab355ca82ebc4c1f0f235affdd8bfb411" prot="public" virt="non-virtual"><scope>leaguewizard::core::models::EventSchema</scope><name>my_team</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

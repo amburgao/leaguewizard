@@ -1,0 +1,9 @@
+<map id="leaguewizard.core.models.ItemSet" name="leaguewizard.core.models.ItemSet">
+<area shape="rect" id="Node000001" title=" " alt="" coords="107,277,296,357"/>
+<area shape="rect" id="Node000002" href="$classleaguewizard_1_1core_1_1models_1_1Payload.html" title=" " alt="" coords="5,120,195,200"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,210,178,276,174,278,131,213"/>
+<area shape="rect" id="Node000003" href="$classBaseModel.html" title=" " alt="" coords="57,5,143,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,84,103,120,97,120,97,84"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="219,127,253,193"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="232,194,216,262,211,261,226,192"/>
+</map>

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespaceleaguewizard_1_1api_1_1utils" kind="namespace" language="Python">
+    <compoundname>leaguewizard::api::utils</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceleaguewizard_1_1api_1_1utils_1a9f4c424dc4f689eb33075d72869d2382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ssl.SSLContext</type>
+        <definition> ssl.SSLContext leaguewizard.api.utils.ssl_context</definition>
+        <argsstring>(Path cert_path=riot_cert_path)</argsstring>
+        <name>ssl_context</name>
+        <qualifiedname>leaguewizard.api.utils.ssl_context</qualifiedname>
+        <param>
+          <type>Path</type>
+          <declname>cert_path</declname>
+          <defval>riot_cert_path</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates an SSL context for client connections.
+
+Args:
+    cert_path: The path to the CA certificate file.
+
+Returns:
+    An SSLContext object configured for client use.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/utils.py" line="14" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/utils.py" bodystart="14" bodyend="27"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Provides utilities for SSL context management.
+
+This module contains functions for creating and configuring SSL contexts,
+primarily for client connections, to interact with secure services.
+It leverages the standard `ssl` library and custom certificate paths.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/api/utils.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

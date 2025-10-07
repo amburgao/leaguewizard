@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="gen__ref__pages_8py" kind="file" language="Python">
+    <compoundname>gen_ref_pages.py</compoundname>
+    <innernamespace refid="namespacegen__ref__pages">gen_ref_pages</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacegen__ref__pages" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;Generate<sp/>the<sp/>code<sp/>reference<sp/>pages<sp/>and<sp/>navigation.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pathlib<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Path</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>mkdocs_gen_files</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="namespacegen__ref__pages_1a4a3a4c153af46cac5b4073d4f43aecc4" refkind="member"><highlight class="normal">nav<sp/>=<sp/>mkdocs_gen_files.Nav()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="namespacegen__ref__pages_1a28dac4daa38e3cec011b6992e8bf6a5c" refkind="member"><highlight class="normal">root<sp/>=<sp/>Path(__file__).parent.parent</highlight></codeline>
+<codeline lineno="10" refid="namespacegen__ref__pages_1a79b3025560de68fb48d715a9ac4e3527" refkind="member"><highlight class="normal">src<sp/>=<sp/>root<sp/>/<sp/></highlight><highlight class="stringliteral">&quot;src&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>path<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>sorted(src.rglob(</highlight><highlight class="stringliteral">&quot;*.py&quot;</highlight><highlight class="normal">)):</highlight></codeline>
+<codeline lineno="13" refid="namespacegen__ref__pages_1aff8793bf12776a5e8642b74040fa74b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>module_path<sp/>=<sp/>path.relative_to(src).with_suffix(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14" refid="namespacegen__ref__pages_1ad76cc954362f569835ee67d0221b5f9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>doc_path<sp/>=<sp/>path.relative_to(src).with_suffix(</highlight><highlight class="stringliteral">&quot;.md&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="15" refid="namespacegen__ref__pages_1ab06888e2ebd8bd5c419e2bb60e6a7fc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>full_doc_path<sp/>=<sp/>Path(</highlight><highlight class="stringliteral">&quot;reference&quot;</highlight><highlight class="normal">,<sp/>doc_path)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="namespacegen__ref__pages_1a1b28cd26478738bdbb9317d74b7f47d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>parts<sp/>=<sp/>tuple(module_path.parts)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>parts[-1]<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;__init__&quot;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parts<sp/>=<sp/>parts[:-1]</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>doc_path<sp/>=<sp/>doc_path.with_name(</highlight><highlight class="stringliteral">&quot;index.md&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>full_doc_path<sp/>=<sp/>full_doc_path.with_name(</highlight><highlight class="stringliteral">&quot;index.md&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">elif</highlight><highlight class="normal"><sp/>parts[-1]<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;__main__&quot;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>nav[parts]<sp/>=<sp/>doc_path.as_posix()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>mkdocs_gen_files.open(full_doc_path,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>fd:</highlight></codeline>
+<codeline lineno="29" refid="namespacegen__ref__pages_1a7a1ebac292a88ca2aa98dfecba12f10f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ident<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">.join(parts)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fd.write(f</highlight><highlight class="stringliteral">&quot;:::<sp/>{ident}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>mkdocs_gen_files.set_edit_path(full_doc_path,<sp/>path.relative_to(root))</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>mkdocs_gen_files.open(</highlight><highlight class="stringliteral">&quot;reference/SUMMARY.md&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>nav_file:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>nav_file.writelines(nav.build_literate_nav())</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py"/>
+  </compounddef>
+</doxygen>

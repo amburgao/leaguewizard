@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespaceleaguewizard_1_1data" kind="namespace" language="Python">
+    <compoundname>leaguewizard::data</compoundname>
+    <innernamespace refid="namespaceleaguewizard_1_1data_1_1certs">leaguewizard::data::certs</innernamespace>
+    <innernamespace refid="namespaceleaguewizard_1_1data_1_1images">leaguewizard::data::images</innernamespace>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceleaguewizard_1_1data_1af3b9ac006f89948201b021e6683c3ca9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>leaguewizard::data.image_path</definition>
+        <argsstring></argsstring>
+        <name>image_path</name>
+        <qualifiedname>leaguewizard.data.image_path</qualifiedname>
+        <initializer>=  Path(str(files(&quot;leaguewizard.data.images&quot;) / &quot;logo.ico&quot;))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/data/__init__.py" line="12" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/data/__init__.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceleaguewizard_1_1data_1a3a46f2be217e4c6909a6161970c69412" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>leaguewizard::data.riot_cert_path</definition>
+        <argsstring></argsstring>
+        <name>riot_cert_path</name>
+        <qualifiedname>leaguewizard.data.riot_cert_path</qualifiedname>
+        <initializer>=  Path(str(files(&quot;leaguewizard.data.certs&quot;) / &quot;riotgames.pem&quot;))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/data/__init__.py" line="13" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/data/__init__.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceleaguewizard_1_1data_1a6487b6180f38f3dfb7132ee3967c3bfb" prot="private" static="no" mutable="no">
+        <type>list</type>
+        <definition>list leaguewizard::data.__all__</definition>
+        <argsstring></argsstring>
+        <name>__all__</name>
+        <qualifiedname>leaguewizard.data.__all__</qualifiedname>
+        <initializer>=  [&quot;image_path&quot;, &quot;riot_cert_path&quot;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/data/__init__.py" line="16" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/data/__init__.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>League Wizard data path constants.
+
+This module defines paths to important data files for the
+League Wizard application. It includes the path to the
+application&apos;s logo icon and the Riot Games certificate for
+secure communication.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/src/leaguewizard/data/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

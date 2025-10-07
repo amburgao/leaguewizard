@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacegen__ref__pages" kind="namespace" language="Python">
+    <compoundname>gen_ref_pages</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacegen__ref__pages_1a4a3a4c153af46cac5b4073d4f43aecc4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen_ref_pages.nav</definition>
+        <argsstring></argsstring>
+        <name>nav</name>
+        <qualifiedname>gen_ref_pages.nav</qualifiedname>
+        <initializer>=  mkdocs_gen_files.Nav()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" line="7" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegen__ref__pages_1a28dac4daa38e3cec011b6992e8bf6a5c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen_ref_pages.root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <qualifiedname>gen_ref_pages.root</qualifiedname>
+        <initializer>=  Path(__file__).parent.parent</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" line="9" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegen__ref__pages_1a79b3025560de68fb48d715a9ac4e3527" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str gen_ref_pages.src</definition>
+        <argsstring></argsstring>
+        <name>src</name>
+        <qualifiedname>gen_ref_pages.src</qualifiedname>
+        <initializer>=  <ref refid="namespacegen__ref__pages_1a28dac4daa38e3cec011b6992e8bf6a5c" kindref="member">root</ref> / &quot;src&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" line="10" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegen__ref__pages_1aff8793bf12776a5e8642b74040fa74b5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen_ref_pages.module_path</definition>
+        <argsstring></argsstring>
+        <name>module_path</name>
+        <qualifiedname>gen_ref_pages.module_path</qualifiedname>
+        <initializer>=  path.relative_to(<ref refid="namespacegen__ref__pages_1a79b3025560de68fb48d715a9ac4e3527" kindref="member">src</ref>).with_suffix(&quot;&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" line="13" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegen__ref__pages_1ad76cc954362f569835ee67d0221b5f9b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen_ref_pages.doc_path</definition>
+        <argsstring></argsstring>
+        <name>doc_path</name>
+        <qualifiedname>gen_ref_pages.doc_path</qualifiedname>
+        <initializer>=  path.relative_to(<ref refid="namespacegen__ref__pages_1a79b3025560de68fb48d715a9ac4e3527" kindref="member">src</ref>).with_suffix(&quot;.md&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" line="14" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegen__ref__pages_1ab06888e2ebd8bd5c419e2bb60e6a7fc9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen_ref_pages.full_doc_path</definition>
+        <argsstring></argsstring>
+        <name>full_doc_path</name>
+        <qualifiedname>gen_ref_pages.full_doc_path</qualifiedname>
+        <initializer>=  Path(&quot;reference&quot;, <ref refid="namespacegen__ref__pages_1ad76cc954362f569835ee67d0221b5f9b" kindref="member">doc_path</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" line="15" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegen__ref__pages_1a1b28cd26478738bdbb9317d74b7f47d2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen_ref_pages.parts</definition>
+        <argsstring></argsstring>
+        <name>parts</name>
+        <qualifiedname>gen_ref_pages.parts</qualifiedname>
+        <initializer>=  tuple(module_path.parts)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" line="17" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegen__ref__pages_1a7a1ebac292a88ca2aa98dfecba12f10f" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str gen_ref_pages.ident</definition>
+        <argsstring></argsstring>
+        <name>ident</name>
+        <qualifiedname>gen_ref_pages.ident</qualifiedname>
+        <initializer>=  &quot;.&quot;.join(<ref refid="namespacegen__ref__pages_1a1b28cd26478738bdbb9317d74b7f47d2" kindref="member">parts</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" line="29" column="1" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Generate the code reference pages and navigation.</verbatim> </para>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/amburgao/leaguewizard/scripts/gen_ref_pages.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>
